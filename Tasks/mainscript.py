@@ -49,7 +49,7 @@ class taskbattery(metadatacollection):
                 self.ESQtask = ESQtask
                 self.INFO = INFO
                 self.taskexeclist = []
-        win = visual.Window(size=(640, 480),color='white', winType='pyglet')
+        win = visual.Window(size=(1280, 800),color='white', winType='pyglet')
         #def initializeBattery(self):
                 #for i in self.tasklist:
 
