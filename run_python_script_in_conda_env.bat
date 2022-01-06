@@ -1,4 +1,4 @@
 @echo OFF
-python Tasks//mainscript.py
+python "C:\Users\Ian\Documents\GitHub\THINCLabTestRepo\Tasks\mainscript.py"
 
 pause
