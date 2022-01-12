@@ -1278,11 +1278,11 @@ VER_B = {
 
 VER_A_MRI = {
             'rec_keys': ['left', 'right'],
-            'loc_keys': ['6', '7']
+            'loc_keys': ['left', 'right']
             }
 
 VER_B_MRI = {
-            'rec_keys': ['6', '7'],
+            'rec_keys': ['left', 'right'],
             'loc_keys': ['left', 'right']
             }
 
@@ -2079,9 +2079,9 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
                 respRT = None
 
         # ending message
-        end_msg.draw()
+        # end_msg.draw()
         Experiment.window.flip()
-        event.waitKeys(keyList=['return'])
+        # event.waitKeys(keyList=['return'])
 
         logging.flush()
         # change output files to read only

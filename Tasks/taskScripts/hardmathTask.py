@@ -33,17 +33,13 @@ Block1 = 5H, 5E, 5E, 5H
 
 """
 
-from psychopy import visual, core, monitors, event, sound, gui, logging
-import psychopy
-from datetime import datetime
-from random import shuffle
-import os
 import time
+from psychopy import visual, core, monitors, event
+from datetime import datetime
+import os
 import csv
-import sys, os, errno # to get file system encoding (used in setDir())
-import numpy as np
+import sys, os # to get file system encoding (used in setDir())
 import random
-from collections import OrderedDict
 import pandas as pd
 import codecs
 import re
@@ -178,14 +174,14 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
     expr_time = 1.45 # formal experiment, it is 1.45
     choi_time = 1.45  # formal experiment, it is 1.45
     blank_time = 0.1   # display a blank screen
-    timelimit_deci = 1.45 # equal to the choi_time 1.45 (check)
+    timelimit_deci = 4 # equal to the choi_time 1.45 (check)
     trial_time = expr_time + choi_time + blank_time  # each trial is 3s
 
     pretrialFixDur = 15.00;  # in seconds previous four fixation is 15s
     posttrialFixDur = 16.00; # in seconds the final fixation is 16s
 
     instru_key     = ['return','escape']
-    choie_key_list = ['1','2','escape']  # 1 == left, 2 == right
+    choie_key_list = ['left','right','escape']  # 1 == left, 2 == right
 
     # window related
     # windows
@@ -257,7 +253,7 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
         #    print ('User cancelled the experiment')
         #    core.quit()
     
-    # creates a file with a name that is absolute path + info collected from GUI
+        # creates a file with a name that is absolute path + info collected from GUI
         # filename = data_folder + os.sep + '%s_%s_%s_%s.csv' %(expInfo['subjID'], expInfo['subjName'], expInfo['expdate'],expInfo['run'])
         # filename_fixa = data_folder + os.sep + '%s_%s_%s_%s_fixa.csv' %(expInfo['subjID'], expInfo['subjName'], expInfo['expdate'],expInfo['run'])
         filename = data_folder + os.sep + '%s_%s_.csv' %(expInfo['subjID'], expInfo['expdate'])
@@ -282,12 +278,12 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
     # Open a csv file, read through from the first row   # correct
     def load_conditions_dict(conditionfile):
 
-    #load each row as a dictionary with the headers as the keys
-    #save the headers in its original order for data saving
+        #load each row as a dictionary with the headers as the keys
+        #save the headers in its original order for data saving
 
-    # csv.DictReader(f,fieldnames = None): create an object that operates like a regular reader 
-    # but maps the information in each row to an OrderedDict whose keys
-    # are given by the optional fieldnames parameter.
+        # csv.DictReader(f,fieldnames = None): create an object that operates like a regular reader 
+        # but maps the information in each row to an OrderedDict whose keys
+        # are given by the optional fieldnames parameter.
 
         with open(os.path.join(os.getcwd(), conditionfile)) as csvfile:
             reader = csv.DictReader(csvfile)
@@ -361,7 +357,7 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
     #     keys = event.waitKeys(keyList =['return','escape'],timeStamped = True)
     #     if keys[0][0]=='escape':
     #         shutdown()
-    instructions = instructionsc(window=win, instruction_txt=instr_txt)
+    #instructions = instructionsc(window=win, instruction_txt=instr_txt)
     
     def trigger_exp(path,trigger_figure):
 
@@ -411,36 +407,41 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
         # trigger_exp(curr_dic,trigger_figure)
         # event.waitKeys(keyList=['5'], timeStamped=True)
         #  remind the subjects that experiment starts soon.
-    #    ready(curr_dic,ready_figure)
-    #    core.wait(4)  # 2 TRs
-    #    win.flip() 
+        #    ready(curr_dic,ready_figure)
+        #    core.wait(4)  # 2 TRs
+        #    win.flip() 
     
 
-    # write the fixation time into the fixation.csv file    
+        # write the fixation time into the fixation.csv file    
         fixa_numth = 1  
         blockfixa_onset_abs = 0
         f.write('%f,%.2f\n'% (fixa_numth, blockfixa_onset_abs))
-    # draw the first long fixation and flip the window 
+        # draw the first long fixation and flip the window 
 
         fixa.draw()
         resultdictWriter('fixation cross', timer,writer)
         timetodraw = core.monotonicClock.getTime()
-    #        
+        #        
         while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
             pass
         
         run_onset = win.flip()  # this is when the real experiment starts and the run starts
         
+        
         print ('----run_onset is : ---',run_onset)
         
         timetodraw = run_onset + pretrialFixDur
-        while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
-            pass
+        # while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
+        #     pass
         
         count = 1 # initiaze count
         curtime = core.Clock()
         for trial in all_trials:
+            fixa.draw()
+            win.flip()
+            time.sleep(2)
             if curtime.getTime() < runtime:
+                
                 #''' trial is a ordered dictionary. The key is the first raw of the stimuli csv file'''
                 expression = prep_cont(trial['expression'],word_pos)
                 choice = prep_cont(trial['choice'][0:4],choice_right_pos)
@@ -451,8 +452,8 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
                 resultdictWriter('Math Trial Start',timer,writer)
                 ideal_trial_onset = float( pretrialFixDur) +float(run_onset) + float( trial['expr_onset'])
                 timetodraw = ideal_trial_onset
-                while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
-                    pass
+                # while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
+                #     pass
                 trial_onset = win.flip()  # when expression is displayed, this is the trial onset
                 
                 
@@ -465,7 +466,9 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
                         pass
                 event.clearEvents()
                 choice_onset = win.flip()
-                keys = event.waitKeys(maxWait = timelimit_deci, keyList =['1','2','3','4','escape'],timeStamped = True)
+                keys = event.waitKeys(maxWait = timelimit_deci, keyList =['left','right'],timeStamped = True)
+                fixa.draw()
+                win.flip()
                 resultdictWriter('Choice made',timer,writer)
 
                 # If subjects do not press the key within maxwait time, RT is the timilimit and key is none and it is false
@@ -481,7 +484,11 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
                     
                     else:
                         keypress = keys[0][0]
-                        RT = keys[0][1] - choice_onset       
+                        RT = keys[0][1] - choice_onset  
+                        if trial["correct_ans"] == '1':
+                            trial["correct_ans"] = 'left'
+                        if trial["correct_ans"] == '2':
+                            trial["correct_ans"] = 'right'
                         correct = (keys[0][0]==trial['correct_ans']) 
                         trial['RT']=RT
                         trial['correct'] = correct
@@ -499,13 +506,13 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
 
                 resultdictWriter('Math Trial End',timer,writer, correct)
                 
-                blank.draw()
-                timetodraw = trial_onset + expr_time + choi_time       
-                while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
-                    pass
-                blank_r_onset = win.flip()
+                # blank.draw()
+                # timetodraw = trial_onset + expr_time + choi_time       
+                # while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
+                #     pass
+                # blank_r_onset = win.flip()
 
-                trial['blank_r_onset']=blank_r_onset - run_onset
+                # trial['blank_r_onset']=blank_r_onset - run_onset
 
             
                 write_trial(filename,headers,trial)     # calls the function that writes csv output
@@ -551,7 +558,7 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
     write_file_not_exist(filename)
     write_file_not_exist(filename_fixa)
     # set up the window to display the instruction
-    win = set_up_window()
+    #win = set_up_window()
 
     # read the instruction
     #instruct()
@@ -624,6 +631,6 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
     random.shuffle(data)
     data = block_remover(data)
     data = new_csv_creator(data)
-    resultdict = {'Timepoint': None, 'Time': None, 'Is_correct': None, 'Experience Sampling Question': None, 'Experience Sampling Response':None, 'Task' : None, 'Task Iteration': None, 'Participant ID': None,'Response_Key':None, 'Auxillary Data': None}
-    timer = core.Clock()
+    resdict = {'Timepoint': None, 'Time': None, 'Is_correct': None, 'Experience Sampling Question': None, 'Experience Sampling Response':None, 'Task' : None, 'Task Iteration': None, 'Participant ID': None,'Response_Key':None, 'Auxillary Data': None}
+    
     runexp1(timer, win, writer, resdict,  data, runtime)

@@ -21,6 +21,9 @@ from psychopy.misc import fromFile
 
 ############################################# fMRI #############################################################
 
+
+
+
 def setup_input(input_method):
     
     #If input_method is 'keyboard', we don't do anything
@@ -369,6 +372,7 @@ def HelpWin(myClock, myWin,dfile):
     #set up instructions and clock (so you can time stamp duration or trials, RT etc..)
     instrTxt2 = visual.TextStim(myWin,text=lines2, height = 0.05, color='black')
     instrTxt3 = visual.TextStim(myWin,text=lines3, height = 0.05, color='black')
+    instrimg = visual.ImageStim(myWin,image=(os.path.dirname(os.path.abspath(__file__)) + "//resources//GoNoGo_Task//Go.jpg"),size=[2,1])
     # Before each part of the task begins, you will be informed what type of stimuli you will have to attend to by a cue in red (WORD, PICTURE or BOX).\n\
     # \nPlease give equal importance to SPEED and ACCURACY when completing this task. We would like you to respond as FAST as possible while maintaining a high \
     # level of ACCURACY.\n\
@@ -454,7 +458,11 @@ def HelpWin(myClock, myWin,dfile):
     instrTxt3.draw()
     myWin.flip()
     event.waitKeys(keyList=['return'])
+    instrimg.draw()
     myWin.flip()
+    event.waitKeys(keyList=['return'])
+    myWin.flip()
+    
 
     # Start being ready to get triggers
     if trig_collector:

@@ -533,6 +533,8 @@ def run_experiment(timer, win, writer, resdict, runtime, dfiles):
                 cur_stim = Display_Text(window=win, text=mytext, 
                                         size=trial_parameter['StimTxt_size'], color=trial_parameter['StimTxt_color'], 
                                         font=trial_parameter['StimTxt_font'], pos_x=mypos_x, pos_y=mypos_y)
+                cur_stimL = visual.TextStim(win=win,text='No', pos=(-.8,0), color='black')
+                cur_stimR = visual.TextStim(win=win,text='Yes', pos=(.8,0), color='black')
 
             #######################################################
             # display the current stimulus-text 
@@ -545,6 +547,7 @@ def run_experiment(timer, win, writer, resdict, runtime, dfiles):
                     print(runtime)
                     if stimcount == 0:
                         return
+                
                 mytime = cur_stim.show(timer)
 
                 # calculate the duration time
@@ -561,8 +564,13 @@ def run_experiment(timer, win, writer, resdict, runtime, dfiles):
                 
                 # if this is the last trial, wait for key press OR when duration for this stim lapses
                 if stimcount == trial_parameter['num_stim'] -1:
+                    cur_stimL.setAutoDraw(True)
+                    cur_stimR.setAutoDraw(True)
+                    cur_stim.show(timer)
                     trial_response['keystart_time'], trial_response['resp_key'], trial_response['response'], trial_response['keypress_time'], trial_response['key_RT'] = Get_Response(timer, myduration/1000, settings['rec_keys'], settings['rec_keyans'], trial_parameter['beep_flag'])
                     if trial_parameter['resp_stay'] == 0:  # stay until duration
+                        cur_stimL.setAutoDraw(False)
+                        cur_stimR.setAutoDraw(False)
                         win.flip()  # clear the window
                         #core.wait(myduration/1000 - trial_response['key_RT']) # wait for duration
                     

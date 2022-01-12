@@ -1,7 +1,27 @@
+#  TODO LIST:
+#         DONE 1.	Experience sampling questions need to be shown in a random order and to show all 14.
+#         DONE 2.	Instead of using a completely random order, we would be better doing blocks of each task in a row as this will be easier for the participants. The tasks also for pairs (self + other, easy maths + hard maths, 1 back 0 back, go no go and finger tapping, reading and memory). Ideally it would be ordered so that we first pick a pair of tasks and then randomize which pair goes first.
+#         DONE 3.	Change both the instructions and response keys for the maths task, 1 back and 0 back to left and right arrow keys.
+#         DONE 4.	The 1 back and 0 back task ends with a screen that says remain the scanner. We should reombve this.
+#         DONE 5.	The maths task should wait for a response before moving to the next trial
+#         DONE 6.	The maths task starts and ends with a very long fixation cross. This should be removed
+#         DONE 7.	The instructions for the 1 back and 0 back task did not fit on the screen of my computer
+#         QUESTION - NO REPEATING OF STIMULI ACROSS TRIALS OR WITHIN      8.	There are repeating stimuli in the self and other tasks. We should show new items on every trial
+#         DONE 9.	In the reading task the sentences do not complete before moving to the next trial. We should show complete sentences before moving on.
+#         DONE 10.	In the introduction to the go / no go task it would help if we showed the participants examples of these trials types when we give them the instructions. This could just be done by making an image with examples of both on the left and right with the words respond and do not respond beneath the appropriate item.
+#         DONE 11.	When the tapping task describes which hand to use it should say "Now tap in time with the grey square using you left/right hand"
+#         DONE 12.	The reading task repeated exactly the same sentences on each block. It should show different ones every time. 
+#         13.	I think we may need to rethink the memory task. Instead of asking them to type in the word, we should instead have a list of events (like party) and then we ask the participants first pick a party that they went to and then remember this event when the fixation cross is on the screen. Ideally this screen could show the cue on screen so help them remember what they are thinking about. I am going to email Meichao for the list of words she used so you can use these.
+#         14.	It does not include videos yet. If it easier you can have a different script for this and we can either run that before or after the main one, or add it to this one. 
+
+
+
+
 # Main script written by Ian Goodall-Halliwell. Subscripts are individually credited. Many have been extensively modified, for better or for worse (probably for worse o__o ).
 
-from psychopy import core, visual, gui
+from psychopy import core, visual, gui, event
 import psychopy
+import time
 import csv
 import taskScripts
 import os
@@ -44,16 +64,34 @@ class metadatacollection():
 class taskbattery(metadatacollection):
         time = core.Clock()
         resultdict = {'Timepoint': None, 'Time': None, 'Is_correct': None, 'Experience Sampling Question': None, 'Experience Sampling Response':None, 'Task' : None, 'Task Iteration': None, 'Participant ID': None, 'Response_Key':None, 'Auxillary Data': None}
+        #self.win = visual.Window(size=(1280, 800),color='white', winType='pyglet',fullscr=True)
         def __init__(self, tasklist, ESQtask, INFO):
                 self.tasklist = tasklist
                 self.ESQtask = ESQtask
                 self.INFO = INFO
                 self.taskexeclist = []
-        win = visual.Window(size=(1280, 800),color='white', winType='pyglet',fullscr=True)
+                self.win = visual.Window(size=(1280, 800),color='white', winType='pyglet',fullscr=False)
+                self.text = text_2 = visual.TextStim(win=self.win, name='text_2',
+                        text='Experiment starting placeholder',
+                        font='Arial',
+                        anchorHoriz='center', anchorVert='center', wrapWidth=None, ori=0, 
+                        color='black', colorSpace='rgb', opacity=1, 
+                        languageStyle='LTR',
+                        depth=0.0)
+                taskbattery.win = self.win
+        
+        
         #def initializeBattery(self):
                 #for i in self.tasklist:
 
         def run_battery(self):
+                self.text.draw(self.win)
+                self.win.flip()
+                time.sleep(1)
+                event.waitKeys(keyList=['return'])
+                self.win.flip()
+                
+                
                 for i in self.tasklist:
                         i.initvers()
                         i.setver()
@@ -163,6 +201,8 @@ INFO = {
 
 
 
+
+
 # Main and backup data file
 datafile = str(os.path.dirname(os.path.realpath(__file__)) + '/log_file/testfull2.csv')
 datafileBackup = 'log_file/testfullbackup.csv'
@@ -199,15 +239,24 @@ hardmathTask2 = task(taskScripts.hardmathTask, datafile, datafileBackup,"Math Ta
 # Example of defining a full battery:
 #tasks = list([friendTask2,youTask2,gonogoTask2,fingertapTask2,readingTask2,memTask])
 fulltasklist = [
-        friendTask,youTask,gonogoTask,fingertapTask,readingTask,memTask,zerobackTask,onebackTask,easymathTask1,hardmathTask1,
-        friendTask2,youTask2,gonogoTask2,fingertapTask2,readingTask2,memTask2,zerobackTask2,onebackTask2,easymathTask2,hardmathTask2]
+        [friendTask,youTask],[gonogoTask,fingertapTask],[readingTask,memTask],[zerobackTask,onebackTask],[easymathTask1,hardmathTask1],
+        [friendTask2,youTask2],[gonogoTask2,fingertapTask2],[readingTask2,memTask2],[zerobackTask2,onebackTask2],[easymathTask2,hardmathTask2]]
+
+for enum, blk in enumerate(fulltasklist):
+        random.shuffle(blk)
 
 random.shuffle(fulltasklist)
 tasks = fulltasklist
 
-
+tasks = [readingTask2]
 
 # Example of task battery using 0-back and 1-back tasks:
+
+
+
+# ADD AN INITIAL SCREEN DESCRIBING THE EXPERIMENT
+# ADD DESCRIPTION FOR WHAT LEFT AND RIGHT DOES FOR THE SELF/OTHER TASK
+
 
 
 tbt = taskbattery(tasks, ESQTask, INFO)

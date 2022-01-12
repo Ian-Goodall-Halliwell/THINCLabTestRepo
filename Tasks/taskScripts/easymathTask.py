@@ -185,7 +185,7 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
     posttrialFixDur = 16.00; # in seconds the final fixation is 16s
 
     instru_key     = ['return','escape']
-    choie_key_list = ['1','2','escape']  # 1 == left, 2 == right
+    choie_key_list = ['left','right','escape']  # 1 == left, 2 == right
 
     # window related
     # windows
@@ -411,36 +411,41 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
         # trigger_exp(curr_dic,trigger_figure)
         # event.waitKeys(keyList=['5'], timeStamped=True)
         #  remind the subjects that experiment starts soon.
-    #    ready(curr_dic,ready_figure)
-    #    core.wait(4)  # 2 TRs
-    #    win.flip() 
+        #    ready(curr_dic,ready_figure)
+        #    core.wait(4)  # 2 TRs
+        #    win.flip() 
     
 
-    # write the fixation time into the fixation.csv file    
+        # write the fixation time into the fixation.csv file    
         fixa_numth = 1  
         blockfixa_onset_abs = 0
         f.write('%f,%.2f\n'% (fixa_numth, blockfixa_onset_abs))
-    # draw the first long fixation and flip the window 
+        # draw the first long fixation and flip the window 
 
         fixa.draw()
         resultdictWriter('fixation cross', timer,writer)
         timetodraw = core.monotonicClock.getTime()
-    #        
+        #        
         while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
             pass
         
         run_onset = win.flip()  # this is when the real experiment starts and the run starts
         
+        
         print ('----run_onset is : ---',run_onset)
         
         timetodraw = run_onset + pretrialFixDur
-        while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
-            pass
+        # while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
+        #     pass
         
         count = 1 # initiaze count
         curtime = core.Clock()
         for trial in all_trials:
+            fixa.draw()
+            win.flip()
+            time.sleep(2)
             if curtime.getTime() < runtime:
+                
                 #''' trial is a ordered dictionary. The key is the first raw of the stimuli csv file'''
                 expression = prep_cont(trial['expression'],word_pos)
                 choice = prep_cont(trial['choice'][0:4],choice_right_pos)
@@ -451,8 +456,8 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
                 resultdictWriter('Math Trial Start',timer,writer)
                 ideal_trial_onset = float( pretrialFixDur) +float(run_onset) + float( trial['expr_onset'])
                 timetodraw = ideal_trial_onset
-                while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
-                    pass
+                # while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
+                #     pass
                 trial_onset = win.flip()  # when expression is displayed, this is the trial onset
                 
                 
@@ -465,7 +470,9 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
                         pass
                 event.clearEvents()
                 choice_onset = win.flip()
-                keys = event.waitKeys(maxWait = timelimit_deci, keyList =['1','2','3','4','escape'],timeStamped = True)
+                keys = event.waitKeys(maxWait = timelimit_deci, keyList =['left','right'],timeStamped = True)
+                fixa.draw()
+                win.flip()
                 resultdictWriter('Choice made',timer,writer)
 
                 # If subjects do not press the key within maxwait time, RT is the timilimit and key is none and it is false
@@ -481,7 +488,11 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
                     
                     else:
                         keypress = keys[0][0]
-                        RT = keys[0][1] - choice_onset       
+                        RT = keys[0][1] - choice_onset  
+                        if trial["correct_ans"] == '1':
+                            trial["correct_ans"] = 'left'
+                        if trial["correct_ans"] == '2':
+                            trial["correct_ans"] = 'right'
                         correct = (keys[0][0]==trial['correct_ans']) 
                         trial['RT']=RT
                         trial['correct'] = correct
@@ -499,13 +510,13 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
 
                 resultdictWriter('Math Trial End',timer,writer, correct)
                 
-                blank.draw()
-                timetodraw = trial_onset + expr_time + choi_time       
-                while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
-                    pass
-                blank_r_onset = win.flip()
+                # blank.draw()
+                # timetodraw = trial_onset + expr_time + choi_time       
+                # # while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
+                # #     pass
+                # # blank_r_onset = win.flip()
 
-                trial['blank_r_onset']=blank_r_onset - run_onset
+                # trial['blank_r_onset']=blank_r_onset - run_onset
 
             
                 write_trial(filename,headers,trial)     # calls the function that writes csv output

@@ -22,7 +22,7 @@ from psychopy.constants import (NOT_STARTED, STARTED, PLAYING, PAUSED,
 import numpy as np  # whole numpy lib is available, prepend 'np.'
 from numpy import (sin, cos, tan, log, log10, pi, average,
                 sqrt, std, deg2rad, rad2deg, linspace, asarray)
-from numpy.random import random, randint, normal, shuffle, choice as randchoice
+from numpy.random import random, randint, normal, shuffle, choice 
 import os  # handy system and path functions
 import sys  # to get file system encoding
 import csv
@@ -344,6 +344,7 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
             routineTimer.add(3.000000)
             # update component parameters for each repeat
             # keep track of which components have finished
+            text_2.setText(np.random.choice(["Now tap in time with the grey square using you left hand","Now tap in time with the grey square using you right hand"])) 
             Finger_tapComponents = [text_2]
             for thisComponent in Finger_tapComponents:
                 thisComponent.tStart = None

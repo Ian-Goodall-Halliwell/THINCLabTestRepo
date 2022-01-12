@@ -168,7 +168,7 @@ def get_settings(env, ver):
     return settings
 
 def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
-    random.seed(a=seed)
+    random.seed()
     rs = random.randint(0,10000)
     random.seed(a=rs)
     print(os.path.dirname(os.path.abspath(__file__)))
@@ -243,7 +243,7 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
     
 
     #       get each question from Questionnaire:
-    for enum, i in enumerate(range(0, 2)):
+    for enum, i in enumerate(range(0, len(ES_fixed.trialList))):
         
         #if i < len(ES_fixed.trialList):
         if i < len(ES_fixed.trialList):

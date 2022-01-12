@@ -1,0 +1,3 @@
+,trial_num,expression,expr_onset,expr_dura,expr_offset,choice,choi_onset,choi_dura,choi_offset,blank,blank_onset,blank_offset,blank_dura,correct_ans,i_trial_onset,trial_onset,choice_onset,blank_r_onset,RT,correct,KeyPress
+0,19,3  +  7,0,1.45,55.45,10        12,55.45,1.45,56.9, ,56.9,57,0.1,left,15.0,2.0345645000052173,3.4791786999994656,,0.6722807000041939,True,left
+1,11,4  +  6,3,1.45,31.45,8        10,31.45,1.45,32.9, ,32.9,33,0.1,right,18.0,6.194418700004462,7.638660299999174,,0.4926519000000553,True,right
