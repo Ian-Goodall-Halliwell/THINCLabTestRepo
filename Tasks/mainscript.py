@@ -348,7 +348,7 @@ reading_memory1 = taskgroup([gonogoTask],"taskScripts/resources/group_inst/readi
 
 
 fulltasklist = [self_other,gonogo_fingtap,reading_memory,oneback_zeroback,ezmath_hrdmath]
-fulltasklist = [reading_memory1]
+#fulltasklist = [reading_memory1]
 
 
 for enum, blk in enumerate(fulltasklist):
