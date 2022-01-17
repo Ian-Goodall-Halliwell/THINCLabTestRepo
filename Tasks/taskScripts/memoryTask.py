@@ -94,22 +94,22 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
         color='black', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
-    textbox = visual.TextBox2(
-        win, text='Type response here', font='Open Sans',
-        pos=(0, -.4),     letterHeight=0.05,
-        size=(None, None), borderWidth=2.0,
-        color='black', colorSpace='rgb',
-        opacity=None,
-        bold=False, italic=False,
-        lineSpacing=1.0,
-        padding=0.0,
-        anchor='center',
-        fillColor=None, borderColor=None,
-        flipHoriz=False, flipVert=False,
-        editable=True,
-        name='textbox',
-        autoLog=True,
-    )
+    # textbox = visual.TextBox2(
+    #     win, text='Type response here', font='Open Sans',
+    #     pos=(0, -.4),     letterHeight=0.05,
+    #     size=(None, None), borderWidth=2.0,
+    #     color='black', colorSpace='rgb',
+    #     opacity=None,
+    #     bold=False, italic=False,
+    #     lineSpacing=1.0,
+    #     padding=0.0,
+    #     anchor='center',
+    #     fillColor=None, borderColor=None,
+    #     flipHoriz=False, flipVert=False,
+    #     editable=True,
+    #     name='textbox',
+    #     autoLog=True,
+    # )
     key_resp = keyboard.Keyboard()
 
     # Initialize components for Routine "blank"
@@ -214,12 +214,12 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
         # ------Prepare to start Routine "trial"-------
         continueRoutine = True
         # update component parameters for each repeat
-        textbox.reset()
+        #textbox.reset()
         key_resp.keys = []
         key_resp.rt = []
         _key_resp_allKeys = []
         # keep track of which components have finished
-        trialComponents = [memoryPrompt, textbox, key_resp]
+        trialComponents = [memoryPrompt, key_resp]
         for thisComponent in trialComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -252,7 +252,7 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
             # *memoryPrompt* updates
             if memoryPrompt.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                memoryPrompt.setText(stimlist[a])
+                memoryPrompt.setText("Please try to recall: \n" + stimlist[a])
                 memoryPrompt.frameNStart = frameN  # exact frame index
                 memoryPrompt.tStart = t  # local t and not account for scr refresh
                 memoryPrompt.tStartRefresh = tThisFlipGlobal  # on global time
@@ -263,16 +263,16 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
                 resultdict['Timepoint'], resultdict['Time'] = None,None
             
             # *textbox* updates
-            if textbox.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                textbox.frameNStart = frameN  # exact frame index
-                textbox.tStart = t  # local t and not account for scr refresh
-                textbox.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(textbox, 'tStartRefresh')  # time at next scr refresh
-                textbox.setAutoDraw(True)
-                resultdict['Timepoint'], resultdict['Time'] = 'Text Input Updating', timer.getTime()
-                writer.writerow(resultdict)
-                resultdict['Timepoint'], resultdict['Time'] = None,None
+            # if textbox.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            #     # keep track of start time/frame for later
+            #     textbox.frameNStart = frameN  # exact frame index
+            #     textbox.tStart = t  # local t and not account for scr refresh
+            #     textbox.tStartRefresh = tThisFlipGlobal  # on global time
+            #     win.timeOnFlip(textbox, 'tStartRefresh')  # time at next scr refresh
+            #     textbox.setAutoDraw(True)
+            #     resultdict['Timepoint'], resultdict['Time'] = 'Text Input Updating', timer.getTime()
+            #     writer.writerow(resultdict)
+            #     resultdict['Timepoint'], resultdict['Time'] = None,None
             
             # *key_resp* updates
             waitOnFlip = False
@@ -318,9 +318,9 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
                 thisComponent.setAutoDraw(False)
         trials.addData('memoryPrompt.started', memoryPrompt.tStartRefresh)
         trials.addData('memoryPrompt.stopped', memoryPrompt.tStopRefresh)
-        trials.addData('textbox.text',textbox.text)
-        trials.addData('textbox.started', textbox.tStartRefresh)
-        trials.addData('textbox.stopped', textbox.tStopRefresh)
+        # trials.addData('textbox.text',textbox.text)
+        # trials.addData('textbox.started', textbox.tStartRefresh)
+        # trials.addData('textbox.stopped', textbox.tStopRefresh)
         # check responses
         if key_resp.keys in ['', [], None]:  # No response was made
             key_resp.keys = None
@@ -329,7 +329,7 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
             trials.addData('key_resp.rt', key_resp.rt)
         trials.addData('key_resp.started', key_resp.tStartRefresh)
         trials.addData('key_resp.stopped', key_resp.tStopRefresh)
-        resultdict['Timepoint'], resultdict['Time'], resultdict['Auxillary Data'] = 'Text Input Submitted', timer.getTime(), textbox.text
+        resultdict['Timepoint'], resultdict['Time'] = 'Text Input Submitted', timer.getTime() #textbox.text
         writer.writerow(resultdict)
         resultdict['Timepoint'], resultdict['Time'], resultdict['Auxillary Data'] = None,None,None
         # the Routine "trial" was not non-slip safe, so reset the non-slip timer
@@ -437,7 +437,7 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
             # *text_3* updates
             if text_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                text_3.setText(text=("Press return when you are ready to remember:\n\n" + textbox.text))
+                text_3.setText(text=("Press return when you are ready to remember:\n\n" + stimlist[a]))
                 text_3.frameNStart = frameN  # exact frame index
                 text_3.tStart = t  # local t and not account for scr refresh
                 text_3.tStartRefresh = tThisFlipGlobal  # on global time

@@ -147,7 +147,7 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
     # Initialize components for Routine "Blank"
     BlankClock = core.Clock()
     text_4 = visual.TextStim(win=win, name='text_4',
-        text=' ',
+        text='+',
         font='Arial',
         pos=[0, 0], anchorHoriz='center', anchorVert='center', wrapWidth=None, ori=0, 
         color='black', colorSpace='rgb', opacity=1, 

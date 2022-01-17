@@ -1957,12 +1957,17 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
         instructions03 = instructions1(
             window=Experiment.window, settings=settings,
             instruction_txt=instr_txt3, ready_txt=ready_txt)
-
+        instrimg = visual.ImageStim(win,image=(os.path.dirname(os.path.abspath(__file__)) + "//resources//ZeroBack_Task//0back.jpg"),size=[2,1])
+        
         # skip instruction except run 1
         if experiment_info['Run'] == '1':
             instructions01.show()
             instructions02.show()
             instructions03.show()
+            instrimg.draw()
+            win.flip()
+            event.waitKeys(keyList=['return'])
+            
         else:
             pass
 
@@ -2005,6 +2010,29 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
         if dfile == 'B':
             Experiment.trials = block_b
             #if test
+        nogolis = []
+        zbacklis = []
+        finallist = []
+        for trl in Experiment.trials:
+            if trl['TrialType'] == 'NoGo':
+                nogolis.append(trl)
+            if trl['TrialType'] == 'OneBack':
+                zbacklis.append(trl)
+            c = 0
+            cvt = 0 
+        for enb, bm in enumerate(nogolis):
+            if enb == 0:
+                c = random.randint(3,6)
+            if c != 0:
+                c = c - 1
+                finallist.append(bm)
+            if c == 0:
+                finallist.append(zbacklis[cvt])
+                c = random.randint(3,6)
+                cvt = cvt + 1
+                if cvt == 6:
+                    cvt = 0
+        Experiment.trials = finallist  
         if experiment_info['Environment'] is 'mri':
             # wait trigger
             instructions.waitTrigger(trigger_code)

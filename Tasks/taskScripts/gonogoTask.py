@@ -362,7 +362,7 @@ def HelpWin(myClock, myWin,dfile):
         lines2 = f.read()
     with open(os.path.dirname(os.path.abspath(__file__)) + "//resources//GoNoGo_Task//GoNoGo_instr_3.txt") as f:
         lines3 = f.read()
-    instrTxt1 = visual.TextStim(myWin,text=lines1, height = 0.05, color='black')
+    instrTxt1 = visual.TextStim(myWin,text=lines1,  color='black')
     # For this task, a series of words and pictures framed by a black box will appear in the centre of the screen. \
     # Your job is to press the left button every time a stimulus appears, except when that stimulus is an animal. Then, don't press anything. \n\
     # \nYou will be given around 1 second to respond to each stimulus, after which time, another one will appear. \n\
@@ -370,8 +370,8 @@ def HelpWin(myClock, myWin,dfile):
     # on the keyboard every time a stimulus appear that is more slanted than the one that is normally presented.\n\
     # \n(press the left button to continue)
     #set up instructions and clock (so you can time stamp duration or trials, RT etc..)
-    instrTxt2 = visual.TextStim(myWin,text=lines2, height = 0.05, color='black')
-    instrTxt3 = visual.TextStim(myWin,text=lines3, height = 0.05, color='black')
+    instrTxt2 = visual.TextStim(myWin,text=lines2,  color='black')
+    instrTxt3 = visual.TextStim(myWin,text=lines3,  color='black')
     instrimg = visual.ImageStim(myWin,image=(os.path.dirname(os.path.abspath(__file__)) + "//resources//GoNoGo_Task//Go.jpg"),size=[2,1])
     # Before each part of the task begins, you will be informed what type of stimuli you will have to attend to by a cue in red (WORD, PICTURE or BOX).\n\
     # \nPlease give equal importance to SPEED and ACCURACY when completing this task. We would like you to respond as FAST as possible while maintaining a high \

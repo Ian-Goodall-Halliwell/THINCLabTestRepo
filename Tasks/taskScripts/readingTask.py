@@ -55,7 +55,7 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
 
     # window background color
     win_bg_col = (1.0,1.0,1.0) # background color is white
-    changed_col = (1,-1,-1) # response color is red
+    changed_col = (-1,-1,-1) # response color is red
     win_text_col = (-1,-1,-1)  # text color is black
 
     # instruction, position height (font size)

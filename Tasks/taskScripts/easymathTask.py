@@ -608,7 +608,7 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
     run_stimuli(stimuli_file, runtime)
 
     ## end of the experiment
-    end_exp()
+    #end_exp()
     resultdictWriter('Math Task End',timer,writer)
     # Lucilla would like to discard some volumes at the beginning of the scanning - Xiuyi.
     # That's why she asked her experiment to wait for 4s to start. - Xiuyi

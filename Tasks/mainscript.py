@@ -17,12 +17,63 @@
 
 
 
+
+        
+# Experience sampling questions
+
+# DONE  1.	We need to add a first slide that says “Now we would like you to answer questions about the sorts of thoughts you had while completing the most recent task. Press Enter to continue”
+
+# General Instructions for each branch of the battery
+
+# DONE  Can you add a screen that describes the pairs of tasks that the participants do once before they do either type. For example, for the self and other tasks we could say “The next set of tasks require you decide whether a set of adjectives describe you or your best friend. Press enter to continue” These slides should only happen once
+
+# DONE  Maths: “The next set of tasks will require you to add up pairs of number. Press Enter to continue.”
+
+# DONE  0-back 1 back tasks: “The next set of tasks will require you to make decisions about shapes presented on the screen. Press enter to continue”
+
+# DONE  Reading and memory: “The next set of tasks requires you to read information presented on screen and to remember events from your past. Press enter to continue”.
+
+# DONE  Go/ No Go and finger Tapping. “ The next set of tasks require you to make button presses in response to different stimuli”.
+
+# 
+# DONE # Memory task. 
+
+# DONE        # 2.	This needs to use the items from the list Meichao gave you. Here as a reminder is what I asked for last time so you don’t need to go digging around
+
+# DONE        # “I think we may need to rethink the memory task. Instead of asking them to type in the word, we should instead have a list of events (like party) and then we ask the participants first pick a party that they went to and then think about this event when the fixation cross is on the screen. Ideally this screen could show the cue on screen so help them remember what they are thinking about. I am going to email Meichao for the list of words she used so you can use these.”
+
+# DONE        # These trials need to last less long than 70 seconds since people will only be able to do this for 10 -15 seconnds
+
+# O back / 1 back task
+
+# DONE        3.	Limit the number of repetitions for the 0 back and 1 back task to maximum of 4 before the response trial.
+# DONE        4.	We could show an example of target and response trails for the 0 back and 1 back trials in the intro to each task the same way you did for the go / no go task
+# DONE        5.	The instructions for these tasks are too long (i.e. wide) to fit in the screen
+
+# Finger Tapping
+# DONE        6.	I think it would be easier for participants if between each squre it showed a fixation cross.
+
+# Go / no Go
+
+# DONE        7.	The font size in the instructions for this task is quite small and could be made a little larger.
+
+# Reading Task
+# DONE        8.	It is still showing some words in red ink in this tasks. All of the words should be presented in black ink if possible.
+# DONE        9.	It shows the word “End of Experiment” at the end of each block of this task. Please delete this.
+
+# Maths Task
+# DONE        10.	At the end of each block it shows a very long fixation cross and then says “End of Experiment”. Please delete these.
+
+# DONE        There is one more change I thought of. It would helpful to add a slide at the end of each ‘section’ that says “This is the end of this phase of the experiment. Please take a break if you need to before continuing with the study”. Ideally it would not say this at the end of the study.
+
+
 # Main script written by Ian Goodall-Halliwell. Subscripts are individually credited. Many have been extensively modified, for better or for worse (probably for worse o__o ).
 
 from psychopy import core, visual, gui, event
 import psychopy
 import time
 import csv
+#from Tasks.taskScripts import memoryTask
 import taskScripts
 import os
 import random
@@ -67,7 +118,7 @@ class taskbattery(metadatacollection):
         #self.win = visual.Window(size=(1280, 800),color='white', winType='pyglet',fullscr=True)
         def __init__(self, tasklist, ESQtask, INFO):
                 self.tasklist = tasklist
-                self.ESQtask = ESQtask
+                taskbattery.ESQtask = ESQtask
                 self.INFO = INFO
                 self.taskexeclist = []
                 self.win = visual.Window(size=(1280, 800),color='white', winType='pyglet',fullscr=False)
@@ -92,11 +143,13 @@ class taskbattery(metadatacollection):
                 self.win.flip()
                 
                 
-                for i in self.tasklist:
-                        i.initvers()
-                        i.setver()
+                for en,i in enumerate(self.tasklist):
+                        i.show()
                         i.run()
-                        self.ESQtask.run()
+                        pp = len(self.tasklist)
+                        if en < len(self.tasklist):
+                                i.end()
+                        
 #OPEN THE TRIAL FILES AND CUT THEM INTO BLOCKS
 
 # This creates a class which feeds all the necessary information into the task functions imported from each task file
@@ -187,6 +240,54 @@ class task(taskbattery,metadatacollection):
                 f.close()
                 taskbattery.resultdict = {'Timepoint': None, 'Time': None, 'Is_correct': None, 'Experience Sampling Question': None, 'Experience Sampling Response':None, 'Task' : None, 'Task Iteration': None, 'Participant ID': None,'Response_Key':None, 'Auxillary Data': None}
 
+class taskgroup(taskbattery,metadatacollection):
+        def __init__(self,tasks,instrpath):
+                self.tasks = tasks
+                self.instrpath = instrpath
+                
+                
+                
+        def show(self):
+                text_inst = visual.TextStim(win=taskbattery.win, name='text_4',
+                        text='',
+                        font='Open Sans',
+                        pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+                        color='black', colorSpace='rgb', opacity=None, 
+                        languageStyle='LTR',
+                        depth=0.0)
+                with open(os.path.join(os.getcwd(),self.instrpath)) as f:
+                        lines1 = f.read()
+                text_inst.setText(lines1)
+                text_inst.draw()
+                taskbattery.win.flip()
+                event.waitKeys(keyList=['return'])
+                # taskbattery.win.flip()
+        def run(self):
+                for task in self.tasks:
+                        task.initvers()
+                        task.setver()
+                        task.run()
+                        taskbattery.ESQtask.run()
+                        
+        def end(self):
+                text_inst = visual.TextStim(win=taskbattery.win, name='text_1',
+                        text='This is the end of this phase of the experiment. \n Please take a break if you need to before continuing with the study',
+                        font='Open Sans',
+                        pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+                        color='black', colorSpace='rgb', opacity=None, 
+                        languageStyle='LTR',
+                        depth=0.0)
+                text_inst.draw()
+                taskbattery.win.flip()
+                event.waitKeys(keyList=['return'])
+                taskbattery.win.flip()
+                
+        def shuffle(self):
+                random.shuffle(self.tasks)
+                        
+        
+        
+
 
 
 
@@ -195,7 +296,7 @@ class task(taskbattery,metadatacollection):
 INFO = {
                 'Experiment Seed': '1',  
                 'Subject': '2', 
-                'Block Runtime': 70
+                'Block Runtime': 90
                 }
 
 
@@ -236,19 +337,27 @@ zerobackTask2 = task(taskScripts.zerobackTask, datafile, datafileBackup,"Zero-Ba
 onebackTask2 = task(taskScripts.onebackTask, datafile, datafileBackup,"One-Back Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//ZeroBack_Task//ConditionsSpecifications_ES_oneback.csv', 2)
 easymathTask2 = task(taskScripts.easymathTask, datafile, datafileBackup,"Math Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),"taskScripts/resources/Maths_Task/new_math_stimuli1.csv", 2)
 hardmathTask2 = task(taskScripts.hardmathTask, datafile, datafileBackup,"Math Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),"taskScripts/resources/Maths_Task/new_math_stimuli2.csv", 2)
-# Example of defining a full battery:
-#tasks = list([friendTask2,youTask2,gonogoTask2,fingertapTask2,readingTask2,memTask])
-fulltasklist = [
-        [friendTask,youTask],[gonogoTask,fingertapTask],[readingTask,memTask],[zerobackTask,onebackTask],[easymathTask1,hardmathTask1],
-        [friendTask2,youTask2],[gonogoTask2,fingertapTask2],[readingTask2,memTask2],[zerobackTask2,onebackTask2],[easymathTask2,hardmathTask2]]
+
+
+self_other = taskgroup([friendTask,youTask,friendTask2,youTask2],"taskScripts/resources/group_inst/self_other.txt" )
+gonogo_fingtap = taskgroup([gonogoTask,fingertapTask,gonogoTask2,fingertapTask2],"taskScripts/resources/group_inst/gonogo_fingtap.txt")
+reading_memory = taskgroup([readingTask,memTask,readingTask2,memTask2],"taskScripts/resources/group_inst/reading_memory.txt")
+oneback_zeroback = taskgroup([zerobackTask,onebackTask,zerobackTask2,onebackTask2],"taskScripts/resources/group_inst/oneback_zeroback.txt")
+ezmath_hrdmath = taskgroup([easymathTask1,hardmathTask1,easymathTask2,hardmathTask2],"taskScripts/resources/group_inst/ezmath_hrdmath.txt")
+reading_memory1 = taskgroup([gonogoTask],"taskScripts/resources/group_inst/reading_memory.txt")
+
+
+fulltasklist = [self_other,gonogo_fingtap,reading_memory,oneback_zeroback,ezmath_hrdmath]
+fulltasklist = [reading_memory1]
+
 
 for enum, blk in enumerate(fulltasklist):
-        random.shuffle(blk)
+        blk.shuffle()
 
 random.shuffle(fulltasklist)
 tasks = fulltasklist
 
-tasks = [readingTask2]
+#tasks = [readingTask2]
 
 # Example of task battery using 0-back and 1-back tasks:
 
