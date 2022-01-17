@@ -18,7 +18,7 @@ from psychopy import prefs
 from psychopy import sound, gui, visual, core, data, event, logging, clock, colors
 from psychopy.constants import (NOT_STARTED, STARTED, PLAYING, PAUSED,
                                 STOPPED, FINISHED, PRESSED, RELEASED, FOREVER)
-
+import time
 import numpy as np  # whole numpy lib is available, prepend 'np.'
 from numpy import (sin, cos, tan, log, log10, pi, average,
                    sqrt, std, deg2rad, rad2deg, linspace, asarray)
@@ -543,7 +543,7 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
             if text.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
                 
-                if curtim.getTime() > runtime:
+                if curtim.getTime() > 20:
                     # keep track of stop time/frame for later
                     text.tStop = t  # not accounting for scr refresh
                     text.frameNStop = frameN  # exact frame index
@@ -656,6 +656,7 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
     # Flip one final time so any remaining win.callOnFlip() 
     # and win.timeOnFlip() tasks get executed before quitting
     win.flip()
+    time.sleep(1)
 
     # these shouldn't be strictly necessary (should auto-save)
     thisExp.saveAsWideText(filename+'.csv', delim='auto')

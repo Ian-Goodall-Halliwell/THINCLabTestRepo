@@ -363,6 +363,7 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
             text_inst.setText(cur)
             text_inst.draw()
             win.flip()
+            time.sleep(1)
             event.waitKeys(keyList=['return'])
 
         trialtimer = core.MonotonicClock()
@@ -635,9 +636,9 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
     run_stimuli(stimuli_file,fixa_list, expClock, resultdict, writer)
 
     # end of the experiment
-    end_onset = end_exp()
+    #end_onset = end_exp()
 
-    print ('end onset',end_onset)
+    #print ('end onset',end_onset)
 
 
 
