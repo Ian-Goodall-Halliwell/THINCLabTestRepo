@@ -1,116 +1,230 @@
 METADATA:
 Block Runtime,Experiment Seed,Subject
 90,1,2
-17.63402739999583
+6.348190899996553
 Timepoint,Time,Is_correct,Experience Sampling Question,Experience Sampling Response,Task,Task Iteration,Participant ID,Response_Key,Auxillary Data
-EXPERIMENT DATA:,GoNoGo Task
-Start Time,20.779752100002952
-gonogo START,20.779872300015995,,,,GoNoGo Task,1,1,,
-Go/NoGo Initialized,22.331454099999974,,,,GoNoGo Task,1,1,,
-Stimulus start,23.201635600009467,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,24.452380400005495,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,25.307089300011285,,,,GoNoGo Task,1,1,,Type: NoGo
-Stimulus end,26.563119800004642,True,,,GoNoGo Task,1,1,,Type: NoGo
-Stimulus start,27.416753600002266,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,28.41781680000713,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,29.25990589999128,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,30.514828600018518,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,31.627172800013795,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,32.883081100007985,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,33.984654700005194,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,34.73822870000731,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,35.57401989999926,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,36.827184699999634,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,37.90898199999356,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,38.66071799999918,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,39.740229699993506,,,,GoNoGo Task,1,1,,Type: NoGo
-Stimulus end,40.99385520000942,True,,,GoNoGo Task,1,1,,Type: NoGo
-Stimulus start,41.57330990000628,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,42.57713859999785,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,43.16122569999425,,,,GoNoGo Task,1,1,,Type: NoGo
-Stimulus end,44.161554699996486,True,,,GoNoGo Task,1,1,,Type: NoGo
-Stimulus start,44.96593410000787,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,46.22361390001606,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,47.28137889999198,,,,GoNoGo Task,1,1,,Type: NoGo
-Stimulus end,48.03526370000327,True,,,GoNoGo Task,1,1,,Type: NoGo
-Stimulus start,49.083950600004755,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,50.09055690001696,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,50.90240310001536,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,51.90389810001943,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,52.72340410001925,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,53.729767000011634,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,54.28308600001037,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,55.535603600001195,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,56.615360900003,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,57.869446299999254,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,58.94328050001059,,,,GoNoGo Task,1,1,,Type: NoGo
-Stimulus end,59.94592480000574,True,,,GoNoGo Task,1,1,,Type: NoGo
-Stimulus start,60.7808556999953,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,62.035155000019586,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,62.60710250001284,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,63.36206710000988,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,64.43695220001973,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,65.18880000000354,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,66.26612939999904,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,67.52197709999746,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,68.10577140000532,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,68.85622149999836,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,69.96240079999552,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,70.96827800001483,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,71.55438400001731,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,72.81438110000454,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,73.4214512000035,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,74.17433090001578,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,74.79731210001046,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,75.803694000002,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,76.42401370001608,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,77.4251559000113,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,78.04179710001335,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,79.04355719999876,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,79.64115350000793,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,80.89788870001212,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,81.49224870000035,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,82.49537200000486,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,83.35748530001729,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,84.11394810001366,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,84.72802370000863,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,85.48904040001798,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,86.34745639999164,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,87.60060120001435,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,88.20631080001476,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,89.4665661000181,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,90.3310054000176,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,91.5869437000074,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,92.68533130001742,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,93.69209039999987,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,94.53101710000192,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,95.78674219999812,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,96.61521069999435,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,97.62308720001602,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,98.4614591000136,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,99.21697969999514,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,99.80807640001876,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,100.81509730001562,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,101.64855360001093,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,102.65484080000897,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,103.5138930999965,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,104.26576609999756,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,105.08507339999778,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,105.83615829999326,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,106.68394230000558,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,107.93459429999348,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,108.9984774000186,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,109.75268180001876,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,110.82267950000823,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,111.8281025000033,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,112.3792739000055,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,113.13350470000296,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,113.69332330001635,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,114.69690529999207,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,115.28190960001666,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,116.03697590000229,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,117.10738030000357,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,117.8631863000046,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Stimulus start,118.66288610000629,,,,GoNoGo Task,1,1,,Type: Go
-Stimulus end,119.91818979999516,noResponse,,,GoNoGo Task,1,1,,Type: Go
-Go/NoGo Finished,119.94672189999255,,,,GoNoGo Task,1,1,,
+EXPERIMENT DATA:,Zero-Back Task
+Start Time,1864.8250388999877
+0-Back Start,1864.8251395999978,,,,Zero-Back Task,1,1,,
+NoGoStimulus Start,1868.0309587999946,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1869.2992542999855,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,1871.307713199989,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1872.3548871999956,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,1873.974749099987,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1875.3968357999984,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,1877.5250286000082,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1878.4489283000003,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,1880.0094929999905,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1881.49379149999,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,1883.9580279999936,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1884.53642270001,True,,,Zero-Back Task,1,1,None,ZeroBack
+ZeroBackStimulus Start,1886.482617600006,,,,Zero-Back Task,1,1,,ZeroBack
+ZeroBackStimulus End,1890.5849121999927,False,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,1893.0828656000085,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1893.6334427999973,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,1895.6863909999956,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1896.675171400013,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,1898.5458857000049,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1899.7167164999992,True,,,Zero-Back Task,1,1,None,ZeroBack
+ZeroBackStimulus Start,1901.6034939000092,,,,Zero-Back Task,1,1,,ZeroBack
+ZeroBackStimulus End,1905.765560300002,False,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,1908.050369500008,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1908.7996169000107,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,1910.7414871999936,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1911.8416329000029,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,1913.5527902999893,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1914.8832033000072,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,1916.5289025999955,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1917.9183612999914,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,1919.7455145999847,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1920.9598778999934,True,,,Zero-Back Task,1,1,None,ZeroBack
+ZeroBackStimulus Start,1922.6731617999903,,,,Zero-Back Task,1,1,,ZeroBack
+ZeroBackStimulus End,1927.0090541999962,False,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,1929.3790898000007,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1930.0507846999972,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,1932.1700517999998,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1933.0996056000004,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,1934.866330799996,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1936.1403305999993,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,1938.3317526000028,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1939.1833918000048,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,1941.3719026999897,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1942.224031699996,True,,,Zero-Back Task,1,1,None,ZeroBack
+ZeroBackStimulus Start,1944.2284515000065,,,,Zero-Back Task,1,1,,ZeroBack
+ZeroBackStimulus End,1948.2799598000129,False,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,1950.3253122000024,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1951.321549299988,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,1953.3375650999951,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1954.3635493000038,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,1955.9336607999867,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,1957.4117531999946,True,,,Zero-Back Task,1,1,None,ZeroBack
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,1957.4252887000039
+ESQ,1959.5649810000032,,Future_start,,Experience Sampling Questions,1,1,,
+ESQ,1961.5775659999927,,Future_response,2.0,Experience Sampling Questions,1,1,,Marker Started at 2
+ESQ,1961.5779158000078,,Problem_start,,Experience Sampling Questions,1,1,,
+ESQ,1962.6055389000103,,Problem_response,8.0,Experience Sampling Questions,1,1,,Marker Started at 8
+ESQ,1962.6059527999896,,Other_start,,Experience Sampling Questions,1,1,,
+ESQ,1963.627509199985,,Other_response,8.0,Experience Sampling Questions,1,1,,Marker Started at 8
+ESQ,1963.627894300007,,Knowledge_start,,Experience Sampling Questions,1,1,,
+ESQ,1964.6615337000112,,Knowledge_response,3.0,Experience Sampling Questions,1,1,,Marker Started at 3
+ESQ,1964.6618910999969,,Emotion_start,,Experience Sampling Questions,1,1,,
+ESQ,1965.6896223000076,,Emotion_response,6.0,Experience Sampling Questions,1,1,,Marker Started at 6
+ESQ,1965.6899866999884,,Past_start,,Experience Sampling Questions,1,1,,
+ESQ,1966.7177009999868,,Past_response,8.0,Experience Sampling Questions,1,1,,Marker Started at 8
+ESQ,1966.7180684999912,,Absorption_start,,Experience Sampling Questions,1,1,,
+ESQ,1967.7402449999936,,Absorption_response,3.0,Experience Sampling Questions,1,1,,Marker Started at 3
+ESQ,1967.7405971999979,,Detailed_start,,Experience Sampling Questions,1,1,,
+ESQ,2550.5242156999884,,Detailed_response,8.0,Experience Sampling Questions,1,1,,Marker Started at 8
+ESQ,2550.5246026999957,,Deliberate_start,,Experience Sampling Questions,1,1,,
+ESQ,2551.553070599999,,Deliberate_response,2.0,Experience Sampling Questions,1,1,,Marker Started at 2
+ESQ,2551.553420100012,,Focus_start,,Experience Sampling Questions,1,1,,
+ESQ,2552.579496999999,,Focus_response,2.0,Experience Sampling Questions,1,1,,Marker Started at 2
+ESQ,2552.5798527000006,,Intrusive_start,,Experience Sampling Questions,1,1,,
+ESQ,2553.6010214000125,,Intrusive_response,5.0,Experience Sampling Questions,1,1,,Marker Started at 5
+ESQ,2553.6013674999995,,Distracting_start,,Experience Sampling Questions,1,1,,
+ESQ,2554.6212251000106,,Distracting_response,2.0,Experience Sampling Questions,1,1,,Marker Started at 2
+ESQ,2554.6215869000007,,Self_start,,Experience Sampling Questions,1,1,,
+ESQ,2555.642528700002,,Self_response,6.0,Experience Sampling Questions,1,1,,Marker Started at 6
+ESQ,2555.6428808000055,,Modality_start,,Experience Sampling Questions,1,1,,
+ESQ,2556.6643908999977,,Modality_response,10.0,Experience Sampling Questions,1,1,,Marker Started at 10
+EXPERIMENT DATA:,One-Back Task
+Start Time,2556.677598899987
+0-Back Start,2556.6777072999976,,,,One-Back Task,1,1,,
+NoGoStimulus Start,2561.067437199992,,,,One-Back Task,1,1,,OneBack
+NoGoStimulus End,2562.329806099995,True,,,One-Back Task,1,1,None,OneBack
+NoGoStimulus Start,2564.325798100006,,,,One-Back Task,1,1,,OneBack
+NoGoStimulus End,2565.3716219000053,True,,,One-Back Task,1,1,None,OneBack
+NoGoStimulus Start,2566.990460400004,,,,One-Back Task,1,1,,OneBack
+NoGoStimulus End,2568.4157027000037,True,,,One-Back Task,1,1,None,OneBack
+NoGoStimulus Start,2570.634948799998,,,,One-Back Task,1,1,,OneBack
+NoGoStimulus End,2571.451184400008,True,,,One-Back Task,1,1,None,OneBack
+NoGoStimulus Start,2573.575776599988,,,,One-Back Task,1,1,,OneBack
+NoGoStimulus End,2574.505039999989,True,,,One-Back Task,1,1,None,OneBack
+NoGoStimulus Start,2576.060077000002,,,,One-Back Task,1,1,,OneBack
+NoGoStimulus End,2577.5391800999932,True,,,One-Back Task,1,1,None,OneBack
+OneBackStimulus Start,2579.8950348999933,,,,One-Back Task,1,1,,OneBack
+OneBackStimulus End,2583.5738109000085,False,,,One-Back Task,1,1,None,OneBack
+NoGoStimulus Start,2586.0371473999985,,,,One-Back Task,1,1,,OneBack
+NoGoStimulus End,2586.615348799998,True,,,One-Back Task,1,1,None,OneBack
+NoGoStimulus Start,2589.1095848999976,,,,One-Back Task,1,1,,OneBack
+NoGoStimulus End,2589.6570037000056,True,,,One-Back Task,1,1,None,OneBack
+NoGoStimulus Start,2591.527801599994,,,,One-Back Task,1,1,,OneBack
+NoGoStimulus End,2592.700445399998,True,,,One-Back Task,1,1,None,OneBack
+OneBackStimulus Start,2594.508531700005,,,,One-Back Task,1,1,,OneBack
+OneBackStimulus End,2598.7346884,False,,,One-Back Task,1,1,None,OneBack
+NoGoStimulus Start,2601.0207818000054,,,,One-Back Task,1,1,,OneBack
+NoGoStimulus End,2601.7748905000044,True,,,One-Back Task,1,1,None,OneBack
+NoGoStimulus Start,2603.71705430001,,,,One-Back Task,1,1,,OneBack
+NoGoStimulus End,2604.817286000005,True,,,One-Back Task,1,1,None,OneBack
+NoGoStimulus Start,2606.529100899992,,,,One-Back Task,1,1,,OneBack
+NoGoStimulus End,2607.8581869000045,True,,,One-Back Task,1,1,None,OneBack
+OneBackStimulus Start,2609.5995962999878,,,,One-Back Task,1,1,,OneBack
+OneBackStimulus End,2613.8929302000033,False,,,One-Back Task,1,1,None,OneBack
+NoGoStimulus Start,2615.537537199998,,,,One-Back Task,1,1,,OneBack
+NoGoStimulus End,2616.927861700009,True,,,One-Back Task,1,1,None,OneBack
+NoGoStimulus Start,2618.7558530000097,,,,One-Back Task,1,1,,OneBack
+NoGoStimulus End,2619.9693039999984,True,,,One-Back Task,1,1,None,OneBack
+NoGoStimulus Start,2622.339960000012,,,,One-Back Task,1,1,,OneBack
+NoGoStimulus End,2623.0118033000035,True,,,One-Back Task,1,1,None,OneBack
+NoGoStimulus Start,2625.1280503000016,,,,One-Back Task,1,1,,OneBack
+NoGoStimulus End,2626.0530205999967,True,,,One-Back Task,1,1,None,OneBack
+OneBackStimulus Start,2628.275914400001,,,,One-Back Task,1,1,,OneBack
+OneBackStimulus End,2632.080923200003,False,,,One-Back Task,1,1,None,OneBack
+NoGoStimulus Start,2633.8494550999894,,,,One-Back Task,1,1,,OneBack
+NoGoStimulus End,2635.124131299992,True,,,One-Back Task,1,1,None,OneBack
+NoGoStimulus Start,2637.3119724999997,,,,One-Back Task,1,1,,OneBack
+NoGoStimulus End,2638.1646634000062,True,,,One-Back Task,1,1,None,OneBack
+NoGoStimulus Start,2640.3522325000085,,,,One-Back Task,1,1,,OneBack
+NoGoStimulus End,2641.1991463000013,True,,,One-Back Task,1,1,None,OneBack
+NoGoStimulus Start,2643.244757200009,,,,One-Back Task,1,1,,OneBack
+NoGoStimulus End,2644.24092370001,True,,,One-Back Task,1,1,None,OneBack
+NoGoStimulus Start,2646.254811299994,,,,One-Back Task,1,1,,OneBack
+NoGoStimulus End,2647.2754968999943,True,,,One-Back Task,1,1,None,OneBack
+OneBackStimulus Start,2649.2776027999935,,,,One-Back Task,1,1,,OneBack
+OneBackStimulus End,2653.3110561000067,False,,,One-Back Task,1,1,None,OneBack
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,2655.86020689999
+ESQ,2759.8505353000073,,Future_start,,Experience Sampling Questions,1,1,,
+ESQ,2761.401802600012,,Future_response,9.0,Experience Sampling Questions,1,1,,Marker Started at 9
+ESQ,2761.402159899997,,Past_start,,Experience Sampling Questions,1,1,,
+ESQ,2762.4227716999885,,Past_response,3.0,Experience Sampling Questions,1,1,,Marker Started at 3
+ESQ,2762.423114800011,,Self_start,,Experience Sampling Questions,1,1,,
+ESQ,2763.443958299991,,Self_response,5.0,Experience Sampling Questions,1,1,,Marker Started at 5
+ESQ,2763.444311500003,,Emotion_start,,Experience Sampling Questions,1,1,,
+ESQ,2764.4710924999963,,Emotion_response,4.0,Experience Sampling Questions,1,1,,Marker Started at 4
+ESQ,2764.4714464000135,,Focus_start,,Experience Sampling Questions,1,1,,
+ESQ,2765.499798600009,,Focus_response,10.0,Experience Sampling Questions,1,1,,Marker Started at 10
+ESQ,2765.5001517999917,,Distracting_start,,Experience Sampling Questions,1,1,,
+ESQ,2766.5270155000035,,Distracting_response,7.0,Experience Sampling Questions,1,1,,Marker Started at 7
+ESQ,2766.527374700003,,Problem_start,,Experience Sampling Questions,1,1,,
+ESQ,2767.548723099986,,Problem_response,8.0,Experience Sampling Questions,1,1,,Marker Started at 8
+ESQ,2767.549074699986,,Other_start,,Experience Sampling Questions,1,1,,
+ESQ,2768.569520399993,,Other_response,5.0,Experience Sampling Questions,1,1,,Marker Started at 5
+ESQ,2768.569868099992,,Intrusive_start,,Experience Sampling Questions,1,1,,
+ESQ,2769.59016610001,,Intrusive_response,9.0,Experience Sampling Questions,1,1,,Marker Started at 9
+ESQ,2769.590514999989,,Detailed_start,,Experience Sampling Questions,1,1,,
+ESQ,2770.6104756999994,,Detailed_response,8.0,Experience Sampling Questions,1,1,,Marker Started at 8
+ESQ,2770.610829299985,,Absorption_start,,Experience Sampling Questions,1,1,,
+ESQ,2771.631688499998,,Absorption_response,7.0,Experience Sampling Questions,1,1,,Marker Started at 7
+ESQ,2771.6320340000093,,Deliberate_start,,Experience Sampling Questions,1,1,,
+ESQ,2772.660284599988,,Deliberate_response,6.0,Experience Sampling Questions,1,1,,Marker Started at 6
+ESQ,2772.6606436999864,,Knowledge_start,,Experience Sampling Questions,1,1,,
+ESQ,2773.687596100004,,Knowledge_response,7.0,Experience Sampling Questions,1,1,,Marker Started at 7
+ESQ,2773.6879367000074,,Modality_start,,Experience Sampling Questions,1,1,,
+ESQ,2774.7146973999916,,Modality_response,10.0,Experience Sampling Questions,1,1,,Marker Started at 10
+EXPERIMENT DATA:,Zero-Back Task
+Start Time,2774.728078199987
+0-Back Start,2774.728129700001,,,,Zero-Back Task,1,1,,
+NoGoStimulus Start,2778.1139442999847,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2779.375075899996,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,2781.370547700004,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2782.417027999996,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,2784.03627099999,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2785.4608643999964,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,2787.5763002999884,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2788.4953958000115,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,2790.0490108999948,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2791.5302372000006,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,2793.991659799998,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2794.569191799994,True,,,Zero-Back Task,1,1,None,ZeroBack
+ZeroBackStimulus Start,2796.512256099988,,,,Zero-Back Task,1,1,,ZeroBack
+ZeroBackStimulus End,2800.618039599998,False,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,2803.113848500012,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2803.6669937999977,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,2805.71971949999,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2806.7082171000075,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,2808.5790913999954,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2809.750791700004,True,,,Zero-Back Task,1,1,None,ZeroBack
+ZeroBackStimulus Start,2811.6443523000053,,,,Zero-Back Task,1,1,,ZeroBack
+ZeroBackStimulus End,2815.805995100003,False,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,2818.0930432000023,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2818.8479413999885,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,2820.7942470000125,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2821.8967724000104,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,2823.6098031,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2824.9384048999927,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,2826.5843950000126,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2827.9729654999974,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,2829.802305899997,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2831.0145466999966,True,,,Zero-Back Task,1,1,None,ZeroBack
+ZeroBackStimulus Start,2832.7269322999928,,,,Zero-Back Task,1,1,,ZeroBack
+ZeroBackStimulus End,2837.0643064999895,False,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,2839.435551900009,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2840.1050778999925,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,2842.2193064999883,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2843.147659999988,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,2844.9141185999906,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2846.188887600001,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,2848.376706400013,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2849.223027500004,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,2851.4128985000134,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2852.2655825999973,True,,,Zero-Back Task,1,1,None,ZeroBack
+ZeroBackStimulus Start,2854.2716209999926,,,,Zero-Back Task,1,1,,ZeroBack
+ZeroBackStimulus End,2858.320636199991,False,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,2860.365780299995,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2861.362729799992,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,2863.376876399998,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2864.3971736000094,True,,,Zero-Back Task,1,1,None,ZeroBack
+NoGoStimulus Start,2865.9650389000017,,,,Zero-Back Task,1,1,,ZeroBack
+NoGoStimulus End,2867.4385558000067,True,,,Zero-Back Task,1,1,None,ZeroBack

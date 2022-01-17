@@ -260,6 +260,7 @@ class taskgroup(taskbattery,metadatacollection):
                 text_inst.setText(lines1)
                 text_inst.draw()
                 taskbattery.win.flip()
+                time.sleep(1)
                 event.waitKeys(keyList=['return'])
                 # taskbattery.win.flip()
         def run(self):
@@ -279,6 +280,7 @@ class taskgroup(taskbattery,metadatacollection):
                         depth=0.0)
                 text_inst.draw()
                 taskbattery.win.flip()
+                time.sleep(1)
                 event.waitKeys(keyList=['return'])
                 taskbattery.win.flip()
                 

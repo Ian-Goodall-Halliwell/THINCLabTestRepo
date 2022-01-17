@@ -17,8 +17,8 @@ from itertools import groupby
 df = pd.read_csv(os.path.join(os.getcwd(),'MovieScript//csv//sorted_filmList.csv'))
 
 # separate the dataframe into conditions (cert and uncert)
-cert = df['cert']
-uncert = df['uncert']
+# cert = df['cert']
+# uncert = df['uncert']
 
 # def randomisation(df1,df2):
 #     """Returns randomised list for 1st dataframe given
@@ -314,7 +314,7 @@ def runexp(win):
     # writer.writeheader()
 
     # use trialhandler to sequentially present films listed in filmlist csv file. 
-    filmDict = data.TrialHandler(nReps = 1, method = 'sequential', trialList = data.importConditions('references/filmList.csv'), name = 'filmList') 
+    filmDict = data.TrialHandler(nReps = 1, method = 'sequential', trialList = data.importConditions('MovieScript/csv/filmList.csv'), name = 'filmList') 
 
     # create white window for stimuli to be presented on throughout task. 
     # win = visual.Window(size=[1024, 768], color=[1,1,1,], monitor="testMonitor", fullscr= True, allowGUI = False)
@@ -365,3 +365,4 @@ def runexp(win):
             thought_probes(film[videoCondition], part_number)
 
         outputfile.flush()
+runexp(visual.Window(size=(1280, 800),color='white', winType='pyglet',fullscr=False))
