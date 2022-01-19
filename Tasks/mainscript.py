@@ -198,7 +198,7 @@ class task(taskbattery,metadatacollection):
                 
                 incrordecr = random.choice([-1,1])
                 amnt = random.randint(5,15)
-                self.runtime = self.runtime = amnt*incrordecr
+                self.runtime = self.runtime + amnt*incrordecr
                 with open(self.main_log_location, 'w') as o:
                         metawrite = csv.writer(o)
                         metawrite.writerow(["Runtime Mod",(amnt*incrordecr)])

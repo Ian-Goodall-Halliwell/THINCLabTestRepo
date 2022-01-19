@@ -161,6 +161,7 @@ def new_csv_creator(dictList):
     return csvName
 
 def runexp1(timer, win, writer, resultdict, data,runtime):
+    stimuli_file = data
     ### Initialize variables
 
     # file related
@@ -546,6 +547,8 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
                 #         pass
         
                 count+=1 # the number-th trials that are displaying
+            else:
+                return
 
     # -----------------------------------------------------------------------------------------------------------------------------------------------
     # call the functions defined

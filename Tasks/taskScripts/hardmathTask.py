@@ -157,6 +157,7 @@ def new_csv_creator(dictList):
     return csvName
 
 def runexp1(timer, win, writer, resultdict, data,runtime):
+    stimuli_file = data
     ### Initialize variables
 
     # file related
@@ -233,34 +234,34 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
         core.quit()
 
     # get the participants info, initialize the screen and create a data file for this subject
-    def info_gui(expName):
-        # Set up a dictionary in which we can store our experiment details
-        expInfo={}
-        expInfo['expname'] =expName
-        # Create a string version of the current year/month/day hour/minute
-        expInfo['expdate']=datetime.now().strftime('%Y%m%d_%H%M')
-        expInfo['subjID']=['1','2']
-        # expInfo['subjName']=''
-        # expInfo['run']=''
+    # def info_gui(expName):
+    #     # Set up a dictionary in which we can store our experiment details
+    #     expInfo={}
+    #     expInfo['expname'] =expName
+    #     # Create a string version of the current year/month/day hour/minute
+    #     expInfo['expdate']=datetime.now().strftime('%Y%m%d_%H%M')
+    #     expInfo['subjID']=['1','2']
+    #     # expInfo['subjName']=''
+    #     # expInfo['run']=''
         
-        # Set up our input dialog
-        # Use the 'fixed' argument to stop the user changing the 'expname' parameter
-        # Use the 'order' argument to set the order in which to display the fields
-        #dlg = gui.DlgFromDict(expInfo,title='input data', fixed = ['expname','expdate'],order =['expname','expdate','subjID'])
-        # dlg = gui.DlgFromDict(expInfo,title='input data', fixed = ['expname','expdate'],order =['expname','expdate','subjID','subjName','run'])
+    #     # Set up our input dialog
+    #     # Use the 'fixed' argument to stop the user changing the 'expname' parameter
+    #     # Use the 'order' argument to set the order in which to display the fields
+    #     #dlg = gui.DlgFromDict(expInfo,title='input data', fixed = ['expname','expdate'],order =['expname','expdate','subjID'])
+    #     # dlg = gui.DlgFromDict(expInfo,title='input data', fixed = ['expname','expdate'],order =['expname','expdate','subjID','subjName','run'])
 
-        #if not dlg.OK:
-        #    print ('User cancelled the experiment')
-        #    core.quit()
+    #     #if not dlg.OK:
+    #     #    print ('User cancelled the experiment')
+    #     #    core.quit()
     
-        # creates a file with a name that is absolute path + info collected from GUI
-        # filename = data_folder + os.sep + '%s_%s_%s_%s.csv' %(expInfo['subjID'], expInfo['subjName'], expInfo['expdate'],expInfo['run'])
-        # filename_fixa = data_folder + os.sep + '%s_%s_%s_%s_fixa.csv' %(expInfo['subjID'], expInfo['subjName'], expInfo['expdate'],expInfo['run'])
-        #filename = data_folder + os.sep + '%s_%s_.csv' %(expInfo['subjID'], expInfo['expdate'])
-        #filename_fixa = data_folder + os.sep + '%s_%s_fixa.csv' %(expInfo['subjID'], expInfo['expdate'])
+    #     # creates a file with a name that is absolute path + info collected from GUI
+    #     # filename = data_folder + os.sep + '%s_%s_%s_%s.csv' %(expInfo['subjID'], expInfo['subjName'], expInfo['expdate'],expInfo['run'])
+    #     # filename_fixa = data_folder + os.sep + '%s_%s_%s_%s_fixa.csv' %(expInfo['subjID'], expInfo['subjName'], expInfo['expdate'],expInfo['run'])
+    #     #filename = data_folder + os.sep + '%s_%s_.csv' %(expInfo['subjID'], expInfo['expdate'])
+    #     #filename_fixa = data_folder + os.sep + '%s_%s_fixa.csv' %(expInfo['subjID'], expInfo['expdate'])
         
-        stimuli_file = data
-        return expInfo, filename,stimuli_file,filename_fixa
+    #     stimuli_file = data
+    #     return stimuli_file,filename_fixa
     # to avoid overwriting the data. Check whether the file exists, if not, create a new one and write the header.
     # Otherwise, rename it - repeat_n
     # correct
@@ -397,7 +398,7 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
         #write_header(filename,headers)
         
         # open the fixation file     
-        f=open(filename_fixa,'a')
+        #f=open(filename_fixa,'a')
         
         # prepare fixation and blank screen for drawing
         fixa = prep_cont('+',word_pos)
@@ -542,7 +543,8 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
                 #         pass
         
                 count+=1 # the number-th trials that are displaying
-
+            else:
+                return
     # -----------------------------------------------------------------------------------------------------------------------------------------------
     # call the functions defined
     # get the current directory
@@ -552,8 +554,8 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
     #makedir(data_folder)
 
     # record subjects info and create a csv file with the info about subjects
-    expInfo, filename, stimuli_file,filename_fixa = info_gui(expName)
-
+    # stimuli_file,filename_fixa = info_gui(expName)
+    
     # if the data does not exist, create one, otherwise,  rename one –filename-repeat-n
     #write_file_not_exist(filename)
     #write_file_not_exist(filename_fixa)
