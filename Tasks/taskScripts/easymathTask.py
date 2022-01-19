@@ -268,16 +268,16 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
     # to avoid overwriting the data. Check whether the file exists, if not, create a new one and write the header.
     # Otherwise, rename it - repeat_n
     # correct
-    def write_file_not_exist(filename):
-        repeat_n = 1
-        while True:
-            if not os.path.isfile(filename):
-                f = open(filename,'w')
-            # f.write(header)F
-                break
-            else:
-                filename = data_folder + os.sep + '%s_%s_repeat_%s.csv' %(expInfo['subjID'], expInfo['expdate'],str(repeat_n))
-                repeat_n = repeat_n +  1
+    # def write_file_not_exist(filename):
+    #     repeat_n = 1
+    #     while True:
+    #         if not os.path.isfile(filename):
+    #             f = open(filename,'w')
+    #         # f.write(header)F
+    #             break
+    #         else:
+    #             filename = data_folder + os.sep + '%s_%s_repeat_%s.csv' %(expInfo['subjID'], expInfo['expdate'],str(repeat_n))
+    #             repeat_n = repeat_n +  1
 
     # Open a csv file, read through from the first row   # correct
     def load_conditions_dict(conditionfile):
@@ -306,18 +306,18 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
     # create the header
 
                 
-    def write_header(filename, header):
-        with open (filename,'a') as csvfile:
-            fieldnames = header
-            data_file = csv.DictWriter(csvfile,fieldnames=fieldnames,lineterminator ='\n')
-            data_file.writeheader()
+    # def write_header(filename, header):
+    #     with open (filename,'a') as csvfile:
+    #         fieldnames = header
+    #         data_file = csv.DictWriter(csvfile,fieldnames=fieldnames,lineterminator ='\n')
+    #         data_file.writeheader()
             
     #write each trial
-    def write_trial(filename,header,trial):
-        with open (filename,'a') as csvfile:
-            fieldnames = header
-            data_file = csv.DictWriter(csvfile,fieldnames=fieldnames,lineterminator ='\n')
-            data_file.writerow(trial)
+    # def write_trial(filename,header,trial):
+    #     with open (filename,'a') as csvfile:
+    #         fieldnames = header
+    #         data_file = csv.DictWriter(csvfile,fieldnames=fieldnames,lineterminator ='\n')
+    #         data_file.writerow(trial)
             
     # set up the window
     # fullscr: better timing can be achieved in full-screen mode
@@ -398,10 +398,10 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
         headers += ['i_trial_onset','trial_onset','choice_onset','blank_r_onset', 'RT', 'correct','KeyPress']   
         # open the result file to write the header
         
-        write_header(filename,headers)
+        #write_header(filename,headers)
         
         # open the fixation file     
-        f=open(filename_fixa,'a')
+        #f=open(filename_fixa,'a')
         
         # prepare fixation and blank screen for drawing
         fixa = prep_cont('+',word_pos)
@@ -419,7 +419,7 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
         # write the fixation time into the fixation.csv file    
         fixa_numth = 1  
         blockfixa_onset_abs = 0
-        f.write('%f,%.2f\n'% (fixa_numth, blockfixa_onset_abs))
+        #f.write('%f,%.2f\n'% (fixa_numth, blockfixa_onset_abs))
         # draw the first long fixation and flip the window 
 
         fixa.draw()
@@ -519,31 +519,31 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
                 # trial['blank_r_onset']=blank_r_onset - run_onset
 
             
-                write_trial(filename,headers,trial)     # calls the function that writes csv output
+                #write_trial(filename,headers,trial)     # calls the function that writes csv output
                 
         # display the long fixation after every 20 trials.
         # But at the end of all the trials, the fixation time is posttrialFixDur (16s).
         # Otherwise, it is pretrialFixDur (15s)
 
-                if count % 20 ==0:
-                    fixa_numth += 1
-                    if count!=80:
-                        fixa_time = pretrialFixDur
-                    else:
-                        fixa_time = posttrialFixDur
+                # if count % 20 ==0:
+                #     fixa_numth += 1
+                #     if count!=80:
+                #         fixa_time = pretrialFixDur
+                #     else:
+                #         fixa_time = posttrialFixDur
                         
-                    fixa.draw()
-                    timetodraw = ideal_trial_onset + trial_time
-                    while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
-                        pass
+                #     fixa.draw()
+                #     timetodraw = ideal_trial_onset + trial_time
+                #     while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
+                #         pass
                         
-                    blockfixa_onset=win.flip()
-                    blockfixa_onset_abs = blockfixa_onset - run_onset
-                    f.write('%f,%.2f\n'% (fixa_numth, blockfixa_onset_abs)) 
+                #     blockfixa_onset=win.flip()
+                #     blockfixa_onset_abs = blockfixa_onset - run_onset
+                #     #f.write('%f,%.2f\n'% (fixa_numth, blockfixa_onset_abs)) 
                     
-                    timetodraw = ideal_trial_onset + trial_time + fixa_time
-                    while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
-                        pass
+                #     timetodraw = ideal_trial_onset + trial_time + fixa_time
+                #     while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
+                #         pass
         
                 count+=1 # the number-th trials that are displaying
 
@@ -559,8 +559,8 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
     expInfo, filename, stimuli_file,filename_fixa = info_gui(expName)
 
     # if the data does not exist, create one, otherwise,  rename one –filename-repeat-n
-    write_file_not_exist(filename)
-    write_file_not_exist(filename_fixa)
+    # write_file_not_exist(filename)
+    # write_file_not_exist(filename_fixa)
     # set up the window to display the instruction
     win = set_up_window()
 

@@ -66,6 +66,15 @@
 
 # DONE        There is one more change I thought of. It would helpful to add a slide at the end of each ‘section’ that says “This is the end of this phase of the experiment. Please take a break if you need to before continuing with the study”. Ideally it would not say this at the end of the study.
 
+# In terms of feedback here are things that need to be fixed.
+# 1.	The example slides showing the trial types for the 0 back and 1 back are wrong (i.e. the slides are with the wrong task)
+# 2.	There were examples of the 1 back trials which were impossible (i.e. I saw a triangle when the prio slide only had circles and squares)
+# 3.	Lets specific the people use the space bar for the finger tapping task rather than letting them select whichever key they like.
+# 4.	The box in the finger tapping task looks black to me but the instructions refer to it as grey. This may confuse participants so lets make them more aligned.
+
+
+
+
 
 # Main script written by Ian Goodall-Halliwell. Subscripts are individually credited. Many have been extensively modified, for better or for worse (probably for worse o__o ).
 
@@ -186,6 +195,13 @@ class task(taskbattery,metadatacollection):
                         l.append(row)
                         print(row)
                 self.l = l
+                
+                incrordecr = random.choice([-1,1])
+                amnt = random.randint(5,15)
+                self.runtime = self.runtime = amnt*incrordecr
+                with open(self.main_log_location, 'w') as o:
+                        metawrite = csv.writer(o)
+                        metawrite.writerow(["Runtime Mod",(amnt*incrordecr)])
         def setver(self):
                 ###
                 ###   ###   NEED TO LOAD THE FILES FROM CSV AND PRESERVE THE HEADERS, THEN PUT THE OLD HEADERS INTO THE NEW BLOCK CSVs
@@ -327,6 +343,8 @@ zerobackTask = task(taskScripts.zerobackTask, datafile, datafileBackup,"Zero-Bac
 onebackTask = task(taskScripts.onebackTask, datafile, datafileBackup,"One-Back Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//ZeroBack_Task//ConditionsSpecifications_ES_oneback.csv', 1)
 easymathTask1 = task(taskScripts.easymathTask, datafile, datafileBackup,"Math Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),"taskScripts/resources/Maths_Task/new_math_stimuli1.csv", 1)
 hardmathTask1 = task(taskScripts.hardmathTask, datafile, datafileBackup,"Math Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),"taskScripts/resources/Maths_Task/new_math_stimuli2.csv", 1)
+movieTask1 = task(taskScripts.movieTask, datafile, datafileBackup,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'taskScripts//resources//Movie_Task//csv//sorted_filmList.csv', 1)
+
 #Block 2
 
 friendTask2 = task(taskScripts.otherTask, datafile, datafileBackup, "Friend Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources/Other_Task/Other_Stimuli.csv', 2)
@@ -339,18 +357,19 @@ zerobackTask2 = task(taskScripts.zerobackTask, datafile, datafileBackup,"Zero-Ba
 onebackTask2 = task(taskScripts.onebackTask, datafile, datafileBackup,"One-Back Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//ZeroBack_Task//ConditionsSpecifications_ES_oneback.csv', 2)
 easymathTask2 = task(taskScripts.easymathTask, datafile, datafileBackup,"Math Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),"taskScripts/resources/Maths_Task/new_math_stimuli1.csv", 2)
 hardmathTask2 = task(taskScripts.hardmathTask, datafile, datafileBackup,"Math Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),"taskScripts/resources/Maths_Task/new_math_stimuli2.csv", 2)
-
+movieTask2 = task(taskScripts.movieTask, datafile, datafileBackup,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'taskScripts//resources//Movie_Task//csv//sorted_filmList.csv', 2)
 
 self_other = taskgroup([friendTask,youTask,friendTask2,youTask2],"taskScripts/resources/group_inst/self_other.txt" )
 gonogo_fingtap = taskgroup([gonogoTask,fingertapTask,gonogoTask2,fingertapTask2],"taskScripts/resources/group_inst/gonogo_fingtap.txt")
 reading_memory = taskgroup([readingTask,memTask,readingTask2,memTask2],"taskScripts/resources/group_inst/reading_memory.txt")
 oneback_zeroback = taskgroup([zerobackTask,onebackTask,zerobackTask2,onebackTask2],"taskScripts/resources/group_inst/oneback_zeroback.txt")
 ezmath_hrdmath = taskgroup([easymathTask1,hardmathTask1,easymathTask2,hardmathTask2],"taskScripts/resources/group_inst/ezmath_hrdmath.txt")
-reading_memory1 = taskgroup([gonogoTask],"taskScripts/resources/group_inst/reading_memory.txt")
+movie_main = taskgroup([movieTask1,movieTask2],"taskScripts/resources/group_inst/movie_main.txt")
+#reading_memory1 = taskgroup([gonogoTask],"taskScripts/resources/group_inst/reading_memory.txt")
 
 
-fulltasklist = [self_other,gonogo_fingtap,reading_memory,oneback_zeroback,ezmath_hrdmath]
-#fulltasklist = [reading_memory]
+#fulltasklist = [self_other,gonogo_fingtap,reading_memory,oneback_zeroback,ezmath_hrdmath]
+fulltasklist = [ezmath_hrdmath]
 #fulltasklist = [reading_memory1]
 
 

@@ -1956,7 +1956,7 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime, dfile,seed):
         instructions03 = instructions1(
             window=Experiment.window, settings=settings,
             instruction_txt=instr_txt3, ready_txt=ready_txt)
-        instrimg = visual.ImageStim(win,image=(os.path.dirname(os.path.abspath(__file__)) + "//resources//OneBack_Task//1back.jpg"),size=[2,1])
+        instrimg = visual.ImageStim(win,image=(os.path.dirname(os.path.abspath(__file__)) + "//resources//ZeroBack_Task//0back.jpg"),size=[2,1])
         # skip instruction except run 1
         if experiment_info['Run'] == '1':
             instructions01.show()

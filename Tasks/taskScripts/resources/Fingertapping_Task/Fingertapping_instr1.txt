@@ -1,1 +1,2 @@
-In this task you will be asked to press a key on the keyboard in time with the presentation of a grey square.
+In this task you will be asked to press the space bar on the keyboard 
+in time with the presentation of a black square.
