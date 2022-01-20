@@ -2019,7 +2019,9 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
             if trl['TrialType'] == 'OneBack':
                 zbacklis.append(trl)
             c = 0
-            cvt = 0 
+            cvt = 0
+        zbacklis.extend(zbacklis)
+        zbacklis.extend(zbacklis)
         for enb, bm in enumerate(nogolis):
             if enb == 0:
                 c = random.randint(3,6)
@@ -2035,8 +2037,8 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
                 finallist.append(tmper)
                 c = random.randint(3,6)
                 cvt = cvt + 1
-                if cvt == 6:
-                    cvt = 0
+                # if cvt == 6:
+                #     cvt = 0
         Experiment.trials = finallist  
         if experiment_info['Environment'] is 'mri':
             # wait trigger

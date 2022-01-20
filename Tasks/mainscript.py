@@ -130,7 +130,7 @@ class taskbattery(metadatacollection):
                 taskbattery.ESQtask = ESQtask
                 self.INFO = INFO
                 self.taskexeclist = []
-                self.win = visual.Window(size=(1280, 800),color='white', winType='pyglet',fullscr=False)
+                self.win = visual.Window(size=(1440, 1080),color='white', winType='pyglet',fullscr=False)
                 self.text = text_2 = visual.TextStim(win=self.win, name='text_2',
                         text='Experiment starting placeholder',
                         font='Arial',
@@ -280,11 +280,12 @@ class taskgroup(taskbattery,metadatacollection):
                 event.waitKeys(keyList=['return'])
                 # taskbattery.win.flip()
         def run(self):
-                for task in self.tasks:
-                        task.initvers()
-                        task.setver()
-                        task.run()
-                        taskbattery.ESQtask.run()
+                for taskgrp in self.tasks:
+                        for task in taskgrp:
+                                task.initvers()
+                                task.setver()
+                                task.run()
+                                taskbattery.ESQtask.run()
                         
         def end(self):
                 text_inst = visual.TextStim(win=taskbattery.win, name='text_1',
@@ -359,17 +360,17 @@ easymathTask2 = task(taskScripts.easymathTask, datafile, datafileBackup,"Math Ta
 hardmathTask2 = task(taskScripts.hardmathTask, datafile, datafileBackup,"Math Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),"taskScripts/resources/Maths_Task/new_math_stimuli2.csv", 2)
 movieTask2 = task(taskScripts.movieTask, datafile, datafileBackup,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'taskScripts//resources//Movie_Task//csv//sorted_filmList.csv', 2)
 
-self_other = taskgroup([friendTask,youTask,friendTask2,youTask2],"taskScripts/resources/group_inst/self_other.txt" )
-gonogo_fingtap = taskgroup([gonogoTask,fingertapTask,gonogoTask2,fingertapTask2],"taskScripts/resources/group_inst/gonogo_fingtap.txt")
-reading_memory = taskgroup([readingTask,memTask,readingTask2,memTask2],"taskScripts/resources/group_inst/reading_memory.txt")
-oneback_zeroback = taskgroup([zerobackTask,onebackTask,zerobackTask2,onebackTask2],"taskScripts/resources/group_inst/oneback_zeroback.txt")
-ezmath_hrdmath = taskgroup([easymathTask1,hardmathTask1,easymathTask2,hardmathTask2],"taskScripts/resources/group_inst/ezmath_hrdmath.txt")
-movie_main = taskgroup([movieTask1,movieTask2],"taskScripts/resources/group_inst/movie_main.txt")
-#reading_memory1 = taskgroup([gonogoTask],"taskScripts/resources/group_inst/reading_memory.txt")
+self_other = taskgroup([[friendTask,friendTask2],[youTask,youTask2]],"taskScripts/resources/group_inst/self_other.txt" )
+gonogo_fingtap = taskgroup([[gonogoTask,gonogoTask2],[fingertapTask,fingertapTask2]],"taskScripts/resources/group_inst/gonogo_fingtap.txt")
+reading_memory = taskgroup([[readingTask,readingTask2],[memTask,memTask2]],"taskScripts/resources/group_inst/reading_memory.txt")
+oneback_zeroback = taskgroup([[zerobackTask,zerobackTask2],[onebackTask,onebackTask2]],"taskScripts/resources/group_inst/oneback_zeroback.txt")
+ezmath_hrdmath = taskgroup([[easymathTask1,easymathTask2],[hardmathTask1,hardmathTask2]],"taskScripts/resources/group_inst/ezmath_hrdmath.txt")
+movie_main = taskgroup([[movieTask1,movieTask2]],"taskScripts/resources/group_inst/movie_main.txt")
+reading_memory1 = taskgroup([[onebackTask,movieTask2]],"taskScripts/resources/group_inst/reading_memory.txt")
 
 
-#fulltasklist = [self_other,gonogo_fingtap,reading_memory,oneback_zeroback,ezmath_hrdmath]
-fulltasklist = [ezmath_hrdmath]
+##fulltasklist = [self_other,gonogo_fingtap,reading_memory,oneback_zeroback,ezmath_hrdmath,movie_main]
+fulltasklist = [reading_memory1]
 #fulltasklist = [reading_memory1]
 
 
