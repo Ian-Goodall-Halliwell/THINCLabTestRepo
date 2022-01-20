@@ -1,0 +1,2 @@
+TrialIndex,Condition,TrialType,fix_duration,stim_duration,stimPicLeft,stimPicRight,stimPicMid,Ans,fixStart,stimStart,keyResp,resp,respCORR,respRT,IDNO,Run
+0,OneBack,NoGo,1.7550690257394217,1.2449309742605783,c:\Users\Adjunct\Documents\GitHub\THINCLabTestRepo\Tasks\taskScripts//resources//ZeroBack_Task//stimuli//triangle.png,c:\Users\Adjunct\Documents\GitHub\THINCLabTestRepo\Tasks\taskScripts//resources//ZeroBack_Task//stimuli//square.png,,NA,1570.0728423999972,1571.876253399998,None,None,,nan,001,1

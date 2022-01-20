@@ -153,11 +153,13 @@ class taskbattery(metadatacollection):
                 
                 
                 for en,i in enumerate(self.tasklist):
+                        os.chdir(os.path.dirname(os.path.realpath(__file__)))
                         i.show()
                         i.run()
                         pp = len(self.tasklist)
                         if en < len(self.tasklist):
                                 i.end()
+                        
                         
 #OPEN THE TRIAL FILES AND CUT THEM INTO BLOCKS
 
@@ -184,7 +186,10 @@ class task(taskbattery,metadatacollection):
                 try:
                         f = open(os.path.join(os.getcwd(), self.dfile), 'r')
                 except:
-                        f = open(os.path.join(os.path.join(os.getcwd(),'taskScripts'), self.dfile), 'r')
+                        try:
+                                f = open(os.path.join(os.path.join(os.getcwd(),'taskScripts'), self.dfile), 'r')
+                        except:
+                                f = open(os.path.join(os.getcwd(), self.dfile), 'r')
                 d_reader = csv.DictReader(f)
 
                 #get fieldnames from DictReader object and store in list
@@ -369,8 +374,8 @@ movie_main = taskgroup([[movieTask1,movieTask2]],"taskScripts/resources/group_in
 reading_memory1 = taskgroup([[onebackTask,movieTask2]],"taskScripts/resources/group_inst/reading_memory.txt")
 
 
-##fulltasklist = [self_other,gonogo_fingtap,reading_memory,oneback_zeroback,ezmath_hrdmath,movie_main]
-fulltasklist = [reading_memory1]
+fulltasklist = [self_other,gonogo_fingtap,reading_memory,oneback_zeroback,ezmath_hrdmath,movie_main]
+#fulltasklist = [reading_memory1]
 #fulltasklist = [reading_memory1]
 
 
