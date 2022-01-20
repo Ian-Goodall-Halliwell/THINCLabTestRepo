@@ -344,7 +344,7 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
             routineTimer.add(3.000000)
             # update component parameters for each repeat
             # keep track of which components have finished
-            text_2.setText(np.random.choice(["Now tap in time with the grey square using you left hand","Now tap in time with the grey square using you right hand"])) 
+            text_2.setText(np.random.choice(["Now tap in time with the black square using you left hand","Now tap in time with the black square using you right hand"])) 
             Finger_tapComponents = [text_2]
             for thisComponent in Finger_tapComponents:
                 thisComponent.tStart = None

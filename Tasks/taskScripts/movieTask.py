@@ -101,10 +101,10 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
     \nIf at any point, you become distressed and would like to stop the task, please inform the experimenter. You will not be penalised for withdrawing from the study. 
     \nAt the end of each task block, you will be asked to rate several statements about the ongoing thoughts you experienced during that block. 
     \nTo rate these statements, hold 1 to move the marker left along the slider and hold 2 to move the marker right along the slider. When you are happy with your selection, please press 4 to move on to the next statement. 
-    \nPress 1 to begin the experiment."""
+    \nPress return to begin the experiment."""
 
     # user can update start screen text here if required. 
-    start_screen = "The experiment is about to start. Press 5 to continue."
+    start_screen = "The experiment is about to start. Press return to continue."
 
 
     # use trialhandler to sequentially present films listed in filmlist csv file. 
