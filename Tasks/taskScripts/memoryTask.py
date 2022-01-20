@@ -252,7 +252,7 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
             # *memoryPrompt* updates
             if memoryPrompt.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                memoryPrompt.setText("Please try to recall: \n" + stimlist[a])
+                memoryPrompt.setText("We would like you to think about a memory related to the word {}. \n Please decide on an event from your life that is related to {}. \n Press enter when you have done this.".format(stimlist[a],stimlist[a]))
                 memoryPrompt.frameNStart = frameN  # exact frame index
                 memoryPrompt.tStart = t  # local t and not account for scr refresh
                 memoryPrompt.tStartRefresh = tThisFlipGlobal  # on global time
@@ -437,7 +437,7 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
             # *text_3* updates
             if text_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                text_3.setText(text=("Press return when you are ready to remember:\n\n" + stimlist[a]))
+                text_3.setText(text=("Now we would like you to think about this event. Please press enter when you are ready to begin."))
                 text_3.frameNStart = frameN  # exact frame index
                 text_3.tStart = t  # local t and not account for scr refresh
                 text_3.tStartRefresh = tThisFlipGlobal  # on global time
