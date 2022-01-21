@@ -91,9 +91,9 @@ os.chdir(os.path.dirname(os.path.realpath(__file__)))
 # It contains the number of repetitions and a global runtime variable.
 # It also contains the subject ID, and will eventually use the experiment seed to randomize trial order.
 class metadatacollection():
-        def __init__(self, INFO, main_log_location):
+        def __init__(self,INFO):#, main_log_location):
                 self.INFO = INFO
-                self.main_log_location = main_log_location
+                #self.main_log_location = main_log_location
 
                 # Don't really know what this is, best to leave it be probably
                 self.sbINFO = "Test"
@@ -105,10 +105,10 @@ class metadatacollection():
 
         # This writes info collected from the GUI into the logfile
         def collect_metadata(self):  
-                print(os.getcwd())
-                if os.path.exists(self.main_log_location): 
-                        os.remove(self.main_log_location)
-                f = open(self.main_log_location, 'w')
+                print(os.path.join(os.getcwd()+self.sbINFO.data[2]))
+                if os.path.exists(os.path.join(os.getcwd()+self.sbINFO.data[2])): 
+                        os.remove(os.path.join(os.getcwd()+self.sbINFO.data[2]))
+                f = open(os.path.join(os.getcwd()+self.sbINFO.data[2]), 'w')
                 metawriter = csv.writer(f)
                 metawriter.writerow(["METADATA:"])
                 metawriter.writerow(self.sbINFO.inputFieldNames)
@@ -333,7 +333,7 @@ datafile = str(os.path.dirname(os.path.realpath(__file__)) + '/log_file/testfull
 datafileBackup = 'log_file/testfullbackup.csv'
 
 # Run the GUI and save output to logfile
-metacoll = metadatacollection(INFO, datafile)
+metacoll = metadatacollection(INFO)
 metacoll.rungui()
 metacoll.collect_metadata()
 

@@ -55,11 +55,11 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
     thisExp = data.ExperimentHandler(name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
         originPath='C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\TaskFiles\\Psychopy_Files\\exp.py',
-        savePickle=True, saveWideText=True,
-        dataFileName=filename)
+        savePickle=True, saveWideText=True)
+        #dataFileName=filename)
     # save a log file for detail verbose info
-    logFile = logging.LogFile(filename+'.log', level=logging.EXP)
-    logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a file
+    #logFile = logging.LogFile(filename+'.log', level=logging.EXP)
+    #logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a file
 
     endExpNow = False  # flag for 'escape' or other condition => quit the exp
     frameTolerance = 0.001  # how close to onset before 'same' frame
@@ -659,8 +659,8 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
     time.sleep(1)
 
     # these shouldn't be strictly necessary (should auto-save)
-    thisExp.saveAsWideText(filename+'.csv', delim='auto')
-    thisExp.saveAsPickle(filename)
-    logging.flush()
+    #thisExp.saveAsWideText(filename+'.csv', delim='auto')
+    #thisExp.saveAsPickle(filename)
+    #logging.flush()
     # make sure everything is closed down
     

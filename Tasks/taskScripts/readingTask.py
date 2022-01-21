@@ -600,7 +600,7 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
     curr_dic = get_pwd()
 
     # make a directory – data to store the generated data
-    makedir(data_folder)
+    #makedir(data_folder)
     expInfo={}
     expInfo['expname'] =expName
         # Create a string version of the current year/month/day hour/minute
@@ -612,7 +612,7 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
     filename, stimuli_file, fixa_file = 'testdataread.csv', dfile ,os.path.dirname(os.path.abspath(__file__))+ "//resources//Reading_Task//sem_fixa_run.csv"
 
     # if the data does not exist, create one, otherwise,  rename one –filename-repeat-n
-    write_file_not_exist(filename)
+    #write_file_not_exist(filename)
 
     # set up the window to display the instruction
     #win = set_up_window()

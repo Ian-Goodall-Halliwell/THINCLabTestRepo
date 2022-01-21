@@ -1,48 +1,37 @@
-Runtime Mod,9
-EXPERIMENT DATA:,Zero-Back Task
-Start Time,1681.521468699968
-0-Back Start,1681.5215547999833,,,,Zero-Back Task,1,1,,
-NoGoStimulus Start,1685.5681859999895,,,,Zero-Back Task,1,1,,ZeroBack
-NoGoStimulus End,1686.8621344999992,True,,,Zero-Back Task,1,1,None,ZeroBack
-NoGoStimulus Start,1688.884047599975,,,,Zero-Back Task,1,1,,ZeroBack
-NoGoStimulus End,1689.9357037000009,True,,,Zero-Back Task,1,1,None,ZeroBack
-NoGoStimulus Start,1691.5887249999796,,,,Zero-Back Task,1,1,,ZeroBack
-NoGoStimulus End,1693.0269467000035,True,,,Zero-Back Task,1,1,None,ZeroBack
-NoGoStimulus Start,1695.1683476999751,,,,Zero-Back Task,1,1,,ZeroBack
-NoGoStimulus End,1696.1103007000056,True,,,Zero-Back Task,1,1,None,ZeroBack
-NoGoStimulus Start,1697.6916031999863,,,,Zero-Back Task,1,1,,ZeroBack
-NoGoStimulus End,1699.1767780999653,True,,,Zero-Back Task,1,1,None,ZeroBack
-NoGoStimulus Start,1701.6671003999654,,,,Zero-Back Task,1,1,,ZeroBack
-NoGoStimulus End,1702.2580407999922,True,,,Zero-Back Task,1,1,None,ZeroBack
-ZeroBackStimulus Start,1704.2346304999664,,,,Zero-Back Task,1,1,,ZeroBack
-ZeroBackStimulus End,1708.3596156999702,False,,,Zero-Back Task,1,1,None,ZeroBack
-EXPERIMENT DATA:,Experience Sampling Questions
-Start Time,1708.4174223999726
-ESQ,5657.456155699969,,Other_start,,Experience Sampling Questions,1,1,,
-ESQ,5659.540578199958,,Other_response,3.0,Experience Sampling Questions,1,1,,Marker Started at 3
-ESQ,5659.541273299954,,Future_start,,Experience Sampling Questions,1,1,,
-ESQ,5660.582249699975,,Future_response,7.0,Experience Sampling Questions,1,1,,Marker Started at 7
-ESQ,5660.582940499997,,Absorption_start,,Experience Sampling Questions,1,1,,
-ESQ,5661.631627800001,,Absorption_response,2.0,Experience Sampling Questions,1,1,,Marker Started at 2
-ESQ,5661.6323543000035,,Deliberate_start,,Experience Sampling Questions,1,1,,
-ESQ,5662.683595199953,,Deliberate_response,10.0,Experience Sampling Questions,1,1,,Marker Started at 10
-ESQ,5662.684280799993,,Focus_start,,Experience Sampling Questions,1,1,,
-ESQ,5664.839655699965,,Focus_response,6.0,Experience Sampling Questions,1,1,,Marker Started at 6
-ESQ,5664.840336399968,,Self_start,,Experience Sampling Questions,1,1,,
-ESQ,5665.881072599965,,Self_response,8.0,Experience Sampling Questions,1,1,,Marker Started at 8
-ESQ,5665.881764099991,,Knowledge_start,,Experience Sampling Questions,1,1,,
-ESQ,5666.94911809999,,Knowledge_response,5.0,Experience Sampling Questions,1,1,,Marker Started at 5
-ESQ,5666.94980209996,,Modality_start,,Experience Sampling Questions,1,1,,
-ESQ,5667.997930299956,,Modality_response,4.0,Experience Sampling Questions,1,1,,Marker Started at 4
-ESQ,5667.998611399962,,Intrusive_start,,Experience Sampling Questions,1,1,,
-ESQ,5669.048181799997,,Intrusive_response,2.0,Experience Sampling Questions,1,1,,Marker Started at 2
-ESQ,5669.048859199975,,Problem_start,,Experience Sampling Questions,1,1,,
-ESQ,5670.111536499986,,Problem_response,5.0,Experience Sampling Questions,1,1,,Marker Started at 5
-ESQ,5670.112219000002,,Emotion_start,,Experience Sampling Questions,1,1,,
-ESQ,5671.163478199975,,Emotion_response,9.0,Experience Sampling Questions,1,1,,Marker Started at 9
-ESQ,5671.164160999993,,Distracting_start,,Experience Sampling Questions,1,1,,
-ESQ,5672.213324699958,,Distracting_response,6.0,Experience Sampling Questions,1,1,,Marker Started at 6
-ESQ,5672.214000999986,,Past_start,,Experience Sampling Questions,1,1,,
-ESQ,5673.26328959997,,Past_response,9.0,Experience Sampling Questions,1,1,,Marker Started at 9
-ESQ,5673.2639626999735,,Detailed_start,,Experience Sampling Questions,1,1,,
-ESQ,5674.313627799973,,Detailed_response,8.0,Experience Sampling Questions,1,1,,Marker Started at 8
+Runtime Mod,6
+EXPERIMENT DATA:,Finger Tapping Task
+Start Time,299.5059573999897
+Finger Tapping Start,,,,,Finger Tapping Task,1,1,,
+Finger Tapping Block Start,,,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial Start,,,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial End,,False,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial Start,,,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial End,,False,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial Start,,,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial End,,False,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial Start,,,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial End,,False,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial Start,,,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial End,,False,,,Finger Tapping Task,1,1,,
+Finger Tapping Block Start,,,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial Start,,,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial End,,False,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial Start,,,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial End,,False,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial Start,,,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial End,,False,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial Start,,,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial End,,False,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial Start,,,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial End,,False,,,Finger Tapping Task,1,1,,
+Finger Tapping Block Start,,,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial Start,,,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial End,,False,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial Start,,,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial End,,False,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial Start,,,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial End,,False,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial Start,,,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial End,,False,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial Start,,,,,Finger Tapping Task,1,1,,
+Finger Tapping Trial End,,False,,,Finger Tapping Task,1,1,,
