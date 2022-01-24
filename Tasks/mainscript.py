@@ -10,7 +10,8 @@ import taskScripts
 import os
 import random
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
-
+if not os.path.exists(os.path.join(os.getcwd(),"log_file")):
+        os.mkdir(os.path.join(os.getcwd(),"log_file"))
 # This class is responsible for creating and holding the information about how each task should run.
 # It contains the number of repetitions and a global runtime variable.
 # It also contains the subject ID, and will eventually use the experiment seed to randomize trial order.
@@ -65,7 +66,7 @@ class taskbattery(metadatacollection):
                 taskbattery.ESQtask = ESQtask
                 self.INFO = INFO
                 self.taskexeclist = []
-                self.win = visual.Window(size=(1920, 1080),color='white', winType='pyglet',fullscr=False)
+                self.win = visual.Window(size=(1440, 960),color='white', winType='pyglet',fullscr=False)
                 self.text = text_2 = visual.TextStim(win=self.win, name='text_2',
                         text='Welcome to our experiment. \n Please follow the instructions on-screen and notify the attending researcher if anything is unclear \n We are thankful for your participation.',
                         font='Arial',
