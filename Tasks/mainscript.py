@@ -32,6 +32,8 @@ class metadatacollection():
                 print(os.path.join(os.getcwd()+self.sbINFO.data[2]))
                 if os.path.exists(os.path.join(os.getcwd()+self.sbINFO.data[2])): 
                         os.remove(os.path.join(os.getcwd()+self.sbINFO.data[2]))
+                if not os.path.exists(os.path.join(os.getcwd(),'/log_file')):
+                        os.mkdir(os.path.join(os.getcwd(),'/log_file'))
                 f = open(os.path.join(os.getcwd() + '/log_file/output_log_{}_full.csv'.format(self.sbINFO.data[2])), 'w', newline='')
                 fq = open(os.path.join(os.getcwd() + '/log_file/output_log_{}.csv'.format(self.sbINFO.data[2])), 'w', newline='')
                 metawriter = csv.writer(f)
