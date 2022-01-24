@@ -1397,39 +1397,39 @@ def create_headers(list_headers):
 
     return OrderedDict(headers)
 
-def write_csv(fileName, list_headers, thisTrial):
-    '''
-    append the data of the current trial to the data file
-    if the data file has not been created, this function will create one
+# def write_csv(fileName, list_headers, thisTrial):
+#     '''
+#     append the data of the current trial to the data file
+#     if the data file has not been created, this function will create one
 
 
-    attributes
+#     attributes
 
-    fileName: str
-        the file name generated when capturing participant info
+#     fileName: str
+#         the file name generated when capturing participant info
 
-    list_headers: list
-        the headers in a list, will pass on to function create_headers
+#     list_headers: list
+#         the headers in a list, will pass on to function create_headers
 
-    thisTrial: dict
-        a dictionary storing the current trial
-    '''
+#     thisTrial: dict
+#         a dictionary storing the current trial
+#     '''
 
-    full_path = os.path.abspath(fileName)
-    directory = os.path.dirname(full_path)
-    create_dir(directory)
-    fieldnames = create_headers(list_headers)
+#     full_path = os.path.abspath(fileName)
+#     directory = os.path.dirname(full_path)
+#     create_dir(directory)
+#     fieldnames = create_headers(list_headers)
 
-    if not os.path.isfile(full_path):
-        # headers and the first entry
-        with codecs.open(full_path, 'ab+', encoding='utf8') as f:
-            dw = csv.DictWriter(f, fieldnames=fieldnames)
-            dw.writeheader()
-            dw.writerow(thisTrial)
-    else:
-        with codecs.open(full_path, 'ab+', encoding='utf8') as f:
-            dw = csv.DictWriter(f, fieldnames=fieldnames)
-            dw.writerow(thisTrial)
+#     if not os.path.isfile(full_path):
+#         # headers and the first entry
+#         with codecs.open(full_path, 'ab+', encoding='utf8') as f:
+#             dw = csv.DictWriter(f, fieldnames=fieldnames)
+#             dw.writeheader()
+#             dw.writerow(thisTrial)
+#     else:
+#         with codecs.open(full_path, 'ab+', encoding='utf8') as f:
+#             dw = csv.DictWriter(f, fieldnames=fieldnames)
+#             dw.writerow(thisTrial)
 
 def read_only(path):
     '''
@@ -1847,8 +1847,8 @@ def subject_info(experiment_info):
     file_root = ('_').join([experiment_info['Subject'], experiment_info['Run'],
                             experiment_info['Experiment'], experiment_info['Date']])
 
-    experiment_info['DataFile'] = 'data' + os.path.sep + file_root + '.csv'
-    experiment_info['LogFile'] = 'data' + os.path.sep + file_root + '.log'
+    #experiment_info['DataFile'] = 'data' + os.path.sep + file_root + '.csv'
+    #experiment_info['LogFile'] = 'data' + os.path.sep + file_root + '.log'
 
     if experiment_info['Environment'] is 'mri':
         experiment_info['MRIFile'] = 'data' + os.path.sep + file_root + '_voltime.csv'
@@ -1934,7 +1934,7 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime, dfile,seed):
 
 
         # set log file
-        event_logger(settings['logging_level'], experiment_info['LogFile'])
+        #event_logger(settings['logging_level'], experiment_info['LogFile'])
 
         # create experiment
         Experiment = Paradigm(win, escape_key='esc', color=0)
@@ -2020,6 +2020,8 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime, dfile,seed):
                 zbacklis.append(trl)
             c = 0
             cvt = 0 
+        zbacklis.extend(zbacklis)
+        zbacklis.extend(zbacklis)
         for enb, bm in enumerate(nogolis):
             if enb == 0:
                 c = random.randint(3,6)
@@ -2099,7 +2101,7 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime, dfile,seed):
                 trial['Run'] = experiment_info['Run']
 
                 # write to csv
-                write_csv(experiment_info['DataFile'], headers, trial)
+               # write_csv(experiment_info['DataFile'], headers, trial)
 
                 # clear answers
                 KeyResp = None
@@ -2113,8 +2115,8 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime, dfile,seed):
 
         logging.flush()
         # change output files to read only
-        read_only(experiment_info['DataFile'])
-        read_only(experiment_info['LogFile'])
+        #read_only(experiment_info['DataFile'])
+        #read_only(experiment_info['LogFile'])
         # quit
         #Experiment.window.close()
         #core.quit()

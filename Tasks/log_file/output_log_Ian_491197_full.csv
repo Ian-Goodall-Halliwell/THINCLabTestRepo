@@ -1,0 +1,54 @@
+EXPERIMENT DATA:,Movie Task
+Start Time,8.03639760002261
+Movie Task Start,8.036440600000788,,,,Movie Task,1,491197,,,
+Movie Init,8.86175630002981,,,,Movie Task,1,491197,,,
+Movie Start,8.861876900016796,,,,Movie Task,1,491197,,,
+Movie End,131.5251575000002,,,,Movie Task,1,491197,,,
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,131.54452100000344
+ESQ,165.91056899999967,,Self_start,,Experience Sampling Questions,1,491197,,,Movie Task
+ESQ,167.40557609999087,,Self_response,9.0,Experience Sampling Questions,1,491197,,Marker Started at 9,Movie Task
+ESQ,167.4060464000213,,Absorption_start,,Experience Sampling Questions,1,491197,,,Movie Task
+ESQ,168.77556259999983,,Absorption_response,6.0,Experience Sampling Questions,1,491197,,Marker Started at 6,Movie Task
+EXPERIMENT DATA:,Movie Task
+Start Time,168.78884090000065
+Movie Task Start,168.7888881000108,,,,Movie Task,1,491197,,,
+Movie Init,169.85203100001672,,,,Movie Task,1,491197,,,
+Movie Start,169.85220840002876,,,,Movie Task,1,491197,,,
+Movie End,273.5074747999897,,,,Movie Task,1,491197,,,
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,273.5984316000249
+ESQ,275.0043500000029,,Absorption_start,,Experience Sampling Questions,1,491197,,,Movie Task
+ESQ,276.76263400004245,,Absorption_response,9.0,Experience Sampling Questions,1,491197,,Marker Started at 9,Movie Task
+ESQ,276.76339340000413,,Knowledge_start,,Experience Sampling Questions,1,491197,,,Movie Task
+ESQ,278.16468280000845,,Knowledge_response,6.0,Experience Sampling Questions,1,491197,,Marker Started at 6,Movie Task
+EXPERIMENT DATA:,Memory Task
+Start Time,281.1187138000387
+Memory Task Starting,282.7170194000355,,,,Memory Task,1,491197,,,
+Memory Prompt Shown,283.8949693000177,,,,Memory Task,1,491197,,,
+Text Input Submitted,284.21061469998676,,,,Memory Task,1,491197,,,
+Ready Check Started,289.21370730001945,,,,Memory Task,1,491197,,,
+Ready Check Ended,293.83509190002223,,,,Memory Task,1,491197,,,
+Blank Memory Recall Period Started,313.8416073000408,,,,Memory Task,1,491197,,,
+Blank Memory Recall Period Ended,314.84861760004424,,,,Memory Task,1,491197,,,
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,315.8592924000113
+ESQ,316.69712610001443,,Other_start,,Experience Sampling Questions,1,491197,,,Memory Task
+ESQ,321.2985014000442,,Other_response,6.0,Experience Sampling Questions,1,491197,,Marker Started at 6,Memory Task
+ESQ,321.29878400004236,,Future_start,,Experience Sampling Questions,1,491197,,,Memory Task
+ESQ,322.3675407000119,,Future_response,2.0,Experience Sampling Questions,1,491197,,Marker Started at 2,Memory Task
+EXPERIMENT DATA:,Memory Task
+Start Time,322.4647421000409
+Memory Task Starting,322.66281629999867,,,,Memory Task,1,491197,,,
+Memory Prompt Shown,325.338399500004,,,,Memory Task,1,491197,,,
+Text Input Submitted,332.38751890003914,,,,Memory Task,1,491197,,,
+Ready Check Started,337.40977399999974,,,,Memory Task,1,491197,,,
+Ready Check Ended,361.60881270002574,,,,Memory Task,1,491197,,,
+Blank Memory Recall Period Started,381.61941600003047,,,,Memory Task,1,491197,,,
+Blank Memory Recall Period Ended,382.62612380000064,,,,Memory Task,1,491197,,,
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,383.6451887000003
+ESQ,480.78241099999286,,Future_start,,Experience Sampling Questions,1,491197,,,Memory Task
+ESQ,482.363740300003,,Future_response,6.0,Experience Sampling Questions,1,491197,,Marker Started at 6,Memory Task
+ESQ,482.3640377999982,,Self_start,,Experience Sampling Questions,1,491197,,,Memory Task
+ESQ,483.69701200001873,,Self_response,3.0,Experience Sampling Questions,1,491197,,Marker Started at 3,Memory Task

@@ -1415,21 +1415,21 @@ def write_csv(fileName, list_headers, thisTrial):
         a dictionary storing the current trial
     '''
 
-    full_path = os.path.abspath(fileName)
-    directory = os.path.dirname(full_path)
-    create_dir(directory)
-    fieldnames = create_headers(list_headers)
+    # full_path = os.path.abspath(fileName)
+    # directory = os.path.dirname(full_path)
+    # create_dir(directory)
+    # fieldnames = create_headers(list_headers)
 
-    if not os.path.isfile(full_path):
-        # headers and the first entry
-        with codecs.open(full_path, 'ab+', encoding='utf8') as f:
-            dw = csv.DictWriter(f, fieldnames=fieldnames)
-            dw.writeheader()
-            dw.writerow(thisTrial)
-    else:
-        with codecs.open(full_path, 'ab+', encoding='utf8') as f:
-            dw = csv.DictWriter(f, fieldnames=fieldnames)
-            dw.writerow(thisTrial)
+    # if not os.path.isfile(full_path):
+    #     # headers and the first entry
+    #     with codecs.open(full_path, 'ab+', encoding='utf8') as f:
+    #         dw = csv.DictWriter(f, fieldnames=fieldnames)
+    #         dw.writeheader()
+    #         dw.writerow(thisTrial)
+    # else:
+    #     with codecs.open(full_path, 'ab+', encoding='utf8') as f:
+    #         dw = csv.DictWriter(f, fieldnames=fieldnames)
+    #         dw.writerow(thisTrial)
 
 def read_only(path):
     '''
@@ -1848,8 +1848,8 @@ def subject_info(experiment_info):
     file_root = ('_').join([experiment_info['Subject'], experiment_info['Run'],
                             experiment_info['Experiment'], experiment_info['Date']])
 
-    experiment_info['DataFile'] = 'data' + os.path.sep + file_root + '.csv'
-    experiment_info['LogFile'] = 'data' + os.path.sep + file_root + '.log'
+    # experiment_info['DataFile'] = 'data' + os.path.sep + file_root + '.csv'
+    # experiment_info['LogFile'] = 'data' + os.path.sep + file_root + '.log'
 
     if experiment_info['Environment'] is 'mri':
         experiment_info['MRIFile'] = 'data' + os.path.sep + file_root + '_voltime.csv'
@@ -1935,7 +1935,7 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
 
 
         # set log file
-        event_logger(settings['logging_level'], experiment_info['LogFile'])
+        #event_logger(settings['logging_level'], experiment_info['LogFile'])
 
         # create experiment
         Experiment = Paradigm(win, escape_key='esc', color=0)
@@ -2106,7 +2106,7 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
                 trial['Run'] = experiment_info['Run']
 
                 # write to csv
-                write_csv(experiment_info['DataFile'], headers, trial)
+                #write_csv(experiment_info['DataFile'], headers, trial)
 
                 # clear answers
                 KeyResp = None
@@ -2120,8 +2120,8 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
 
         logging.flush()
         # change output files to read only
-        read_only(experiment_info['DataFile'])
-        read_only(experiment_info['LogFile'])
+        #read_only(experiment_info['DataFile'])
+        #read_only(experiment_info['LogFile'])
         # quit
         #Experiment.window.close()
         #core.quit()

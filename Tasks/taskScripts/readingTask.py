@@ -148,23 +148,23 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
             #core.quit()
 
     # creates a file with a name that is absolute path + info collected from GUI
-        filename = data_folder + os.sep + '%s_%s_%s_%s.csv' %(expInfo['subjID'], expInfo['subjName'], expInfo['expdate'], expInfo['run'])
+        #filename = data_folder + os.sep + '%s_%s_%s_%s.csv' %(expInfo['subjID'], expInfo['subjName'], expInfo['expdate'], expInfo['run'])
         stimuli_file = dfile
-        fixa_file = fixa_name + expInfo['run']+'.csv'
+        #fixa_file = fixa_name + expInfo['run']+'.csv'
         return expInfo, filename,stimuli_file,fixa_file
     # to avoid overwrite the data. Check whether the file exists, if not, create a new one and write the header.
     # Otherwise, rename it - repeat_n
     # correct
-    def write_file_not_exist(filename):
-        repeat_n = 1
-        while True:
-            if not os.path.isfile(filename):
-                f = open(filename,'w')
-               # f.write(header)
-                break
-            else:
-                filename = data_folder + os.sep + '%s_%s_%s_repeat_%s.csv' %(expInfo['subjID'], expInfo['subjName'], expInfo['expdate'],str(repeat_n))
-                repeat_n = repeat_n + 1
+    # def write_file_not_exist(filename):
+    #     repeat_n = 1
+    #     while True:
+    #         if not os.path.isfile(filename):
+    #             f = open(filename,'w')
+    #            # f.write(header)
+    #             break
+    #         else:
+    #             #filename = data_folder + os.sep + '%s_%s_%s_repeat_%s.csv' %(expInfo['subjID'], expInfo['subjName'], expInfo['expdate'],str(repeat_n))
+    #             repeat_n = repeat_n + 1
 
 
     # Open a csv file, read through from the first row   # correct
@@ -194,18 +194,18 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
     # create the header
 
 
-    def write_header(filename, header):
-        with open (filename,'a') as csvfile:
-            fieldnames = header
-            data_file = csv.DictWriter(csvfile,fieldnames=fieldnames,lineterminator ='\n')
-            data_file.writeheader()
+    # def write_header(filename, header):
+    #     with open (filename,'a') as csvfile:
+    #         fieldnames = header
+    #         data_file = csv.DictWriter(csvfile,fieldnames=fieldnames,lineterminator ='\n')
+    #         data_file.writeheader()
 
     #write each trial
-    def write_trial(filename,header,trial):
-        with open (filename,'a') as csvfile:
-            fieldnames = header
-            data_file = csv.DictWriter(csvfile,fieldnames=fieldnames,lineterminator ='\n')
-            data_file.writerow(trial)
+    # def write_trial(filename,header,trial):
+    #     with open (filename,'a') as csvfile:
+    #         fieldnames = header
+    #         data_file = csv.DictWriter(csvfile,fieldnames=fieldnames,lineterminator ='\n')
+    #         data_file.writerow(trial)
 
 
     def read_fix_from_csv(fixa_file):
@@ -242,9 +242,9 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
         return win
 
     # read the content in the csv or text file
-    def read_cont (filename):
-        f = open(filename,'r')
-        return f
+    # def read_cont (filename):
+    #     f = open(filename,'r')
+    #     return f
 
     # prepare the content on the screen - content is text
     def prep_cont(line, pos):
@@ -301,12 +301,12 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
         return end_onset
 
     # read the rest
-    def rest():
-        f = read_cont(rest_file)
-        for line in f.readlines():
-            line.split('\n')
-            line_text = prep_cont(line,instru_pos,text_h)
-            disp_instr_cont(line_text) 
+    # def rest():
+    #     f = read_cont(rest_file)
+    #     for line in f.readlines():
+    #         line.split('\n')
+    #         line_text = prep_cont(line,instru_pos,text_h)
+    #         disp_instr_cont(line_text) 
 
     # display each trial on the screen at the appropriate time
     def run_stimuli(stimuli_file,fixa_list, timer, resultdict, writer):
@@ -330,7 +330,7 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
     #    all_fixa, fixa_headers = load_conditions_dict(conditionfile=fixa_file)
         # open the result file to write the heater
 
-        write_header(filename,headers) 
+        #write_header(filename,headers) 
 
     #    
     #    
@@ -584,7 +584,7 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
                 trial['word15_onset'] = words_onset[14] - run_onset
 
                 trial_pres_num +=1 # the number-th presentnted trial
-                write_trial(filename,headers,trial)     # calls the function that writes csv output
+                #write_trial(filename,headers,trial)     # calls the function that writes csv output
 
                 if trial['task'] != 'xxxxxxxx':
                     fixa_num+=2 # the number-th fixation

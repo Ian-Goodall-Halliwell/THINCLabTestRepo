@@ -1,0 +1,40 @@
+EXPERIMENT DATA:,Finger Tapping Task
+Start Time,11.01191469997866
+Finger Tapping Start,,,,,Finger Tapping Task,1,9752132,,,
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,15.410249000007752
+ESQ,15.880047700018622,,Problem_start,,Experience Sampling Questions,1,9752132,,,Finger Tapping Task
+ESQ,17.415131999994628,,Problem_response,8.0,Experience Sampling Questions,1,9752132,,Marker Started at 8,Finger Tapping Task
+ESQ,17.41540190001251,,Distracting_start,,Experience Sampling Questions,1,9752132,,,Finger Tapping Task
+ESQ,18.79715820000274,,Distracting_response,2.0,Experience Sampling Questions,1,9752132,,Marker Started at 2,Finger Tapping Task
+EXPERIMENT DATA:,Finger Tapping Task
+Start Time,18.86298600002192
+Finger Tapping Start,,,,,Finger Tapping Task,1,9752132,,,
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,23.132133300008718
+ESQ,23.432836799998768,,Knowledge_start,,Experience Sampling Questions,1,9752132,,,Finger Tapping Task
+ESQ,24.984155200014357,,Knowledge_response,10.0,Experience Sampling Questions,1,9752132,,Marker Started at 10,Finger Tapping Task
+ESQ,24.984424900030717,,Past_start,,Experience Sampling Questions,1,9752132,,,Finger Tapping Task
+ESQ,25.998130100022536,,Past_response,10.0,Experience Sampling Questions,1,9752132,,Marker Started at 10,Finger Tapping Task
+EXPERIMENT DATA:,GoNoGo Task
+Start Time,26.063989699992817
+gonogo START,26.064029500004835,,,,GoNoGo Task,1,9752132,,,
+Go/NoGo Initialized,27.625317999976687,,,,GoNoGo Task,1,9752132,,,
+Go/NoGo Finished,27.64426229998935,,,,GoNoGo Task,1,9752132,,,
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,27.652443500002846
+ESQ,27.98284990002867,,Absorption_start,,Experience Sampling Questions,1,9752132,,,GoNoGo Task
+ESQ,29.547102299984545,,Absorption_response,9.0,Experience Sampling Questions,1,9752132,,Marker Started at 9,GoNoGo Task
+ESQ,29.547374700021464,,Distracting_start,,Experience Sampling Questions,1,9752132,,,GoNoGo Task
+ESQ,30.561106399982236,,Distracting_response,7.0,Experience Sampling Questions,1,9752132,,Marker Started at 7,GoNoGo Task
+EXPERIMENT DATA:,GoNoGo Task
+Start Time,30.632755799975712
+gonogo START,30.63279760000296,,,,GoNoGo Task,1,9752132,,,
+Go/NoGo Initialized,31.88066309998976,,,,GoNoGo Task,1,9752132,,,
+Go/NoGo Finished,31.891183400002774,,,,GoNoGo Task,1,9752132,,,
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,31.8951773000299
+ESQ,32.22524360002717,,Emotion_start,,Experience Sampling Questions,1,9752132,,,GoNoGo Task
+ESQ,33.748108899977524,,Emotion_response,7.0,Experience Sampling Questions,1,9752132,,Marker Started at 7,GoNoGo Task
+ESQ,33.74837360001402,,Problem_start,,Experience Sampling Questions,1,9752132,,,GoNoGo Task
+ESQ,34.76911579997977,,Problem_response,9.0,Experience Sampling Questions,1,9752132,,Marker Started at 9,GoNoGo Task

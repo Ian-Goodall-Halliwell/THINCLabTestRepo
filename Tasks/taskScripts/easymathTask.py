@@ -238,14 +238,14 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
         core.quit()
 
     # get the participants info, initialize the screen and create a data file for this subject
-    def info_gui(expName):
-        # Set up a dictionary in which we can store our experiment details
-        expInfo={}
-        expInfo['expname'] =expName
-        # Create a string version of the current year/month/day hour/minute
-        expInfo['expdate']=datetime.now().strftime('%Y%m%d_%H%M')
-        expInfo['subjID']=['1','2']
-        # expInfo['subjName']=''
+    # def info_gui(expName):
+    #     # Set up a dictionary in which we can store our experiment details
+    #     expInfo={}
+    #     expInfo['expname'] =expName
+    #     # Create a string version of the current year/month/day hour/minute
+    #     expInfo['expdate']=datetime.now().strftime('%Y%m%d_%H%M')
+    #     expInfo['subjID']=['1','2']
+    #     # expInfo['subjName']=''
         # expInfo['run']=''
         
         # Set up our input dialog
@@ -261,11 +261,11 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
     # creates a file with a name that is absolute path + info collected from GUI
         # filename = data_folder + os.sep + '%s_%s_%s_%s.csv' %(expInfo['subjID'], expInfo['subjName'], expInfo['expdate'],expInfo['run'])
         # filename_fixa = data_folder + os.sep + '%s_%s_%s_%s_fixa.csv' %(expInfo['subjID'], expInfo['subjName'], expInfo['expdate'],expInfo['run'])
-        filename = data_folder + os.sep + '%s_%s_.csv' %(expInfo['subjID'], expInfo['expdate'])
-        filename_fixa = data_folder + os.sep + '%s_%s_fixa.csv' %(expInfo['subjID'], expInfo['expdate'])
+        #filename = data_folder + os.sep + '%s_%s_.csv' %(expInfo['subjID'], expInfo['expdate'])
+        #filename_fixa = data_folder + os.sep + '%s_%s_fixa.csv' %(expInfo['subjID'], expInfo['expdate'])
         
-        stimuli_file = data
-        return expInfo, filename,stimuli_file,filename_fixa
+        # stimuli_file = data
+        # return expInfo, filename,stimuli_file,filename_fixa
     # to avoid overwriting the data. Check whether the file exists, if not, create a new one and write the header.
     # Otherwise, rename it - repeat_n
     # correct
@@ -556,10 +556,10 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
     curr_dic = get_pwd()
 
     # make a directory – data to store the generated data
-    makedir(data_folder)
+    #makedir(data_folder)
 
     # record subjects info and create a csv file with the info about subjects
-    expInfo, filename, stimuli_file,filename_fixa = info_gui(expName)
+    #expInfo, filename, stimuli_file,filename_fixa = info_gui(expName)
 
     # if the data does not exist, create one, otherwise,  rename one –filename-repeat-n
     # write_file_not_exist(filename)

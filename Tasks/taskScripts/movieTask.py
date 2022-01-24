@@ -14,7 +14,7 @@ import random
 ############### Section for filmlist randomisation ################################################
 
 # read in filmlist csv which is sorted according to condition (cert and uncert)
-df = pd.read_csv(os.path.join(os.getcwd(),'resources//Movie_Task//csv//sorted_filmList.csv'))
+#df = pd.read_csv(os.path.join(os.getcwd(),'resources//Movie_Task//csv//sorted_filmList.csv'))
 
 # separate the dataframe into conditions (cert and uncert)
 # cert = df['cert']
@@ -86,8 +86,11 @@ df = pd.read_csv(os.path.join(os.getcwd(),'resources//Movie_Task//csv//sorted_fi
 ###################################################################################################
 def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
 # kill switch for Psychopy3
-    
-   
+    random.seed(seed)
+    resdict['Timepoint'], resdict['Time'] = 'Movie Task Start', timer.getTime()
+    writer.writerow(resdict)
+    resdict['Timepoint'], resdict['Time'] = None,None
+    df = pd.read_csv(dfile)
     # call globalKeys so that whenever user presses escape, quit function called
     
 
@@ -142,6 +145,9 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
     filmlistb = []
     random.shuffle(control)
     random.shuffle(action)
+    resdict['Timepoint'], resdict['Time'] = 'Movie Init', timer.getTime()
+    writer.writerow(resdict)
+    resdict['Timepoint'], resdict['Time'] = None,None
     for en, m in enumerate(control):
         m = os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//videos//' + m)
         r = os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//videos//' + action[en])
@@ -154,9 +160,9 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
     tasktime = core.Clock()
     tasktime.reset()
 
-    if seed == 1:
+    if filename == 1:
         filmlist = filmlista[0]
-    if seed == 2:
+    if filename == 2:
         filmlist = filmlistb[0]
         
     
@@ -168,6 +174,9 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
     # store when the video started to later store in outputfile, this videoStart uses clock created at start of experiment. 
     videoStart = tasktime.getTime()
     # present film using moviestim
+    resdict['Timepoint'], resdict['Time'] = 'Movie Start', timer.getTime()
+    writer.writerow(resdict)
+    resdict['Timepoint'], resdict['Time'] = None,None
     mov = visual.MovieStim3(win, filmlist, size=(1920, 1080), flipVert=False, flipHoriz=False, loop=False)
 
     while mov.status != visual.FINISHED:
@@ -176,7 +185,9 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
 
     # store when the video ends to later store in outputfile, this videoEnd uses clock created at start of experiment. 
     videoEnd = tasktime.getTime()
-
+    resdict['Timepoint'], resdict['Time'] = 'Movie End', timer.getTime()
+    writer.writerow(resdict)
+    resdict['Timepoint'], resdict['Time'] = None,None
     # If statement to either present break screen or end screen
     # nextTrial = filmDict.getFutureTrial(n=1) # fixes error for end screen 
     # if nextTrial is None or nextTrial[videoCondition] == None:

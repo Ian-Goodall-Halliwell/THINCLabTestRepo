@@ -61,7 +61,7 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
         extraInfo=expInfo, runtimeInfo=None,
         originPath='C:\\Users\\Ian\\Documents\\TaskRepo\\Basic_fMRI_Test_programs\\FingTap.py',
         savePickle=False, saveWideText=False,
-        dataFileName=filename, autoLog=False)
+     autoLog=False)
     # save a log file for detail verbose info
     #logFile = logging.LogFile(filename+'.log', level=logging.EXP)
     logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a file
@@ -715,8 +715,8 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
     win.flip()
 
     # these shouldn't be strictly necessary (should auto-save)
-    thisExp.saveAsWideText(filename+'.csv', delim='auto')
-    thisExp.saveAsPickle(filename)
+    #thisExp.saveAsWideText(filename+'.csv', delim='auto')
+    #thisExp.saveAsPickle(filename)
     logging.flush()
     # make sure everything is closed down
     thisExp.abort()  # or data files will save again on exit

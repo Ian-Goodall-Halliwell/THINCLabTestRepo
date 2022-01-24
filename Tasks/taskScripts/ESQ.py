@@ -167,10 +167,12 @@ def get_settings(env, ver):
 
     return settings
 
-def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
+def runexp(filename, timer, win, writers, resdict, runtime,dfile,seed):
     random.seed()
     rs = random.randint(0,10000)
     random.seed(a=rs)
+    writera = writers[0]
+    writerb = writers[1]
     print(os.path.dirname(os.path.abspath(__file__)))
     instr_path = './taskScripts/resources/ESQ/'  # path for instructions
     instr_name = '_instr.txt' # filename (preceded by subtask name) for instructions
@@ -243,13 +245,14 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
     
 
     #       get each question from Questionnaire:
-    for enum, i in enumerate(range(0,2)):#len(ES_fixed.trialList))):
+    for enum, i in enumerate(range(0,len(ES_fixed.trialList))):
         
         #if i < len(ES_fixed.trialList):
         if i < len(ES_fixed.trialList):
             question = ES_fixed.next()
             resdict['Timepoint'], resdict['Time'], resdict['Experience Sampling Question'] = 'ESQ', timer.getTime(), str(question['Label'] + "_start")
-            writer.writerow(resdict)
+            writera.writerow(resdict)
+            #writerb.writerow(resdict)
             resdict['Timepoint'], resdict['Time'],resdict['Experience Sampling Question'],resdict['Experience Sampling Response'], resdict['Auxillary Data'] = None,None,None,None,None
         ratingScale.noResponse = True
         rand = random.randrange(1,10,1)
@@ -283,7 +286,8 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
 
         resdict['Timepoint'], resdict['Time'], resdict['Experience Sampling Question'], resdict['Experience Sampling Response'],resdict['Auxillary Data'] = 'ESQ', timer.getTime(), str(question['Label'] + "_response"), responded, str("Marker Started at " + str(rand +1))
         
-        writer.writerow(resdict)
+        writera.writerow(resdict)
+        writerb.writerow(resdict)
         
         resdict['Timepoint'], resdict['Time'],resdict['Experience Sampling Question'],resdict['Experience Sampling Response'], resdict['Auxillary Data'] = None,None,None,None,None
     
