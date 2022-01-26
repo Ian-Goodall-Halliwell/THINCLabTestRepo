@@ -144,7 +144,7 @@ def new_csv_creator(dictList):
     newData = {}
     
     for d in dictList:
-        print(d)
+        
         keys = list(d.keys())
 
         for key in keys:
@@ -387,7 +387,7 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
         trigger.draw()
         end_onset = win.flip()
         keys = event.waitKeys(keyList =['return'],timeStamped = True)
-        print ('end of experiment:',end_onset)
+        
         return end_onset
         
         
@@ -433,7 +433,7 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
         run_onset = win.flip()  # this is when the real experiment starts and the run starts
         
         
-        print ('----run_onset is : ---',run_onset)
+        
         
         timetodraw = run_onset + pretrialFixDur
         # while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
@@ -498,7 +498,7 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
                         trial['RT']=RT
                         trial['correct'] = correct
                         trial['KeyPress'] = keypress
-                        print(correct)
+                        
                         resultdictWriter('Math Trial End',timer,writer, correct)
 
             

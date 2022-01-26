@@ -234,10 +234,12 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
         frameN = -1
         a = 0
         stimlist = []
-        print(os.getcwd())
+        
         with open(dfile, newline='') as csvfile:
             spamreader = csv.reader(csvfile, delimiter=',', quotechar='|')
-            for row in spamreader:
+            for en, row in enumerate(spamreader):
+                if en == 0:
+                    continue
                 if row != []:
                     stimlist.append(row[0].strip())
         # -------Run Routine "trial"-------
@@ -252,7 +254,7 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
             # *memoryPrompt* updates
             if memoryPrompt.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                memoryPrompt.setText("We would like you to think about a memory related to the word:\n {}. \n Please decide on an event from your life that is related to the word:\n {}. \n Press enter when you have done this.".format(stimlist[a],stimlist[a]))
+                memoryPrompt.setText("We would like you to think about a memory related to the word:\n \n {}. \n \n Please decide on an event from your life that is related to the word:\n \n {}. \n \n Press enter when you have done this.".format(stimlist[a],stimlist[a]))
                 memoryPrompt.frameNStart = frameN  # exact frame index
                 memoryPrompt.tStart = t  # local t and not account for scr refresh
                 memoryPrompt.tStartRefresh = tThisFlipGlobal  # on global time

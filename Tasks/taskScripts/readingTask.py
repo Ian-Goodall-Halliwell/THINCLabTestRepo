@@ -296,7 +296,7 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
         trigger.draw()
         end_onset = win.flip()
         keys = event.waitKeys(keyList =['return'],timeStamped = True)
-        print ('end of experiment:',end_onset)
+        
         
         return end_onset
 
@@ -354,7 +354,7 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
             color='black', colorSpace='rgb', opacity=None, 
             languageStyle='LTR',
             depth=0.0);
-        print ('run_onset',run_onset)
+        
         with open(os.path.join(os.getcwd(),"taskScripts/resources/Reading_Task/instructions.txt")) as f:
             lines1 = f.read()
         
@@ -458,7 +458,7 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
 
                         words_onset.append(word_onset)
 
-                    print (words_onset)
+                    
 
                 else:
                     for word_index in range(15):

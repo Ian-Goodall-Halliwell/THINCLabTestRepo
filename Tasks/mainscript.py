@@ -30,7 +30,6 @@ class metadatacollection():
 
         # This writes info collected from the GUI into the logfile
         def collect_metadata(self):  
-                print(os.path.join(os.getcwd()+self.sbINFO.data[2]))
                 if os.path.exists(os.path.join(os.getcwd()+self.sbINFO.data[2])): 
                         os.remove(os.path.join(os.getcwd()+self.sbINFO.data[2]))
                 if not os.path.exists(os.path.join(os.getcwd(),'log_file')):
@@ -114,7 +113,7 @@ class task(taskbattery,metadatacollection):
                 self.esq = esq
                 self.ver = ver
                 self.dfile = dfile
-        print(os.getcwd())
+        
         def initvers(self):
                 os.chdir(os.getcwd())
                 try:
@@ -132,7 +131,7 @@ class task(taskbattery,metadatacollection):
                 l = []
                 for row in r:
                         l.append(row)
-                        print(row)
+                        
                 self.l = l
                 
                 incrordecr = random.choice([-1,1])
@@ -159,7 +158,7 @@ class task(taskbattery,metadatacollection):
                 
                 lis = [self.ver_a,self.ver_b]
                 for enum, thing in enumerate(lis):
-                        print(os.getcwd())
+                        
                         if not os.path.exists(os.getcwd()+ '//tmp'):
                                 os.mkdir(os.getcwd()+ '//tmp')
                         if not os.path.exists(os.getcwd()+ '//tmp//%s' %(self.name)):
@@ -235,9 +234,13 @@ class taskgroup(taskbattery,metadatacollection):
         def run(self):
                 for taskgrp in self.tasks:
                         for task in taskgrp:
+                                print("Now initializing {}".format(task.name))
                                 task.initvers()
+                                print("Now setting up {}".format(task.name))
                                 task.setver()
+                                print("Now running {}".format(task.name))
                                 task.run()
+                                print("Now starting ESQ for {}".format(task.name))
                                 taskbattery.ESQtask.run()
                         
         def end(self):
@@ -323,7 +326,7 @@ reading_memory = taskgroup([[readingTask,readingTask2],[memTask,memTask2]],"reso
 oneback_zeroback = taskgroup([[zerobackTask,zerobackTask2],[onebackTask,onebackTask2]],"resources/group_inst/oneback_zeroback.txt")
 ezmath_hrdmath = taskgroup([[easymathTask1,easymathTask2],[hardmathTask1,hardmathTask2]],"resources/group_inst/ezmath_hrdmath.txt")
 movie_main = taskgroup([[movieTask1,movieTask2]],"resources/group_inst/movie_main.txt")
-reading_memory1 = taskgroup([[onebackTask,movieTask2]],"resources/group_inst/reading_memory.txt")
+reading_memory1 = taskgroup([[memTask,memTask2]],"resources/group_inst/reading_memory.txt")
 
 
 fulltasklist = [self_other,gonogo_fingtap,reading_memory,oneback_zeroback,ezmath_hrdmath,movie_main]

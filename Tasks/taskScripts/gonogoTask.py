@@ -63,8 +63,7 @@ def get_response(input_method, resp_device, timeStamped, myClock):
     if input_method == 'keyboard':
         for key, RT in event.getKeys(keyList = ['escape', 'q', 'left', 'right', 'space'], timeStamped = timeStamped):
             if key in ['escape','q']:
-                print ('User Cancelled')
-                print (key)
+                
                 if trig_collector:
                     trig_collector.endCollection()
                 #core.quit()
@@ -88,7 +87,7 @@ def get_response(input_method, resp_device, timeStamped, myClock):
         # Quickly check for a 'q' response on the keyboard to quit
         for key, RT in event.getKeys(keyList = ['escape', 'q'], timeStamped = timeStamped):
             if key in ['escape', 'q']:
-                print ('User cancelled')
+                
                 if trig_collector:
                     trig_collector.endCollection()
                 #core.quit()
@@ -472,7 +471,7 @@ def HelpWin(myClock, myWin,dfile):
     #myWin.flip()
     #event.waitKeys(keyList=['return'])
 
-    print ('got here')
+   
 
     if trig_collector:
         trig_collector.waitForVolume(5)
@@ -523,7 +522,7 @@ def Block_C(thisrun, myClock, myWin, writer, resdict, scrambled_word, scrambled_
 
     for i in slants:
         diff = i
-        print ('difficulty', diff)
+       
         if thisrun == 1 and diff == 'e':
             cond = 'scrambled words easy'
             for i in scrambled_word:
@@ -560,7 +559,7 @@ def Block_C(thisrun, myClock, myWin, writer, resdict, scrambled_word, scrambled_
         d = 0
     #Start Consecutive Go Trials
         tasktimer = core.MonotonicClock()
-        print(tasktimer.getTime())
+        
         while tasktimer.getTime() <= runtime:
             
             
@@ -840,7 +839,7 @@ def main(logloc, myClock, myWin, writer, resdict, runtime,dfile):
     
     myWin.flip()
     fin_time=myClock.getTime()
-    print(fin_time)
+    
     #event.waitKeys()
     
     

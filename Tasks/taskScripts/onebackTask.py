@@ -1173,7 +1173,7 @@ class trial_builder(object):
                     #self.trial_index = trial_idx_tmp
                 #else:
                     # if it's good save this block to the run
-                print('save this block')
+               
                 run += self.dict_trials
                 trial_idx_tmp = self.trial_index
             yield run
@@ -1365,7 +1365,8 @@ def get_settings(env, ver, test=False):
 
     if test:
         #settings.update(TEST)
-        print('t')
+        print('')
+        
     else:
         settings.update(PRODUCTION)
 
@@ -1710,7 +1711,7 @@ class Question(object):
         while (self.rating.noResponse
                and clock.getTime() - start_trial < self.scale_max_time):
             if event.getKeys(keyList=['escape']):
-                print('user quit')
+                print('')
                 #core.quit()
 
             if keyState[key._1] is True:
@@ -1748,7 +1749,7 @@ def get_keyboard(timer, respkeylist, keyans):
     for key, time in event.getKeys(keyList=keylist, timeStamped=timer):
         if key in ['escape']:
             quitEXP(True)
-            #print("quit")
+            
         else:
             KeyResp, KeyPressTime = key, time
     # get what the key press means
@@ -1759,7 +1760,7 @@ def get_keyboard(timer, respkeylist, keyans):
 
 def quitEXP(endExpNow):
     if endExpNow:
-        print('user cancel')
+        print('')
         #core.quit()
 
 
@@ -2050,7 +2051,7 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
         if experiment_info['Environment'] is 'mri':
             fixation.set_trial({'fix_duration': tr * dummy_vol})
             t = fixation.show(timer)
-            print('dummy volume start', t)
+            
 
         # get a global clock
         #timer = time
@@ -2064,7 +2065,7 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
                 # prepare fixation cross and stimulus display
                 fixation.set_trial(trial)
                 fix_t = fixation.show(timer)
-                print(trial['TrialType'])
+                
 
                 if trial['TrialType'] == 'ExpSample':
                     pass

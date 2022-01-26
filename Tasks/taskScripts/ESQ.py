@@ -24,7 +24,7 @@ def load_instruction(PATH):
     return a list
     '''
     PATH = os.path.dirname(os.path.abspath(__file__)) + "//resources//ESQ//ESQ_instr.txt"
-    print(os.path.dirname(os.path.abspath(__file__)))
+    
     with codecs.open(PATH, 'r', encoding='utf8') as f:
         input_data = f.read()
 
@@ -173,7 +173,7 @@ def runexp(filename, timer, win, writers, resdict, runtime,dfile,seed):
     random.seed(a=rs)
     writera = writers[0]
     writerb = writers[1]
-    print(os.path.dirname(os.path.abspath(__file__)))
+    
     instr_path = './taskScripts/resources/ESQ/'  # path for instructions
     instr_name = '_instr.txt' # filename (preceded by subtask name) for instructions
     begin_name = 'begin_instr.txt' # beginning text, if no instruction is needed for second run

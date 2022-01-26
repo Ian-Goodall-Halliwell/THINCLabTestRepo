@@ -139,7 +139,7 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
             control.append(a)
         if v == "action":
             action.append(a)
-        print(a)
+        
     # start a clock right before the experiment starts
     filmlista = []
     filmlistb = []

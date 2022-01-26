@@ -28,7 +28,7 @@ fixed_ESQ_name = './resources/ESQ/ESQ_Questions.csv'
 
 def quitEXP(endExpNow):
     if endExpNow:
-        print ('user cancel')
+        
         core.quit()
 
 def get_keyboard(timer, respkeylist, keyans):
@@ -227,7 +227,7 @@ def load_trials(infile):
     load each row as a dictionary with the headers as the keys
     save the headers in its original order for data saving
     '''
-    print(os.getcwd())
+    
     
     with codecs.open(infile, 'r', encoding='utf8') as f:
         reader = csv.DictReader(f)
@@ -544,8 +544,7 @@ def run_experiment(timer, win, writer, resdict, runtime, dfiles):
             else:
                 
                 if trialtimer.getTime() >= runtime:
-                    print(trialtimer.getTime())
-                    print(runtime)
+                    
                     if stimcount == 0:
                         return
                 mytime = cur_stim.show(timer)
