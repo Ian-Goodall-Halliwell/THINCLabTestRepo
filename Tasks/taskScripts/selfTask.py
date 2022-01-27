@@ -185,10 +185,16 @@ class my_instructions(object):
         return self.instruction_txt
 
     def showf(self):
-        with open(os.path.join(os.getcwd(),"taskScripts/resources/Self_Task/Self_instr1.txt")) as f:
-            lines1 = f.read()
-        with open(os.path.join(os.getcwd(),"taskScripts/resources/Self_Task/Self_instr2.txt")) as f:
-            lines2 = f.read()
+        try:
+            with open(os.path.join(os.getcwd(),"taskScripts/resources/Self_Task/Self_instr1.txt")) as f:
+                lines1 = f.read()
+            with open(os.path.join(os.getcwd(),"taskScripts/resources/Self_Task/Self_instr2.txt")) as f:
+                lines2 = f.read()
+        except:        
+            with open(os.path.join(os.getcwd(),"resources/Self_Task/Self_instr1.txt")) as f:
+                lines1 = f.read()
+            with open(os.path.join(os.getcwd(),"resources/Self_Task/Self_instr2.txt")) as f:
+                lines2 = f.read()
         
         for i, cur in enumerate([lines1,lines2]):
             self.display.setText(cur)

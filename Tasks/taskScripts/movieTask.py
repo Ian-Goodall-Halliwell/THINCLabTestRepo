@@ -111,7 +111,7 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
 
 
     # use trialhandler to sequentially present films listed in filmlist csv file. 
-    filmDict = data.TrialHandler(nReps = 1, method = 'sequential', trialList = data.importConditions('taskScripts//resources//Movie_Task//csv//filmList.csv'), name = 'filmList') 
+    #filmDict = data.TrialHandler(nReps = 1, method = 'sequential', trialList = data.importConditions('taskScripts//resources//Movie_Task//csv//filmList.csv'), name = 'filmList') 
 
     # create white window for stimuli to be presented on throughout task. 
     # win = visual.Window(size=[1024, 768], color=[1,1,1,], monitor="testMonitor", fullscr= True, allowGUI = False)

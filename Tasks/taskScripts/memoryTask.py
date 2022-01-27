@@ -34,8 +34,8 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
     import random
     random.seed(a=seed)
     # Ensure that relative paths start from the same directory as this script
-    _thisDir = os.path.dirname(os.path.abspath(__file__))
-    os.chdir(_thisDir)
+    # _thisDir = os.path.dirname(os.path.abspath(__file__))
+    # os.chdir(_thisDir)
 
     # Store info about the experiment session
     psychopyVersion = '2021.2.3'
@@ -49,7 +49,7 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
     expInfo['psychopyVersion'] = psychopyVersion
 
     # Data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
-    filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])
+    #filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])
 
     # An ExperimentHandler isn't essential but helps with data saving
     thisExp = data.ExperimentHandler(name=expName, version='',
@@ -178,12 +178,20 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
     key_resp_2.rt = []
     _key_resp_2_allKeys = []
     # keep track of which components have finished
-    with open(os.path.join(os.getcwd(),"resources/Memory_Task/instructions1.txt")) as f:
-        lines1 = f.read()
-    with open(os.path.join(os.getcwd(),"resources/Memory_Task/instructions2.txt")) as f:
-        lines2 = f.read()
-    with open(os.path.join(os.getcwd(),"resources/Memory_Task/instructions3.txt")) as f:
-        lines3 = f.read()
+    try:
+        with open(os.path.join(os.getcwd(),"resources/Memory_Task/instructions1.txt")) as f:
+            lines1 = f.read()
+        with open(os.path.join(os.getcwd(),"resources/Memory_Task/instructions2.txt")) as f:
+            lines2 = f.read()
+        with open(os.path.join(os.getcwd(),"resources/Memory_Task/instructions3.txt")) as f:
+            lines3 = f.read()
+    except:
+        with open(os.path.join(os.getcwd(),"taskScripts/resources/Memory_Task/instructions1.txt")) as f:
+            lines1 = f.read()
+        with open(os.path.join(os.getcwd(),"taskScripts/resources/Memory_Task/instructions2.txt")) as f:
+            lines2 = f.read()
+        with open(os.path.join(os.getcwd(),"taskScripts/resources/Memory_Task/instructions3.txt")) as f:
+            lines3 = f.read()
         
         for i, cur in enumerate([lines1,lines2,lines3]):
             text_inst.setText(cur)

@@ -3,6 +3,7 @@
 Created on Mon Oct 14 11:47:22 2019
 
 """
+from genericpath import exists
 import os
 import sys
 import random
@@ -185,12 +186,20 @@ class my_instructions(object):
         return self.instruction_txt
 
     def showf(self):
-        with open(os.path.join(os.getcwd(),"taskScripts/resources/Other_Task/Other_instr1.txt")) as f:
-            lines1 = f.read()
-        with open(os.path.join(os.getcwd(),"taskScripts/resources/Other_Task/Other_instr2.txt")) as f:
-            lines2 = f.read()
-        with open(os.path.join(os.getcwd(),"taskScripts/resources/Other_Task/Other_instr3.txt")) as f:
-            lines3 = f.read()
+        try:
+            with open(os.path.join(os.getcwd(),"taskScripts/resources/Other_Task/Other_instr1.txt")) as f:
+                lines1 = f.read()
+            with open(os.path.join(os.getcwd(),"taskScripts/resources/Other_Task/Other_instr2.txt")) as f:
+                lines2 = f.read()
+            with open(os.path.join(os.getcwd(),"taskScripts/resources/Other_Task/Other_instr3.txt")) as f:
+                lines3 = f.read()
+        except:
+            with open(os.path.join(os.getcwd(),"resources/Other_Task/Other_instr1.txt")) as f:
+                lines1 = f.read()
+            with open(os.path.join(os.getcwd(),"resources/Other_Task/Other_instr2.txt")) as f:
+                lines2 = f.read()
+            with open(os.path.join(os.getcwd(),"resources/Other_Task/Other_instr3.txt")) as f:
+                lines3 = f.read()
         
         for i, cur in enumerate([lines1,lines2,lines3]):
             self.display.setText(cur)

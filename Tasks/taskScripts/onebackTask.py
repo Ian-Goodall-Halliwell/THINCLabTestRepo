@@ -2023,6 +2023,9 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
             cvt = 0
         zbacklis.extend(zbacklis)
         zbacklis.extend(zbacklis)
+        zbacklis.extend(zbacklis)
+        zbacklis.extend(zbacklis)
+        zbacklis.extend(zbacklis)
         for enb, bm in enumerate(nogolis):
             if enb == 0:
                 c = random.randint(3,6)
