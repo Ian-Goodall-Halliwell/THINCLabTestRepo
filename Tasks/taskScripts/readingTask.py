@@ -354,10 +354,12 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
             color='black', colorSpace='rgb', opacity=None, 
             languageStyle='LTR',
             depth=0.0);
-        
-        with open(os.path.join(os.getcwd(),"taskScripts/resources/Reading_Task/instructions.txt")) as f:
-            lines1 = f.read()
-        
+        try:
+            with open(os.path.join(os.getcwd(),"taskScripts/resources/Reading_Task/instructions.txt")) as f:
+                lines1 = f.read()
+        except:
+            with open(os.path.join(os.getcwd(),"resources/Reading_Task/instructions.txt")) as f:
+                lines1 = f.read()
         
         for i, cur in enumerate([lines1]):
             text_inst.setText(cur)

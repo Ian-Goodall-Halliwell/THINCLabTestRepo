@@ -1,0 +1,166 @@
+pygame 2.1.2 (SDL 2.0.18, Python 3.6.13)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Now initializing Movie Task
+Now setting up Movie Task
+Now running Movie Task
+Now starting ESQ for Movie Task
+Now initializing Movie Task
+Now setting up Movie Task
+Now running Movie Task
+Now starting ESQ for Movie Task
+Now initializing Math Task
+Now setting up Math Task
+Now running Math Task
+Now starting ESQ for Math Task
+Now initializing Math Task
+Now setting up Math Task
+Now running Math Task
+Now starting ESQ for Math Task
+Now initializing Math Task
+Now setting up Math Task
+Now running Math Task
+Now starting ESQ for Math Task
+Now initializing Math Task
+Now setting up Math Task
+Now running Math Task
+Now starting ESQ for Math Task
+Now initializing One-Back Task
+Now setting up One-Back Task
+Now running One-Back Task
+4.4760 	WARNING 	Speech-to-text recognition module not available (use command `pip install SpeechRecognition` to get it. Transcription will be unavailable.
+4.6811 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+19.7328 	WARNING 	Monitor specification not found. Creating a temporary one...
+39.5061 	WARNING 	13.888487566669937: Video catchup needed, advancing self._nextFrameT from 13.766666666666628 to 13.799999999999962
+39.5062 	WARNING 	13.888547266658861: Video catchup needed, advancing self._nextFrameT from 13.799999999999962 to 13.833333333333295
+53.5135 	WARNING 	27.895843966689426: Video catchup needed, advancing self._nextFrameT from 27.80000000000054 to 27.833333333333876
+67.5364 	WARNING 	41.91877096664393: Video catchup needed, advancing self._nextFrameT from 41.80000000000019 to 41.83333333333352
+67.5365 	WARNING 	41.91882766666822: Video catchup needed, advancing self._nextFrameT from 41.83333333333352 to 41.86666666666685
+96.5445 	WARNING 	70.92684446665226: Video catchup needed, advancing self._nextFrameT from 70.76666666666522 to 70.79999999999855
+96.5445 	WARNING 	70.92690786666935: Video catchup needed, advancing self._nextFrameT from 70.79999999999855 to 70.83333333333188
+96.5446 	WARNING 	70.92692736664321: Video catchup needed, advancing self._nextFrameT from 70.83333333333188 to 70.86666666666521
+110.5064 	WARNING 	84.88850856665522: Video catchup needed, advancing self._nextFrameT from 84.79999999999775 to 84.83333333333108
+124.5332 	WARNING 	98.9155333666713: Video catchup needed, advancing self._nextFrameT from 98.79999999999696 to 98.83333333333029
+124.5332 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+252.2557 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+267.5733 	WARNING 	10.097366866655648: Video catchup needed, advancing self._nextFrameT from 9.933333333333309 to 9.966666666666642
+267.5734 	WARNING 	10.097467466664966: Video catchup needed, advancing self._nextFrameT from 9.966666666666642 to 9.999999999999975
+267.5734 	WARNING 	10.097490466665477: Video catchup needed, advancing self._nextFrameT from 9.999999999999975 to 10.033333333333308
+267.6334 	WARNING 	10.157498466665857: Video catchup needed, advancing self._nextFrameT from 10.066666666666642 to 10.099999999999975
+281.5157 	WARNING 	24.03977326664608: Video catchup needed, advancing self._nextFrameT from 23.966666666667017 to 24.00000000000035
+296.5552 	WARNING 	39.07929856667761: Video catchup needed, advancing self._nextFrameT from 38.933333333333685 to 38.96666666666702
+296.5553 	WARNING 	39.07935426669428: Video catchup needed, advancing self._nextFrameT from 38.96666666666702 to 39.00000000000035
+296.5553 	WARNING 	39.079375466681086: Video catchup needed, advancing self._nextFrameT from 39.00000000000035 to 39.03333333333368
+296.6119 	WARNING 	39.13596726668766: Video catchup needed, advancing self._nextFrameT from 39.06666666666701 to 39.10000000000034
+310.5048 	WARNING 	53.02886746666627: Video catchup needed, advancing self._nextFrameT from 52.93333333333289 to 52.96666666666622
+310.5048 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+3604.0935 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+3610.3480 	WARNING 	Monitor specification not found. Creating a temporary one...
+3753.7277 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+3756.4242 	WARNING 	Monitor specification not found. Creating a temporary one...
+5644.8487 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+14095.3295 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+15358.1157 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+15364.1047 	WARNING 	Requested image 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//OneBack_Task//1back.jpg' not found but similar filename 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//OneBack_Task//1back.png' exists. This will be used instead but changing the filename is advised.
+15364.2205 	WARNING 	Requested image 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//OneBack_Task//1back.jpg' not found but similar filename 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//OneBack_Task//1back.png' exists. This will be used instead but changing the filename is advised.
+15364.2506 	WARNING 	Requested image 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//OneBack_Task//1back.jpg' not found but similar filename 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//OneBack_Task//1back.png' exists. This will be used instead but changing the filename is advised.
+15364.2776 	WARNING 	Requested image 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//OneBack_Task//1back.jpg' not found but similar filename 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//OneBack_Task//1back.png' exists. This will be used instead but changing the filename is advised.
+Now starting ESQ for One-Back Task
+Now initializing One-Back Task
+Now setting up One-Back Task
+Now running One-Back Task
+16761.0524 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+16763.7293 	WARNING 	Requested image 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//OneBack_Task//1back.jpg' not found but similar filename 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//OneBack_Task//1back.png' exists. This will be used instead but changing the filename is advised.
+16763.7559 	WARNING 	Requested image 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//OneBack_Task//1back.jpg' not found but similar filename 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//OneBack_Task//1back.png' exists. This will be used instead but changing the filename is advised.
+16763.7837 	WARNING 	Requested image 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//OneBack_Task//1back.jpg' not found but similar filename 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//OneBack_Task//1back.png' exists. This will be used instead but changing the filename is advised.
+16763.8092 	WARNING 	Requested image 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//OneBack_Task//1back.jpg' not found but similar filename 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//OneBack_Task//1back.png' exists. This will be used instead but changing the filename is advised.
+Now starting ESQ for One-Back Task
+Now initializing Zero-Back Task
+Now setting up Zero-Back Task
+Now running Zero-Back Task
+16960.4838 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+16963.8880 	WARNING 	Requested image 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.jpg' not found but similar filename 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.png' exists. This will be used instead but changing the filename is advised.
+16963.9144 	WARNING 	Requested image 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.jpg' not found but similar filename 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.png' exists. This will be used instead but changing the filename is advised.
+16963.9425 	WARNING 	Requested image 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.jpg' not found but similar filename 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.png' exists. This will be used instead but changing the filename is advised.
+16963.9703 	WARNING 	Requested image 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.jpg' not found but similar filename 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.png' exists. This will be used instead but changing the filename is advised.
+Now starting ESQ for Zero-Back Task
+Now initializing Zero-Back Task
+Now setting up Zero-Back Task
+Now running Zero-Back Task
+17063.2569 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+17066.5789 	WARNING 	Requested image 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.jpg' not found but similar filename 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.png' exists. This will be used instead but changing the filename is advised.
+17066.6080 	WARNING 	Requested image 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.jpg' not found but similar filename 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.png' exists. This will be used instead but changing the filename is advised.
+17066.6406 	WARNING 	Requested image 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.jpg' not found but similar filename 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.png' exists. This will be used instead but changing the filename is advised.
+17066.6710 	WARNING 	Requested image 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.jpg' not found but similar filename 'C:\\Users\\Ian\\Documents\\GitHub\\THINCLabTestRepo\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.png' exists. This will be used instead but changing the filename is advised.
+Now starting ESQ for Zero-Back Task
+Now initializing Finger Tapping Task
+Now setting up Finger Tapping Task
+Now running Finger Tapping Task
+18654.4304 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+18659.8332 	WARNING 	ExperimentHandler created with no dataFileName parameter. No data will be saved in the event of a crash
+18659.9508 	WARNING 	t of last frame was 9.41ms (=1/106)
+18659.9810 	WARNING 	t of last frame was 11.61ms (=1/86)
+18659.9897 	WARNING 	t of last frame was 8.65ms (=1/115)
+18659.9998 	WARNING 	t of last frame was 10.16ms (=1/98)
+18660.0098 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+Now starting ESQ for Finger Tapping Task
+Now initializing Finger Tapping Task
+Now setting up Finger Tapping Task
+Now running Finger Tapping Task
+18986.7991 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+19445.0450 	WARNING 	ExperimentHandler created with no dataFileName parameter. No data will be saved in the event of a crash
+Now starting ESQ for Finger Tapping Task
+Now initializing GoNoGo Task
+Now setting up GoNoGo Task
+Now running GoNoGo Task
+Now starting ESQ for GoNoGo Task
+Now initializing GoNoGo Task
+Now setting up GoNoGo Task
+Now running GoNoGo Task
+Now starting ESQ for GoNoGo Task
+Now initializing You Task
+Now setting up You Task
+Now running You Task
+Now starting ESQ for You Task
+Now initializing You Task
+Now setting up You Task
+Now running You Task
+Now starting ESQ for You Task
+Now initializing Friend Task
+Now setting up Friend Task
+Now running Friend Task
+Now starting ESQ for Friend Task
+Now initializing Friend Task
+Now setting up Friend Task
+Now running Friend Task
+Now starting ESQ for Friend Task
+Now initializing Memory Task
+Now setting up Memory Task
+Now running Memory Task
+Now starting ESQ for Memory Task
+Now initializing Memory Task
+Now setting up Memory Task
+Now running Memory Task
+Now starting ESQ for Memory Task
+Now initializing Reading Task
+Now setting up Reading Task
+Now running Reading Task
+Now starting ESQ for Reading Task
+Now initializing Reading Task
+Now setting up Reading Task
+Now running Reading Task
+Now starting ESQ for Reading Task
+19951.7084 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+20031.8994 	WARNING 	TextStim.alignHoriz is deprecated. Use alignText and anchorHoriz attributes instead
+20473.9232 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+20576.8441 	WARNING 	TextStim.alignHoriz is deprecated. Use alignText and anchorHoriz attributes instead
+21164.5266 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+22690.2741 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+22812.8108 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+22922.2530 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+23006.0643 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+23011.3151 	WARNING 	ExperimentHandler created with no dataFileName parameter. No data will be saved in the event of a crash
+23121.9587 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+23124.5623 	WARNING 	ExperimentHandler created with no dataFileName parameter. No data will be saved in the event of a crash
+24463.5936 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+54563.1127 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+55230.2850 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
