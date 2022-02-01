@@ -99,10 +99,7 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
         return curr_dic
 
     # make a folder in the current directory used to store data  - correct
-    def makedir(folder_name):
-        os.chdir(curr_dic)
-        if not os.path.exists(folder_name):
-            os.makedirs(folder_name)
+  
 
     def generate_jitter_list(trial_num,start,stop):
         '''

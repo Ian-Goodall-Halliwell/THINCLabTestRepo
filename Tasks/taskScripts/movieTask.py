@@ -133,56 +133,109 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
     event.waitKeys(keyList=(['return']))
     control = []
     action = []
-    for a in os.listdir(os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//videos')):
-        v = a.split("_")[0]
-        if v == "control":
-            control.append(a)
-        if v == "action":
-            action.append(a)
+    try:
+        for a in os.listdir(os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//videos')):
+            v = a.split("_")[0]
+            if v == "control":
+                control.append(a)
+            if v == "action":
+                action.append(a)
+    
+        # start a clock right before the experiment starts
+        filmlista = []
+        filmlistb = []
+        random.shuffle(control)
+        random.shuffle(action)
+        resdict['Timepoint'], resdict['Time'] = 'Movie Init', timer.getTime()
+        writer.writerow(resdict)
+        resdict['Timepoint'], resdict['Time'] = None,None
         
-    # start a clock right before the experiment starts
-    filmlista = []
-    filmlistb = []
-    random.shuffle(control)
-    random.shuffle(action)
-    resdict['Timepoint'], resdict['Time'] = 'Movie Init', timer.getTime()
-    writer.writerow(resdict)
-    resdict['Timepoint'], resdict['Time'] = None,None
-    for en, m in enumerate(control):
-        m = os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//videos//' + m)
-        r = os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//videos//' + action[en])
-        filmlista.append(m)
-        
-        filmlistb.append(r)
+        for en, m in enumerate(control):
+            m = os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//videos//' + m)
+            r = os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//videos//' + action[en])
+            filmlista.append(m)
+            
+            filmlistb.append(r)
+    
         
     
-    filmlist = random.choice([filmlista,filmlistb])
-    tasktime = core.Clock()
-    tasktime.reset()
+        filmlist = random.choice([filmlista,filmlistb])
+        tasktime = core.Clock()
+        tasktime.reset()
 
-    if filename == 1:
-        filmlist = filmlista[0]
-    if filename == 2:
-        filmlist = filmlistb[0]
+        if filename == 1:
+            filmlist = filmlista[0]
+        if filename == 2:
+            filmlist = filmlistb[0]
+            
+        
+        # loop through each film stored in filmDict created above using trialhandler. 
+        
+            # store trial start time for later use in calculating trial duration. 
+        start =time.time()
+
+        # store when the video started to later store in outputfile, this videoStart uses clock created at start of experiment. 
+        videoStart = tasktime.getTime()
+        # present film using moviestim
+        resdict['Timepoint'], resdict['Time'] = 'Movie Start', timer.getTime()
+        writer.writerow(resdict)
+        resdict['Timepoint'], resdict['Time'] = None,None
+        mov = visual.MovieStim3(win, filmlist, size=(1920, 1080), flipVert=False, flipHoriz=False, loop=False)
+
+        while mov.status != visual.FINISHED:
+            mov.draw()
+            win.flip()
+    except:
+        
+        for a in os.listdir(os.path.join(os.getcwd(), 'resources//Movie_Task//videos')):
+            v = a.split("_")[0]
+            if v == "control":
+                control.append(a)
+            if v == "action":
+                action.append(a)
+        filmlista = []
+        filmlistb = []
+        random.shuffle(control)
+        random.shuffle(action)
+        resdict['Timepoint'], resdict['Time'] = 'Movie Init', timer.getTime()
+        writer.writerow(resdict)
+        resdict['Timepoint'], resdict['Time'] = None,None
+
+        for en, m in enumerate(control):
+            m = os.path.join(os.getcwd(), 'resources//Movie_Task//videos//' + m)
+            r = os.path.join(os.getcwd(), 'resources//Movie_Task//videos//' + action[en])
+            filmlista.append(m)
+            
+            filmlistb.append(r)
+    
         
     
-    # loop through each film stored in filmDict created above using trialhandler. 
-    
-        # store trial start time for later use in calculating trial duration. 
-    start =time.time()
+        filmlist = random.choice([filmlista,filmlistb])
+        tasktime = core.Clock()
+        tasktime.reset()
 
-    # store when the video started to later store in outputfile, this videoStart uses clock created at start of experiment. 
-    videoStart = tasktime.getTime()
-    # present film using moviestim
-    resdict['Timepoint'], resdict['Time'] = 'Movie Start', timer.getTime()
-    writer.writerow(resdict)
-    resdict['Timepoint'], resdict['Time'] = None,None
-    mov = visual.MovieStim3(win, filmlist, size=(1920, 1080), flipVert=False, flipHoriz=False, loop=False)
+        if filename == 1:
+            filmlist = filmlista[0]
+        if filename == 2:
+            filmlist = filmlistb[0]
+            
+        
+        # loop through each film stored in filmDict created above using trialhandler. 
+        
+            # store trial start time for later use in calculating trial duration. 
+        start =time.time()
 
-    while mov.status != visual.FINISHED:
-        mov.draw()
-        win.flip()
+        # store when the video started to later store in outputfile, this videoStart uses clock created at start of experiment. 
+        videoStart = tasktime.getTime()
+        # present film using moviestim
+        resdict['Timepoint'], resdict['Time'] = 'Movie Start', timer.getTime()
+        writer.writerow(resdict)
+        resdict['Timepoint'], resdict['Time'] = None,None
+        mov = visual.MovieStim3(win, filmlist, size=(1920, 1080), flipVert=False, flipHoriz=False, loop=False)
 
+        while mov.status != visual.FINISHED:
+            mov.draw()
+            win.flip()
     # store when the video ends to later store in outputfile, this videoEnd uses clock created at start of experiment. 
     videoEnd = tasktime.getTime()
     resdict['Timepoint'], resdict['Time'] = 'Movie End', timer.getTime()

@@ -34,8 +34,8 @@ class metadatacollection():
                         os.remove(os.path.join(os.getcwd()+self.sbINFO.data[2]))
                 if not os.path.exists(os.path.join(os.getcwd(),'log_file')):
                         os.mkdir(os.path.join(os.getcwd(),'log_file'))
-                f = open(os.path.join(os.getcwd() + '/log_file/output_log_{}_full.csv'.format(self.sbINFO.data[2])), 'w', newline='')
-                fq = open(os.path.join(os.getcwd() + '/log_file/output_log_{}.csv'.format(self.sbINFO.data[2])), 'w', newline='')
+                f = open(os.path.join(os.getcwd() + '/log_file/output_log_{}_{}_full.csv'.format(self.sbINFO.data[2],self.INFO['Experiment Seed'])), 'w', newline='')
+                fq = open(os.path.join(os.getcwd() + '/log_file/output_log_{}_{}.csv'.format(self.sbINFO.data[2],self.INFO['Experiment Seed'])), 'w', newline='')
                 metawriter = csv.writer(f)
                 metawriter2 = csv.writer(fq)
                 metawriter.writerow(["METADATA:"])
@@ -65,7 +65,7 @@ class taskbattery(metadatacollection):
                 taskbattery.ESQtask = ESQtask
                 self.INFO = INFO
                 self.taskexeclist = []
-                self.win = visual.Window(size=(1440, 960),color='white', winType='pyglet',fullscr=False)
+                self.win = visual.Window(size=(1440, 960),color='white', winType='pyglet',fullscr=True)
                 self.text = text_2 = visual.TextStim(win=self.win, name='text_2',
                         text='Welcome to our experiment. \n Please follow the instructions on-screen and notify the attending researcher if anything is unclear \n We are thankful for your participation.',
                         font='Arial',
@@ -302,8 +302,8 @@ readingTask = task(taskScripts.readingTask, datafile, datafileBackup, "Reading T
 memTask = task(taskScripts.memoryTask, datafile, datafileBackup,"Memory Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources/Memory_Task/Memory_prompts.csv', 1)
 zerobackTask = task(taskScripts.zerobackTask, datafile, datafileBackup,"Zero-Back Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//ZeroBack_Task//ConditionsSpecifications_ES_zeroback.csv', 1)
 onebackTask = task(taskScripts.onebackTask, datafile, datafileBackup,"One-Back Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//ZeroBack_Task//ConditionsSpecifications_ES_oneback.csv', 1)
-easymathTask1 = task(taskScripts.easymathTask, datafile, datafileBackup,"Math Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),"taskScripts/resources/Maths_Task/new_math_stimuli1.csv", 1)
-hardmathTask1 = task(taskScripts.hardmathTask, datafile, datafileBackup,"Math Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),"taskScripts/resources/Maths_Task/new_math_stimuli2.csv", 1)
+easymathTask1 = task(taskScripts.easymathTask, datafile, datafileBackup,"Math Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),"resources/Maths_Task/new_math_stimuli1.csv", 1)
+hardmathTask1 = task(taskScripts.hardmathTask, datafile, datafileBackup,"Math Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),"resources/Maths_Task/new_math_stimuli2.csv", 1)
 movieTask1 = task(taskScripts.movieTask, datafile, 1,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 1)
 
 #Block 2
@@ -316,8 +316,8 @@ readingTask2 = task(taskScripts.readingTask, datafile, datafileBackup, "Reading 
 memTask2 = task(taskScripts.memoryTask, datafile, datafileBackup,"Memory Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources/Memory_Task/Memory_prompts.csv', 2)
 zerobackTask2 = task(taskScripts.zerobackTask, datafile, datafileBackup,"Zero-Back Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//ZeroBack_Task//ConditionsSpecifications_ES_zeroback.csv', 2)
 onebackTask2 = task(taskScripts.onebackTask, datafile, datafileBackup,"One-Back Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//ZeroBack_Task//ConditionsSpecifications_ES_oneback.csv', 2)
-easymathTask2 = task(taskScripts.easymathTask, datafile, datafileBackup,"Math Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),"taskScripts/resources/Maths_Task/new_math_stimuli1.csv", 2)
-hardmathTask2 = task(taskScripts.hardmathTask, datafile, datafileBackup,"Math Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),"taskScripts/resources/Maths_Task/new_math_stimuli2.csv", 2)
+easymathTask2 = task(taskScripts.easymathTask, datafile, datafileBackup,"Math Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),"resources/Maths_Task/new_math_stimuli1.csv", 2)
+hardmathTask2 = task(taskScripts.hardmathTask, datafile, datafileBackup,"Math Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),"resources/Maths_Task/new_math_stimuli2.csv", 2)
 movieTask2 = task(taskScripts.movieTask, datafile, 2,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 2)
 
 self_other = taskgroup([[friendTask,friendTask2],[youTask,youTask2]],"resources/group_inst/self_other.txt" )
@@ -354,3 +354,4 @@ tasks = fulltasklist
 tbt = taskbattery(tasks, ESQTask, INFO)
 if __name__ == "__main__":
        tbt.run_battery()
+       print("Success")

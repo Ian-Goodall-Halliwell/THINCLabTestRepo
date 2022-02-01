@@ -64,7 +64,7 @@ def load_instruction(PATH):
     return a list
     '''
     import os
-    with codecs.open(os.path.join(os.path.join(os.getcwd(),"taskScripts/resources/Maths_Task"), PATH), 'r', encoding='utf8') as f:
+    with codecs.open(os.path.join(os.path.join(os.getcwd(),"resources/Maths_Task"), PATH), 'r', encoding='utf8') as f:
         input_data = f.read()
 
     text = parse_instructions(input_data)
@@ -228,10 +228,7 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
         return curr_dic
 
     # make a folder in the current directory used to store data  - correct
-    def makedir(folder_name):
-        os.chdir(curr_dic)
-        if not os.path.exists(folder_name):
-            os.makedirs(folder_name)
+    
 
     def shutdown ():
         win.close()
@@ -583,18 +580,33 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
         depth=0.0);
     # show the instruction
     # instruct(curr_dic,instruct_figure)
-    with open(os.path.join(os.getcwd(),"taskScripts/resources/Maths_Task/instr1.txt")) as f:
-        lines1 = f.read()
-    with open(os.path.join(os.getcwd(),"taskScripts/resources/Maths_Task/instr2.txt")) as f:
-        lines2 = f.read()
-    with open(os.path.join(os.getcwd(),"taskScripts/resources/Maths_Task/instr3.txt")) as f:
-        lines3 = f.read()
-        
-        for i, cur in enumerate([lines1,lines2,lines3]):
-            text_inst.setText(cur)
-            text_inst.draw()
-            win.flip()
-            event.waitKeys(keyList=['return'])
+    try:
+        with open(os.path.join(os.getcwd(),"resources/Maths_Task/instr1.txt")) as f:
+            lines1 = f.read()
+        with open(os.path.join(os.getcwd(),"resources/Maths_Task/instr2.txt")) as f:
+            lines2 = f.read()
+        with open(os.path.join(os.getcwd(),"resources/Maths_Task/instr3.txt")) as f:
+            lines3 = f.read()
+            
+            for i, cur in enumerate([lines1,lines2,lines3]):
+                text_inst.setText(cur)
+                text_inst.draw()
+                win.flip()
+                event.waitKeys(keyList=['return'])
+
+    except:
+        with open(os.path.join(os.getcwd(),"taskScripts/resources/Maths_Task/instr1.txt")) as f:
+            lines1 = f.read()
+        with open(os.path.join(os.getcwd(),"taskScripts/resources/Maths_Task/instr2.txt")) as f:
+            lines2 = f.read()
+        with open(os.path.join(os.getcwd(),"taskScripts/resources/Maths_Task/instr3.txt")) as f:
+            lines3 = f.read()
+            
+            for i, cur in enumerate([lines1,lines2,lines3]):
+                text_inst.setText(cur)
+                text_inst.draw()
+                win.flip()
+                event.waitKeys(keyList=['return'])
 
     resultdictWriter('Math Task Start',timer,writer)
 

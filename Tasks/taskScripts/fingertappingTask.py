@@ -38,8 +38,7 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
     random.seed(a=seed)
     win.flip()
     # Ensure that relative paths start from the same directory as this script
-    _thisDir = os.path.dirname(os.path.abspath(__file__))
-    os.chdir(_thisDir)
+    
 
     # Store info about the experiment session
     psychopyVersion = '2021.2.3'

@@ -115,7 +115,7 @@ def get_response(input_method, resp_device, timeStamped, myClock):
     #Implement absolute paths in any computer
     abspath = os.path.abspath(__file__)
     dname = os.path.dirname(abspath)
-    os.chdir(dname)
+   
 
     # This needs to be either keyboard or serial - we then setup the response device
     input_method = 'keyboard'
@@ -300,9 +300,7 @@ def HelpWin(myClock, myWin,dfile):
     # global scrambled_pic
     # global scrambled_word
     #Implement absolute paths in any computer
-    abspath = os.path.abspath(__file__)
-    dname = os.path.dirname(abspath)
-    os.chdir(dname)
+    
 
     # This needs to be either keyboard or serial - we then setup the response device
     input_method = 'keyboard'
