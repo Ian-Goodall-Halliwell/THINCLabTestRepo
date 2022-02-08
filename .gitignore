@@ -2,7 +2,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+Tasks/__pycache__/
+Tasks/taskScripts/__pycache__/
 # C extensions
 *.so
 

@@ -1,0 +1,149 @@
+METADATA:
+Block Runtime,Experiment Seed,Subject
+90,4762814,Ian Goodall-Halliwell
+Time after setup,27.880265299230814
+Timepoint,Time,Is_correct,Experience Sampling Question,Experience Sampling Response,Task,Task Iteration,Participant ID,Response_Key,Auxillary Data,Assoc Task
+ 
+Runtime Mod,-14
+EXPERIMENT DATA:,Friend Task
+Start Time,79.23437849991024
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,184.35905769933015
+ESQ,204.23455059994012,,Future_response,8.600000000000005,Experience Sampling Questions,1,4762814,,Marker Started at 8,Friend Task
+ESQ,208.35051729995757,,Self_response,3.2,Experience Sampling Questions,1,4762814,,Marker Started at 3,Friend Task
+ESQ,213.3175448998809,,Distracting_response,7.499999999999992,Experience Sampling Questions,1,4762814,,Marker Started at 4,Friend Task
+ESQ,219.63255459908396,,Detailed_response,8.299999999999999,Experience Sampling Questions,1,4762814,,Marker Started at 8,Friend Task
+ESQ,229.96654809918255,,Modality_response,2.000000000000008,Experience Sampling Questions,1,4762814,,Marker Started at 8,Friend Task
+ESQ,236.41554829943925,,Other_response,2.3999999999999972,Experience Sampling Questions,1,4762814,,Marker Started at 5,Friend Task
+ESQ,242.68303609918803,,Focus_response,7.699999999999992,Experience Sampling Questions,1,4762814,,Marker Started at 3,Friend Task
+ESQ,246.58241409994662,,Intrusive_response,6.800000000000001,Experience Sampling Questions,1,4762814,,Marker Started at 7,Friend Task
+ESQ,255.13238849956542,,Problem_response,7.900000000000004,Experience Sampling Questions,1,4762814,,Marker Started at 9,Friend Task
+ESQ,259.69965989980847,,Past_response,2.100000000000015,Experience Sampling Questions,1,4762814,,Marker Started at 10,Friend Task
+ESQ,264.4818313997239,,Emotion_response,5.6999999999999975,Experience Sampling Questions,1,4762814,,Marker Started at 5,Friend Task
+ESQ,273.31539739947766,,Knowledge_response,7.499999999999995,Experience Sampling Questions,1,4762814,,Marker Started at 6,Friend Task
+ESQ,278.03102389909327,,Deliberate_response,3.7000000000000006,Experience Sampling Questions,1,4762814,,Marker Started at 3,Friend Task
+ESQ,282.4814117997885,,Absorption_response,6.699999999999996,Experience Sampling Questions,1,4762814,,Marker Started at 3,Friend Task
+ 
+Runtime Mod,13
+EXPERIMENT DATA:,Friend Task
+Start Time,282.4950799997896
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,418.88372539915144
+ESQ,425.19352849945426,,Intrusive_response,5.8,Experience Sampling Questions,1,4762814,,Marker Started at 2,Friend Task
+ESQ,427.26051559951156,,Absorption_response,7.400000000000009,Experience Sampling Questions,1,4762814,,Marker Started at 10,Friend Task
+ESQ,430.92695019952953,,Distracting_response,8.199999999999989,Experience Sampling Questions,1,4762814,,Marker Started at 4,Friend Task
+ESQ,433.3930845996365,,Emotion_response,8.9,Experience Sampling Questions,1,4762814,,Marker Started at 9,Friend Task
+ESQ,441.77777939941734,,Problem_response,5.700000000000008,Experience Sampling Questions,1,4762814,,Marker Started at 8,Friend Task
+ESQ,444.7937805997208,,Future_response,7.400000000000002,Experience Sampling Questions,1,4762814,,Marker Started at 8,Friend Task
+ESQ,449.1260371999815,,Self_response,1.7000000000000117,Experience Sampling Questions,1,4762814,,Marker Started at 9,Friend Task
+ESQ,452.55960779916495,,Modality_response,1.8999999999999975,Experience Sampling Questions,1,4762814,,Marker Started at 5,Friend Task
+ESQ,456.9256409993395,,Detailed_response,8.099999999999993,Experience Sampling Questions,1,4762814,,Marker Started at 6,Friend Task
+ESQ,460.8933085994795,,Other_response,7.800000000000008,Experience Sampling Questions,1,4762814,,Marker Started at 10,Friend Task
+ESQ,465.89222479984164,,Deliberate_response,7.6999999999999975,Experience Sampling Questions,1,4762814,,Marker Started at 7,Friend Task
+ESQ,470.1582106994465,,Past_response,7.500000000000002,Experience Sampling Questions,1,4762814,,Marker Started at 8,Friend Task
+ESQ,474.97402329929173,,Focus_response,7.69999999999999,Experience Sampling Questions,1,4762814,,Marker Started at 5,Friend Task
+ESQ,479.7755314996466,,Knowledge_response,2.799999999999999,Experience Sampling Questions,1,4762814,,Marker Started at 4,Friend Task
+ 
+Runtime Mod,13
+EXPERIMENT DATA:,You Task
+Start Time,479.78869129996747
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,615.2443546997383
+ESQ,619.6042924998328,,Emotion_response,2.0,Experience Sampling Questions,1,4762814,,Marker Started at 2,You Task
+ESQ,631.1863693995401,,Past_response,8.699999999999998,Experience Sampling Questions,1,4762814,,Marker Started at 8,You Task
+ESQ,636.8207828998566,,Self_response,8.199999999999996,Experience Sampling Questions,1,4762814,,Marker Started at 7,You Task
+ESQ,641.2043561991304,,Intrusive_response,2.3000000000000154,Experience Sampling Questions,1,4762814,,Marker Started at 10,You Task
+ESQ,645.6377277998254,,Problem_response,1.800000000000008,Experience Sampling Questions,1,4762814,,Marker Started at 8,You Task
+ESQ,652.170228199102,,Modality_response,8.99999999999999,Experience Sampling Questions,1,4762814,,Marker Started at 6,You Task
+ESQ,658.8197796996683,,Other_response,3.300000000000009,Experience Sampling Questions,1,4762814,,Marker Started at 8,You Task
+ESQ,664.0200455999002,,Focus_response,8.199999999999996,Experience Sampling Questions,1,4762814,,Marker Started at 7,You Task
+ESQ,677.3032845994458,,Knowledge_response,8.599999999999987,Experience Sampling Questions,1,4762814,,Marker Started at 5,You Task
+ESQ,683.7844153996557,,Future_response,1.7000000000000002,Experience Sampling Questions,1,4762814,,Marker Started at 2,You Task
+ESQ,689.6525643998757,,Deliberate_response,8.29999999999999,Experience Sampling Questions,1,4762814,,Marker Started at 3,You Task
+ESQ,693.918673899956,,Distracting_response,3.100000000000016,Experience Sampling Questions,1,4762814,,Marker Started at 10,You Task
+ESQ,698.7189960991964,,Detailed_response,9.200000000000003,Experience Sampling Questions,1,4762814,,Marker Started at 10,You Task
+ESQ,702.051484699361,,Absorption_response,8.299999999999988,Experience Sampling Questions,1,4762814,,Marker Started at 5,You Task
+ 
+Runtime Mod,8
+EXPERIMENT DATA:,You Task
+Start Time,702.0649091992527
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,803.3209518995136
+ESQ,809.3142589991912,,Distracting_response,3.6000000000000023,Experience Sampling Questions,1,4762814,,Marker Started at 6,You Task
+ESQ,811.4310908997431,,Self_response,5.6999999999999975,Experience Sampling Questions,1,4762814,,Marker Started at 5,You Task
+ESQ,813.2308836998418,,Future_response,3.1999999999999984,Experience Sampling Questions,1,4762814,,Marker Started at 5,You Task
+ESQ,815.2657042993233,,Absorption_response,6.999999999999994,Experience Sampling Questions,1,4762814,,Marker Started at 4,You Task
+ESQ,818.2812818996608,,Focus_response,7.999999999999991,Experience Sampling Questions,1,4762814,,Marker Started at 3,You Task
+ESQ,822.1650912994519,,Deliberate_response,2.5999999999999988,Experience Sampling Questions,1,4762814,,Marker Started at 4,You Task
+ESQ,825.5142196994275,,Other_response,8.799999999999986,Experience Sampling Questions,1,4762814,,Marker Started at 5,You Task
+ESQ,828.8976892000064,,Modality_response,8.800000000000004,Experience Sampling Questions,1,4762814,,Marker Started at 10,You Task
+ESQ,837.1322133997455,,Emotion_response,6.199999999999998,Experience Sampling Questions,1,4762814,,Marker Started at 2,You Task
+ESQ,843.8797907996923,,Problem_response,1.8,Experience Sampling Questions,1,4762814,,Marker Started at 2,You Task
+ESQ,848.9467749996111,,Detailed_response,8.099999999999989,Experience Sampling Questions,1,4762814,,Marker Started at 5,You Task
+ESQ,851.9809443997219,,Past_response,8.2,Experience Sampling Questions,1,4762814,,Marker Started at 8,You Task
+ESQ,855.113309899345,,Intrusive_response,5.6000000000000085,Experience Sampling Questions,1,4762814,,Marker Started at 8,You Task
+ESQ,858.0957004996017,,Knowledge_response,8.300000000000002,Experience Sampling Questions,1,4762814,,Marker Started at 9,You Task
+ 
+Runtime Mod,7
+EXPERIMENT DATA:,Movie Task
+Start Time,885.2599142994732
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,1048.9842579998076
+ESQ,1080.688638699241,,Problem_response,1.5999999999999974,Experience Sampling Questions,1,4762814,,Marker Started at 5,Movie Task
+ESQ,1084.1218245998025,,Self_response,2.2000000000000117,Experience Sampling Questions,1,4762814,,Marker Started at 9,Movie Task
+ESQ,1088.7387553993613,,Distracting_response,1.0,Experience Sampling Questions,1,4762814,,Marker Started at 3,Movie Task
+ESQ,1092.7549205999821,,Knowledge_response,1.7999999999999976,Experience Sampling Questions,1,4762814,,Marker Started at 5,Movie Task
+ESQ,1096.3217293992639,,Focus_response,8.99999999999999,Experience Sampling Questions,1,4762814,,Marker Started at 2,Movie Task
+ESQ,1102.0390389999375,,Future_response,1.0000000000000002,Experience Sampling Questions,1,4762814,,Marker Started at 2,Movie Task
+ESQ,1105.5217928998172,,Past_response,1.8000000000000116,Experience Sampling Questions,1,4762814,,Marker Started at 9,Movie Task
+ESQ,1110.3707232996821,,Intrusive_response,1.2000000000000082,Experience Sampling Questions,1,4762814,,Marker Started at 8,Movie Task
+ESQ,1114.37189509999,,Deliberate_response,1.0,Experience Sampling Questions,1,4762814,,Marker Started at 2,Movie Task
+ESQ,1127.669979199767,,Detailed_response,1.0,Experience Sampling Questions,1,4762814,,Marker Started at 10,Movie Task
+ESQ,1135.386823299341,,Emotion_response,9.299999999999995,Experience Sampling Questions,1,4762814,,Marker Started at 8,Movie Task
+ESQ,1139.987867899239,,Absorption_response,1.0,Experience Sampling Questions,1,4762814,,Marker Started at 3,Movie Task
+ESQ,1144.2537087993696,,Other_response,1.1999999999999984,Experience Sampling Questions,1,4762814,,Marker Started at 4,Movie Task
+ESQ,1147.8697092998773,,Modality_response,1.0,Experience Sampling Questions,1,4762814,,Marker Started at 7,Movie Task
+ 
+Runtime Mod,-7
+EXPERIMENT DATA:,Movie Task
+Start Time,1147.8827275997028
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,1308.2293272996321
+ESQ,1320.6809529997408,,Self_response,2.8000000000000016,Experience Sampling Questions,1,4762814,,Marker Started at 6,Movie Task
+ESQ,1332.414763099514,,Emotion_response,6.299999999999996,Experience Sampling Questions,1,4762814,,Marker Started at 4,Movie Task
+ESQ,1336.3984754998237,,Other_response,8.0,Experience Sampling Questions,1,4762814,,Marker Started at 8,Movie Task
+ESQ,1340.4636685997248,,Intrusive_response,7.700000000000005,Experience Sampling Questions,1,4762814,,Marker Started at 9,Movie Task
+ESQ,1351.0148169994354,,Future_response,4.700000000000001,Experience Sampling Questions,1,4762814,,Marker Started at 4,Movie Task
+ESQ,1354.1298795994371,,Problem_response,7.900000000000004,Experience Sampling Questions,1,4762814,,Marker Started at 9,Movie Task
+ESQ,1358.3971388991922,,Distracting_response,8.499999999999995,Experience Sampling Questions,1,4762814,,Marker Started at 7,Movie Task
+ESQ,1364.6808391995728,,Focus_response,3.400000000000013,Experience Sampling Questions,1,4762814,,Marker Started at 9,Movie Task
+ESQ,1368.3289441997185,,Detailed_response,3.5000000000000013,Experience Sampling Questions,1,4762814,,Marker Started at 2,Movie Task
+ESQ,1376.5460624992847,,Absorption_response,7.800000000000001,Experience Sampling Questions,1,4762814,,Marker Started at 8,Movie Task
+ESQ,1381.0627147993073,,Past_response,7.799999999999991,Experience Sampling Questions,1,4762814,,Marker Started at 4,Movie Task
+ESQ,1385.7966867992654,,Deliberate_response,4.000000000000013,Experience Sampling Questions,1,4762814,,Marker Started at 9,Movie Task
+ESQ,1388.9787765992805,,Knowledge_response,4.100000000000001,Experience Sampling Questions,1,4762814,,Marker Started at 2,Movie Task
+ESQ,1392.828735999763,,Modality_response,7.6000000000000085,Experience Sampling Questions,1,4762814,,Marker Started at 10,Movie Task
+ 
+Runtime Mod,-6
+EXPERIMENT DATA:,Finger Tapping Task
+Start Time,1401.1928690997884
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,1510.992478299886
+ESQ,1517.874410899356,,Distracting_response,4.2,Experience Sampling Questions,1,4762814,,Marker Started at 4,Finger Tapping Task
+ESQ,1523.9079735996202,,Modality_response,8.79999999999999,Experience Sampling Questions,1,4762814,,Marker Started at 6,Finger Tapping Task
+ESQ,1529.206997799687,,Self_response,1.7000000000000153,Experience Sampling Questions,1,4762814,,Marker Started at 10,Finger Tapping Task
+ESQ,1544.4570863991976,,Focus_response,10.0,Experience Sampling Questions,1,4762814,,Marker Started at 8,Finger Tapping Task
+ESQ,1548.474577399902,,Deliberate_response,2.4000000000000012,Experience Sampling Questions,1,4762814,,Marker Started at 6,Finger Tapping Task
+ESQ,1561.7907925993204,,Other_response,8.300000000000002,Experience Sampling Questions,1,4762814,,Marker Started at 9,Finger Tapping Task
+ESQ,1567.6060947999358,,Knowledge_response,8.200000000000003,Experience Sampling Questions,1,4762814,,Marker Started at 9,Finger Tapping Task
+ESQ,1573.4230248993263,,Emotion_response,8.199999999999989,Experience Sampling Questions,1,4762814,,Marker Started at 4,Finger Tapping Task
+ESQ,1579.389778599143,,Past_response,3.000000000000009,Experience Sampling Questions,1,4762814,,Marker Started at 8,Finger Tapping Task
+ESQ,1582.4729104992002,,Intrusive_response,8.699999999999989,Experience Sampling Questions,1,4762814,,Marker Started at 4,Finger Tapping Task
+ESQ,1587.1731174997985,,Absorption_response,7.999999999999993,Experience Sampling Questions,1,4762814,,Marker Started at 6,Finger Tapping Task
+ESQ,1589.7898147990927,,Future_response,3.1,Experience Sampling Questions,1,4762814,,Marker Started at 3,Finger Tapping Task
+ESQ,1591.5888453992084,,Problem_response,8.499999999999988,Experience Sampling Questions,1,4762814,,Marker Started at 5,Finger Tapping Task
+ESQ,1593.3719454994425,,Detailed_response,2.1999999999999975,Experience Sampling Questions,1,4762814,,Marker Started at 5,Finger Tapping Task
+ 
+Runtime Mod,8
+EXPERIMENT DATA:,Finger Tapping Task
+Start Time,1593.3848170991987
