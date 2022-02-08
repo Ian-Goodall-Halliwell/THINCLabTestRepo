@@ -330,7 +330,7 @@ reading_memory1 = taskgroup([[memTask,memTask2]],"resources/group_inst/reading_m
 
 
 fulltasklist = [self_other,gonogo_fingtap,reading_memory,oneback_zeroback,ezmath_hrdmath,movie_main]
-fulltasklist = [gonogo_fingtap]
+#fulltasklist = [gonogo_fingtap]
 #fulltasklist = [reading_memory1]
 
 
