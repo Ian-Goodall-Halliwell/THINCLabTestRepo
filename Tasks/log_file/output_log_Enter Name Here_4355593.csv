@@ -1,0 +1,47 @@
+METADATA:
+Block Runtime,Experiment Seed,Subject
+90,4355593,Enter Name Here
+Time after setup,0.713710100390017
+Timepoint,Time,Is_correct,Experience Sampling Question,Experience Sampling Response,Task,Task Iteration,Participant ID,Response_Key,Auxillary Data,Assoc Task
+ 
+Runtime Mod,-7
+EXPERIMENT DATA:,GoNoGo Task
+Start Time,4.466466700658202
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,93.51935640070587
+ESQ,98.16743400041014,,Other_response,2.4999999999999987,Experience Sampling Questions,1,4355593,,Marker Started at 4,GoNoGo Task
+ESQ,100.0509417001158,,Detailed_response,8.0,Experience Sampling Questions,1,4355593,,Marker Started at 8,GoNoGo Task
+ESQ,102.06808499991894,,Absorption_response,8.899999999999997,Experience Sampling Questions,1,4355593,,Marker Started at 8,GoNoGo Task
+ESQ,105.03446879982948,,Intrusive_response,3.000000000000001,Experience Sampling Questions,1,4355593,,Marker Started at 2,GoNoGo Task
+ESQ,106.73519800044596,,Self_response,9.199999999999992,Experience Sampling Questions,1,4355593,,Marker Started at 7,GoNoGo Task
+ESQ,109.21767710056156,,Distracting_response,7.199999999999995,Experience Sampling Questions,1,4355593,,Marker Started at 2,GoNoGo Task
+ESQ,112.20111950021237,,Modality_response,2.600000000000012,Experience Sampling Questions,1,4355593,,Marker Started at 9,GoNoGo Task
+ESQ,128.9828949002549,,Emotion_response,7.400000000000002,Experience Sampling Questions,1,4355593,,Marker Started at 8,GoNoGo Task
+ESQ,130.53297840058804,,Problem_response,6.699999999999994,Experience Sampling Questions,1,4355593,,Marker Started at 5,GoNoGo Task
+ESQ,132.0665963003412,,Knowledge_response,2.799999999999998,Experience Sampling Questions,1,4355593,,Marker Started at 5,GoNoGo Task
+ESQ,133.54931380040944,,Future_response,10.0,Experience Sampling Questions,1,4355593,,Marker Started at 9,GoNoGo Task
+ESQ,135.16613289993256,,Deliberate_response,3.999999999999999,Experience Sampling Questions,1,4355593,,Marker Started at 5,GoNoGo Task
+ESQ,136.78310769982636,,Past_response,5.000000000000003,Experience Sampling Questions,1,4355593,,Marker Started at 2,GoNoGo Task
+ESQ,138.2155721001327,,Focus_response,5.5,Experience Sampling Questions,1,4355593,,Marker Started at 3,GoNoGo Task
+ 
+Runtime Mod,12
+EXPERIMENT DATA:,GoNoGo Task
+Start Time,138.2257869001478
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,242.93042370025069
+ESQ,246.06344620045274,,Self_response,6.599999999999996,Experience Sampling Questions,1,4355593,,Marker Started at 3,GoNoGo Task
+ESQ,247.76312839984894,,Knowledge_response,6.100000000000007,Experience Sampling Questions,1,4355593,,Marker Started at 8,GoNoGo Task
+ESQ,249.24762610066682,,Focus_response,8.199999999999996,Experience Sampling Questions,1,4355593,,Marker Started at 7,GoNoGo Task
+ESQ,250.74585480056703,,Problem_response,3.0999999999999983,Experience Sampling Questions,1,4355593,,Marker Started at 5,GoNoGo Task
+ESQ,252.17991599999368,,Deliberate_response,10.0,Experience Sampling Questions,1,4355593,,Marker Started at 10,GoNoGo Task
+ESQ,253.72938919998705,,Absorption_response,1.9999999999999982,Experience Sampling Questions,1,4355593,,Marker Started at 4,GoNoGo Task
+ESQ,255.04695830028504,,Intrusive_response,7.799999999999994,Experience Sampling Questions,1,4355593,,Marker Started at 6,GoNoGo Task
+ESQ,256.64657450001687,,Emotion_response,1.0,Experience Sampling Questions,1,4355593,,Marker Started at 2,GoNoGo Task
+ESQ,258.162974299863,,Future_response,5.699999999999998,Experience Sampling Questions,1,4355593,,Marker Started at 4,GoNoGo Task
+ESQ,259.76340210065246,,Modality_response,8.69999999999999,Experience Sampling Questions,1,4355593,,Marker Started at 6,GoNoGo Task
+ESQ,261.2625745004043,,Other_response,7.100000000000007,Experience Sampling Questions,1,4355593,,Marker Started at 9,GoNoGo Task
+ESQ,262.6629439005628,,Past_response,5.700000000000005,Experience Sampling Questions,1,4355593,,Marker Started at 7,GoNoGo Task
+ESQ,264.22882580012083,,Distracting_response,1.0,Experience Sampling Questions,1,4355593,,Marker Started at 2,GoNoGo Task
+ESQ,265.59521900024265,,Detailed_response,10.0,Experience Sampling Questions,1,4355593,,Marker Started at 10,GoNoGo Task
+ 
+Runtime Mod,5
