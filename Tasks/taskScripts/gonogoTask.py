@@ -278,10 +278,7 @@ def get_response(input_method, resp_device, timeStamped, myClock):
 def HelpWin(myClock, myWin,dfile):
     global trig_collector
     
-    if sys.platform == 'linux2':
-        sys.path.append('/groups/stimpc/ynicstim')
-    else:
-        sys.path.append('M:/stimpc/ynicstim')
+    
     
 
     trig_collector = None
@@ -353,12 +350,20 @@ def HelpWin(myClock, myWin,dfile):
 
     #set up some fonts. If a list is provided, the first font found will be used.
     sans = ['Helvetica','Gill Sans MT', 'Arial','Verdana'] #use the first font found on this list
-    with open(os.path.dirname(os.path.abspath(__file__)) + "//resources//GoNoGo_Task//GoNoGo_instr_1.txt") as f:
-        lines1 = f.read()
-    with open(os.path.dirname(os.path.abspath(__file__)) + "//resources//GoNoGo_Task//GoNoGo_instr_2.txt") as f:
-        lines2 = f.read()
-    with open(os.path.dirname(os.path.abspath(__file__)) + "//resources//GoNoGo_Task//GoNoGo_instr_3.txt") as f:
-        lines3 = f.read()
+    try:
+        with open(os.path.dirname(os.path.abspath(__file__)) + "//resources//GoNoGo_Task//GoNoGo_instr_1.txt") as f:
+            lines1 = f.read()
+        with open(os.path.dirname(os.path.abspath(__file__)) + "//resources//GoNoGo_Task//GoNoGo_instr_2.txt") as f:
+            lines2 = f.read()
+        with open(os.path.dirname(os.path.abspath(__file__)) + "//resources//GoNoGo_Task//GoNoGo_instr_3.txt") as f:
+            lines3 = f.read()
+    except:
+        with open(os.path.dirname(os.path.abspath(__file__)) + "taskScripts//resources//GoNoGo_Task//GoNoGo_instr_1.txt") as f:
+            lines1 = f.read()
+        with open(os.path.dirname(os.path.abspath(__file__)) + "taskScripts//resources//GoNoGo_Task//GoNoGo_instr_2.txt") as f:
+            lines2 = f.read()
+        with open(os.path.dirname(os.path.abspath(__file__)) + "taskScripts//resources//GoNoGo_Task//GoNoGo_instr_3.txt") as f:
+            lines3 = f.read()
     instrTxt1 = visual.TextStim(myWin,text=lines1,  color='black')
     # For this task, a series of words and pictures framed by a black box will appear in the centre of the screen. \
     # Your job is to press the left button every time a stimulus appears, except when that stimulus is an animal. Then, don't press anything. \n\
@@ -369,7 +374,10 @@ def HelpWin(myClock, myWin,dfile):
     #set up instructions and clock (so you can time stamp duration or trials, RT etc..)
     instrTxt2 = visual.TextStim(myWin,text=lines2,  color='black')
     instrTxt3 = visual.TextStim(myWin,text=lines3,  color='black')
-    instrimg = visual.ImageStim(myWin,image=(os.path.dirname(os.path.abspath(__file__)) + "//resources//GoNoGo_Task//Go.jpg"),size=[2,1])
+    try:
+        instrimg = visual.ImageStim(myWin,image=(os.path.dirname(os.path.abspath(__file__)) + "//resources//GoNoGo_Task//Go.jpg"),size=[2,1])
+    except:
+        instrimg = visual.ImageStim(myWin,image=(os.path.dirname(os.path.abspath(__file__)) + "taskScripts//resources//GoNoGo_Task//Go.jpg"),size=[2,1])
     # Before each part of the task begins, you will be informed what type of stimuli you will have to attend to by a cue in red (WORD, PICTURE or BOX).\n\
     # \nPlease give equal importance to SPEED and ACCURACY when completing this task. We would like you to respond as FAST as possible while maintaining a high \
     # level of ACCURACY.\n\
@@ -413,7 +421,11 @@ def HelpWin(myClock, myWin,dfile):
             go_box.append(item3)
             nogo_box.append(item3)
         if data[3] != '':
-            item6 = (str(os.getcwd())+'/resources/GoNoGo_Task/'+data[3])
+            try:
+                item6 = (str(os.path.dirname(os.path.abspath(__file__)))+'/resources/GoNoGo_Task/'+data[3])
+            except:
+                item6 = (str(os.path.dirname(os.path.abspath(__file__)))+'taskScripts/resources/GoNoGo_Task/'+data[3])
+            
             scrambled_word.append(item6)
             
 
