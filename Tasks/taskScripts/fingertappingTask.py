@@ -156,7 +156,7 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
     # Initialize components for Routine "Blank"
     BlankClock = core.Clock()
     text_4 = visual.TextStim(win=win, name='text_4',
-        text=' ',
+        text='+',
         font='Arial',
         pos=[0, 0], anchorHoriz='center', anchorVert='center', wrapWidth=None, ori=0, 
         color='black', colorSpace='rgb', opacity=1, 
@@ -340,7 +340,7 @@ def runexp(filename, timer, win, writer, resultdict, runtime,dfile,seed):
 
             # ------Prepare to start Routine "Finger_tap"-------
             continueRoutine = True
-            routineTimer.add(3.000000)
+            routineTimer.add(5.000000)
             # update component parameters for each repeat
             # keep track of which components have finished
             text_2.setText(np.random.choice(["Now tap in time with the black square using you left hand","Now tap in time with the black square using you right hand"])) 

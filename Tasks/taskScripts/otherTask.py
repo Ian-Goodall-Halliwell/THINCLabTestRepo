@@ -379,7 +379,7 @@ def run_experiment(timer, win, writer, resdict, runtime, dfiles):
     #del settings['rec_keys'][1]
     #del settings['rec_keyans'][1]
     settings['rec_keyans'][0] = 'Go'
-    Stim_min[0] = 1500
+    Stim_min[0] = 3000
     Stim_max[0] = 5000
     ISI_min[0] = 500
     ISI_max[0] = 500

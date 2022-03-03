@@ -1,4 +1,3 @@
-On each trial, you will be asked to first decide about a specific event, 
-and after that you will be asked to try to imagine that event in as much detail as possible. 
-Once you have an event in mind, type a codeword into a box that you will be able to remember. 
+On each trial, you will be given a prompt, 
+and after that you will be asked to try to recall an event related to the prompt. 
 After this you will be asked to imagine those events as best you can. 
