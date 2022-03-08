@@ -1,0 +1,11 @@
+METADATA:
+Block Runtime,Experiment Seed,Subject
+90,961700,test_run_1
+Time after setup,12.118027699999999
+Timepoint,Time,Is_correct,Experience Sampling Question,Experience Sampling Response,Task,Task Iteration,Participant ID,Response_Key,Auxillary Data,Assoc Task
+EXPERIMENT DATA:,Movie Task
+Start Time,17.302669500000007
+Movie Task Start,17.302709300000004,,,,Movie Task,1,961700,,,
+Movie Init,22.576811300000003,,,,Movie Task,1,961700,,,
+Movie Start,22.576911600000003,,,,Movie Task,1,961700,,,
+Movie End,157.66947,,,,Movie Task,1,961700,,,
