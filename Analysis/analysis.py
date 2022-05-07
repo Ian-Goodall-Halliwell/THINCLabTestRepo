@@ -1,6 +1,14 @@
 import os
 import csv
-os.chdir("..")
+os.chdir(".")
+graddict = {}
+with open('Analysis/coords.csv','r') as ft:
+    rd = csv.reader(ft)
+    for e,row in enumerate(rd):
+        if e == 0:
+            continue
+        graddict.update({row[0]:[float(row[1]),float(row[2]),float(row[3])]})
+        print(row)
 line_dict= {"Task_name":None,
         "Participant #":None,
         "Runtime_mod":None,
@@ -17,11 +25,14 @@ line_dict= {"Task_name":None,
         "Future_response":None,
         "Emotion_response":None,
         "Self_response":None,
-        "Knowledge_response":None
+        "Knowledge_response":None,
+        "Gradient 1":None,
+        "Gradient 2":None,
+        "Gradient 3":None
         }
-if os.path.exists("Analysis/output.csv"):
-        os.remove("Analysis/output.csv")
-with open("Analysis/output.csv", 'a', newline="") as outf:
+if os.path.exists(os.path.join(os.getcwd(),"Analysis/output.csv")):
+        os.remove(os.path.join(os.getcwd(),"Analysis/output.csv"))
+with open(os.path.join(os.getcwd(),"Analysis/output.csv"), 'a', newline="") as outf:
     wr = csv.writer(outf)
     wr.writerow(list(line_dict.keys()))
 for file in os.listdir("Tasks/log_file"):
@@ -45,7 +56,10 @@ for file in os.listdir("Tasks/log_file"):
         "Future_response":None,
         "Emotion_response":None,
         "Self_response":None,
-        "Knowledge_response":None
+        "Knowledge_response":None,
+        "Gradient 1":None,
+        "Gradient 2":None,
+        "Gradient 3":None
         }
         _,_,subject,seed = ftemp.split("_")
         line_dict["Participant #"] = subject
@@ -65,7 +79,8 @@ for file in os.listdir("Tasks/log_file"):
                     if task_name == row[10]:
                         line_dict[row[3]]=row[4]
                     if enum == 14:
-                        
+                        grads = graddict[line_dict["Task_name"]]
+                        line_dict["Gradient 1"],line_dict["Gradient 2"],line_dict["Gradient 3"] = grads
                         with open("Analysis/output.csv", 'a', newline="") as outf:
                             wr = csv.writer(outf)
                             #wr.writerow(list(line_dict.keys()))
