@@ -1,25 +1,21 @@
 #Written by Brontë McKeown and Theodoros Karapanagiotidis
 from psychopy import visual 
-from psychopy.visual import MovieStim 
+
 from psychopy import gui, data, core,event
-import csv
-import time
-from time import localtime, strftime, gmtime
-from datetime import datetime
+
 import os.path
-import pyglet 
-import pandas as pd
-from itertools import groupby
+
+
 import random
 
 ###################################################################################################
 def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
-# kill switch for Psychopy3
+
     random.seed(seed)
+    
     resdict['Timepoint'], resdict['Time'] = 'Movie Task Start', timer.getTime()
     writer.writerow(resdict)
     resdict['Timepoint'], resdict['Time'] = None,None
-    df = pd.read_csv(dfile) 
     
     
 
@@ -53,108 +49,51 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
     
     # Wait for user to press enter to continue. 
     event.waitKeys(keyList=(['return']))
-    control = []
-    action = []
-    try:
-        # Create two lists, one with the control videos, and one with action videos
-        # Videos are sorted based on their file name
-        for a in os.listdir(os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//videos')):
-            v = a.split("_")[0]
-            if v == "control":
-                control.append(a)
-            if v == "action":
-                action.append(a)
-        random.shuffle(control)
-        random.shuffle(action)
-       
-        
-        
-        # Write when it's initialized
-        resdict['Timepoint'], resdict['Time'] = 'Movie Init', timer.getTime()
-        writer.writerow(resdict)
-        resdict['Timepoint'], resdict['Time'] = None,None
-        
-        # Create two different lists of videos for trial 1 and trial 2. 
-        filmlista = []
-        filmlistb = []
-        for en, m in enumerate(control):
-            m = os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//videos//' + m)
-            r = os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//videos//' + action[en])
-            filmlista.append(m)
-            filmlistb.append(r)
+    
+    
+    
+    # Create two lists, one with the control videos, and one with action videos
+    # Videos are sorted based on their file name
+    list_of_videos = os.listdir(os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//videos'))
+    
+    
+    
+    # Write when it's initialized
+    resdict['Timepoint'], resdict['Time'] = 'Movie Init', timer.getTime()
+    writer.writerow(resdict)
+    resdict['Timepoint'], resdict['Time'] = None,None
+    
+    # Create two different lists of videos for trial 1 and trial 2. 
+    
+    trialvideo = os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//videos') + "/" + list_of_videos[filename-1]
+    
+    
+    
+    
+    # Pick the video to show based on the trial version, we are just going to pick the one at the top of the list
     
         
-        
-        #filmlist = random.choice([filmlista,filmlistb])
-        
-        # Pick the video to show based on the trial version, we are just going to pick the one at the top of the list
-        if filename == 1:
-            filmlist = filmlista[0]
-        if filename == 2:
-            filmlist = filmlistb[0]
-            
-        
-        
-        # present film using moviestim
-        resdict['Timepoint'], resdict['Time'] = 'Movie Start', timer.getTime()
-        writer.writerow(resdict)
-        resdict['Timepoint'], resdict['Time'] = None,None
-        
-        
-        mov = visual.MovieStim3(win, filmlist, size=(1920, 1080), flipVert=False, flipHoriz=False, loop=False)
-        while mov.status != visual.FINISHED:
-            mov.draw()
-            win.flip()
-        
-    except:
-        
-        for a in os.listdir(os.path.join(os.getcwd(), 'resources//Movie_Task//videos')):
-            v = a.split("_")[0]
-            if v == "control":
-                control.append(a)
-            if v == "action":
-                action.append(a)
-        random.shuffle(control)
-        random.shuffle(action)
-       
-        
-        
-        # Write when it's initialized
-        resdict['Timepoint'], resdict['Time'] = 'Movie Init', timer.getTime()
-        writer.writerow(resdict)
-        resdict['Timepoint'], resdict['Time'] = None,None
-        
-        # Create two different lists of videos for trial 1 and trial 2. 
-        filmlista = []
-        filmlistb = []
-        for en, m in enumerate(control):
-            m = os.path.join(os.getcwd(), 'resources//Movie_Task//videos//' + m)
-            r = os.path.join(os.getcwd(), 'resources//Movie_Task//videos//' + action[en])
-            filmlista.append(m)
-            filmlistb.append(r)
     
-        
-        
-        #filmlist = random.choice([filmlista,filmlistb])
-        
-        # Pick the video to show based on the trial version, we are just going to pick the one at the top of the list
-        if filename == 1:
-            filmlist = filmlista[0]
-        if filename == 2:
-            filmlist = filmlistb[0]
+    
+    # present film using moviestim
+    resdict['Timepoint'], resdict['Time'] = 'Movie Start', timer.getTime()
+    writer.writerow(resdict)
+    resdict['Timepoint'], resdict['Time'] = None,None
+    
+    
+    mov = visual.MovieStim3(win, trialvideo, size=(1920, 1080), flipVert=False, flipHoriz=False, loop=False)
+    expClock = core.Clock()
+    timelimit = 15
+    while mov.status != visual.FINISHED:
+        if expClock.getTime() > timelimit:
+            expClock.reset()
             
+            break
         
+        mov.draw()
+        win.flip()
         
-        # present film using moviestim
-        resdict['Timepoint'], resdict['Time'] = 'Movie Start', timer.getTime()
-        writer.writerow(resdict)
-        resdict['Timepoint'], resdict['Time'] = None,None
-        
-        
-        mov = visual.MovieStim3(win, filmlist, size=(1920, 1080), flipVert=False, flipHoriz=False, loop=False)
-        while mov.status != visual.FINISHED:
-            mov.draw()
-            win.flip()
+    
     
     
     resdict['Timepoint'], resdict['Time'] = 'Movie End', timer.getTime()

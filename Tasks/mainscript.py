@@ -351,7 +351,7 @@ if __name__ == "__main__":
         onebackTask = task(taskScripts.onebackTask, datafile, datafileBackup,"One-Back Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//ZeroBack_Task//ConditionsSpecifications_ES_oneback.csv', 1)
         easymathTask1 = task(taskScripts.easymathTask, datafile, datafileBackup,"Easy Math Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),"resources/Maths_Task/new_math_stimuli1.csv", 1)
         hardmathTask1 = task(taskScripts.hardmathTask, datafile, datafileBackup,"Hard Math Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),"resources/Maths_Task/new_math_stimuli2.csv", 1)
-        movieTask1 = task(taskScripts.movieTask, datafile, 1,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 1)
+        
 
         #Block 2
 
@@ -365,7 +365,7 @@ if __name__ == "__main__":
         onebackTask2 = task(taskScripts.onebackTask, datafile, datafileBackup,"One-Back Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//ZeroBack_Task//ConditionsSpecifications_ES_oneback.csv', 2)
         easymathTask2 = task(taskScripts.easymathTask, datafile, datafileBackup,"Easy Math Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),"resources/Maths_Task/new_math_stimuli1.csv", 2)
         hardmathTask2 = task(taskScripts.hardmathTask, datafile, datafileBackup,"Hard Math Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),"resources/Maths_Task/new_math_stimuli2.csv", 2)
-        movieTask2 = task(taskScripts.movieTask, datafile, 2,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 2)
+        
 
         # Defining task GROUPS (groups will always be shown together, preceded by an instruction screen)
         
@@ -374,7 +374,14 @@ if __name__ == "__main__":
         reading_memory = taskgroup([[readingTask,readingTask2],[memTask,memTask2]],"resources/group_inst/reading_memory.txt")
         oneback_zeroback = taskgroup([[zerobackTask,zerobackTask2],[onebackTask,onebackTask2]],"resources/group_inst/oneback_zeroback.txt")
         ezmath_hrdmath = taskgroup([[easymathTask1,easymathTask2],[hardmathTask1,hardmathTask2]],"resources/group_inst/ezmath_hrdmath.txt")
-        movie_main = taskgroup([[movieTask1,movieTask2]],"resources/group_inst/movie_main.txt")
+        
+        
+        
+        movieTask1 = task(taskScripts.movieTask, datafile, 1,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 1)
+        movieTask2 = task(taskScripts.movieTask, datafile, 2,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 2)
+        movieTask3 = task(taskScripts.movieTask, datafile, 3,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 3)
+        movieTask4 = task(taskScripts.movieTask, datafile, 4,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 4)
+        movie_main = taskgroup([[movieTask1,movieTask2,movieTask3,movieTask4]],"resources/group_inst/movie_main.txt")
         
 
 
