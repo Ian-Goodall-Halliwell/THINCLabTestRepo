@@ -5,12 +5,18 @@ from psychopy import gui, data, core,event
 
 import os.path
 
-
+import pickle as pkl
 import random
 
 ###################################################################################################
 def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
-
+    import sys
+    import taskScripts
+    sys.path.append("..")
+    from mainscript import task
+    with open("tmp/esqtmp.pkl",'rb') as frrr:
+        datafile,datafileBackup,metinf,blr = pkl.load(frrr)
+    ESQTask = task(taskScripts.ESQ, datafile, datafileBackup, "Experience Sampling Questions", metinf, blr,'resources/GoNoGo_Task/gonogo_stimuli.csv',1, esq=True)
     random.seed(seed)
     
     resdict['Timepoint'], resdict['Time'] = 'Movie Task Start', timer.getTime()
@@ -87,7 +93,7 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
     while mov.status != visual.FINISHED:
         if expClock.getTime() > timelimit:
             expClock.reset()
-            
+            #ESQTask.run()
             break
         
         mov.draw()
